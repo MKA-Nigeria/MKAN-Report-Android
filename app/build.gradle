@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.aliumujib.majlis.mkanreport"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true //I hate this thing too but apache commons is in the file picker module
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        pickFirst 'org/joda/time/format/messages_en.properties'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+
+
+}
+
+//RESOLVES ISSUES WITH support library during android manifest merges
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(path: ':loca_man_mod')
+
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:cardview-v7:25.0.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.github.omadahealth:swipy:1.2.3@aar'
+    compile 'com.fxn769:oblique:1.0'
+    compile 'com.wdullaer:materialdatetimepicker:3.1.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.github.ceryle:SegmentedButton:v1.2.2'
+    compile 'com.github.javiersantos:MaterialStyledDialogs:2.1'
+    compile 'com.github.jaouan:compoundlayout:1.0.1'
+    compile 'solar.blaz:week-date-picker:1.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'jp.wasabeef:picasso-transformations:2.1.0'
+    compile 'com.muddzdev:styleabletoast:1.0.8'
+    compile 'com.github.myinnos:AppFontChanger:1.0'
+    compile 'com.android.support:support-v13:25.0.0'
+    compile 'com.android.support:palette-v7:25.0.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.stepstone.stepper:material-stepper:3.2.1'
+    compile 'com.github.the-cybersapien:recyclerELE:v1.1'
+    compile 'com.github.mmoamenn:ProgressImage_Android:0.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(path: ':mkan_report_data')
+    compile project(path: ':filebrowser')
+
+}

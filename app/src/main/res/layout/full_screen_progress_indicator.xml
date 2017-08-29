@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.bluehomestudio.progressimage.ProgressPicture xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressPicture="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/full_screen_progress_view"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_centerInParent="true"
+    android:src="@mipmap/ic_launcher_round"
+    android:visibility="gone"
+    ProgressPicture:animation="scale" />
+
