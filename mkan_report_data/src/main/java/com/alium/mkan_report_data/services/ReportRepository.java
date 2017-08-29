@@ -27,9 +27,9 @@ public class ReportRepository implements IReportRepository {
     public void saveReport(final MKANReport mkanReport) {
         final ParseObject parseObject = new ParseObject(Constants.MKAN_REPORT_CLASS_NAME);
         //BAD IDEA
-        parseObject.put(Constants.MKAN_REPORT_CLASS_ETEEMAD_EXECUTIVE_MEETINGS_CONDUCTED_COUNT, mkanReport.getNumberOfExecutiveMeetings());
-        parseObject.put(Constants.MKAN_REPORT_CLASS_ETEEMAD_EXECUTIVE_MEETINGS_ATEENDEE_COUNT, mkanReport.getNumberOfAttendeesAtExecutiveMeeting());
-        parseObject.put(Constants.MKAN_REPORT_CLASS_ETEEMAD_QAIDAT_MULK_MEMBER_COUNT, mkanReport.getNumberOfMulkMembersinQaidat());
+//        parseObject.put(Constants.MKAN_REPORT_CLASS_ETEEMAD_EXECUTIVE_MEETINGS_CONDUCTED_COUNT, mkanReport.getEtimadData().getNumberOfExecutiveMeetings());
+//        parseObject.put(Constants.MKAN_REPORT_CLASS_ETEEMAD_EXECUTIVE_MEETINGS_ATEENDEE_COUNT, mkanReport.getEtimadData().getNumberOfAttendeesAtExecutiveMeeting());
+//        parseObject.put(Constants.MKAN_REPORT_CLASS_ETEEMAD_QAIDAT_MULK_MEMBER_COUNT, mkanReport.getEtimadData().getNumberOfMulkMembersinQaidat());
         parseObject.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {

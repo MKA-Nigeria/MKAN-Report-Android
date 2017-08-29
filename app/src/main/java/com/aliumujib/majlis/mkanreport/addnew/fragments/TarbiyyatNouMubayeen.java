@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.alium.mkan_report_data.models.form_models.TarbiyyatiNauMubayeen;
 import com.aliumujib.majlis.mkanreport.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -66,16 +67,17 @@ public class TarbiyyatNouMubayeen extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if(mForm.isValid()){
-            mListener.getSharedMKanReport().setNumberOfKhaddamParticipatingInTarbiyaatiMubayeenClassInMonth(Integer.parseInt(numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth.getText().toString()));
-            mListener.getSharedMKanReport()
-                    .setNumberOfKhaddamParticipatingInPlacesWhereTarviyyatiMubayeenCampWasOrganizedInMonth(Integer.parseInt(numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarviyyatiMubayeenKhaddamWhoListenedToHuzurSermon(Integer.parseInt(numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarviyyatiMubayeenKhaddamWhoWroteHuzoorInMonth(Integer.parseInt(numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarviyyatiMubayeenKhaddamWhoObserveSalat(Integer.parseInt(numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarviyyatiMubayeenKhaddamWhoReciteQuran(Integer.parseInt(numberOfNauMubayeenKhuddamWhoReciteHolyQuran.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarviyyatiMubayeenKhaddamWhoBecameDaillalah(Integer.parseInt(numberOfNauMubayeenKhuddamDaieeIllallahInMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNazimNauMubayeenPhoneNumber(nazimNauMubaiyeenPhoneNumber.getText().toString());
-
+            TarbiyyatiNauMubayeen tarbiyyatiNauMubayeen = new TarbiyyatiNauMubayeen();
+            tarbiyyatiNauMubayeen.setNumberOfKhaddamParticipatingInTarbiyaatiMubayeenClassInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth));
+            tarbiyyatiNauMubayeen
+                    .setNumberOfKhaddamParticipatingInPlacesWhereTarviyyatiMubayeenCampWasOrganizedInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth));
+            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoListenedToHuzurSermon(editTextContentToInt(numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth));
+            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoWroteToHuzoorInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth));
+            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoObserveSalat(editTextContentToInt(numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers));
+            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoReciteQuran(editTextContentToInt(numberOfNauMubayeenKhuddamWhoReciteHolyQuran));
+            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoBecameDaillalah(editTextContentToInt(numberOfNauMubayeenKhuddamDaieeIllallahInMonth));
+            tarbiyyatiNauMubayeen.setNazimNauMubayeenPhoneNumber(nazimNauMubaiyeenPhoneNumber.getText().toString());
+            mListener.getSharedMKanReport().setTarbiyyatiNauMubayeenData(tarbiyyatiNauMubayeen);
             return null;
         }else {
             return new VerificationError("Please fill fields");

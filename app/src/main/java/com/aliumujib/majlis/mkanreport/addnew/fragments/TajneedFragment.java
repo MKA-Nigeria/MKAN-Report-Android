@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.alium.mkan_report_data.models.form_models.Tajneed;
 import com.aliumujib.majlis.mkanreport.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -61,14 +62,16 @@ public class TajneedFragment extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if (mForm.isValid()) {
-            mListener.getSharedMKanReport().setTotalNumberNoOfKhuddam(Integer.parseInt(totalNumberOfKhuddam.getText().toString()));
-            mListener.getSharedMKanReport().setTotalNumberOfKhuddamWithUniform(Integer.parseInt(totalNumberOfKhuddamWithUniform.getText().toString()));
-            mListener.getSharedMKanReport().setTotalNumberOfAtfal(Integer.parseInt(totalNumberOfAtfal.getText().toString()));
-            mListener.getSharedMKanReport().setTotalNumberOfKhuddamAtAge40ByDec(Integer.parseInt(numberOfKhuddamAtFourtyYearsOfAgeByDec.getText().toString()));
-            mListener.getSharedMKanReport().setNazimTajnidPhoneNumber(nazimTajnidPhoneNumber.getText().toString());
+            Tajneed tajneed = new Tajneed();
+            tajneed.setTotalNumberNoOfKhuddam(Integer.parseInt(totalNumberOfKhuddam.getText().toString()));
+            tajneed.setTotalNumberOfKhuddamWithUniform(Integer.parseInt(totalNumberOfKhuddamWithUniform.getText().toString()));
+            tajneed.setTotalNumberOfAtfal(Integer.parseInt(totalNumberOfAtfal.getText().toString()));
+            tajneed.setTotalNumberOfKhuddamAtAge40ByDec(Integer.parseInt(numberOfKhuddamAtFourtyYearsOfAgeByDec.getText().toString()));
+            tajneed.setNazimTajnidPhoneNumber(nazimTajnidPhoneNumber.getText().toString());
+            mListener.getSharedMKanReport().setTajneedData(tajneed);
             return null;
         } else {
-            return new  VerificationError("Please fill all fields");
+            return new VerificationError("Please fill all fields");
         }
     }
 

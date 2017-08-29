@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.alium.mkan_report_data.models.form_models.Taaleem;
 import com.aliumujib.majlis.mkanreport.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -69,14 +70,16 @@ public class TaleemFragment extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if (mForm.isValid()) {
-            mListener.getSharedMKanReport().setTotalNumberOfTaleemClassesConductedInMonth(Integer.parseInt(numberOfTaleemClassesConductedForMonth.getText().toString()));
-            mListener.getSharedMKanReport().setTotalNoOfHoursSpentInTaaleemClasses(Integer.parseInt(totalNumberOfHoursSpent.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfKhuddamThatParticipatedInTalimulQuranSession(Integer.parseInt(numberOfKhuddamInTalimulQuranSession.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfKhuddamThatParticipatedInAgeGroupBookReview(Integer.parseInt(numberOfKhuddamInAgeGroupBookReview.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfKhuddamThatParticipatedInICTTraining(Integer.parseInt(numberOfKhuddamInICTTraining.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfKhuddamThatParticipatedInProficiencyExamsPreparation(Integer.parseInt(numberOfKhuddamInProficiencyExams.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfBooksReviewedInMonth(Integer.parseInt(totalNumberOfBooksReviewedInMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNazimTaaleemPhoneNumber(nazimTaleemPhoneNumber.getText().toString());
+            Taaleem taaleem = new Taaleem();
+            taaleem.setTotalNumberOfTaleemClassesConductedInMonth(Integer.parseInt(numberOfTaleemClassesConductedForMonth.getText().toString()));
+            taaleem.setTotalNoOfHoursSpentInTaaleemClasses(Integer.parseInt(totalNumberOfHoursSpent.getText().toString()));
+            taaleem.setNumberOfKhuddamThatParticipatedInTalimulQuranSession(Integer.parseInt(numberOfKhuddamInTalimulQuranSession.getText().toString()));
+            taaleem.setNumberOfKhuddamThatParticipatedInAgeGroupBookReview(Integer.parseInt(numberOfKhuddamInAgeGroupBookReview.getText().toString()));
+            taaleem.setNumberOfKhuddamThatParticipatedInICTTraining(Integer.parseInt(numberOfKhuddamInICTTraining.getText().toString()));
+            taaleem.setNumberOfKhuddamThatParticipatedInProficiencyExamsPreparation(Integer.parseInt(numberOfKhuddamInProficiencyExams.getText().toString()));
+            taaleem.setNumberOfBooksReviewedInMonth(Integer.parseInt(totalNumberOfBooksReviewedInMonth.getText().toString()));
+            taaleem.setNazimTaaleemPhoneNumber(nazimTaleemPhoneNumber.getText().toString());
+            mListener.getSharedMKanReport().setTaaleemDaTa(taaleem);
             return null;
         } else {
             return new VerificationError("Please fill fields");

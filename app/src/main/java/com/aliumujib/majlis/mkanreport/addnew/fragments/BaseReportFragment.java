@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.EditText;
 
 import com.aditya.filebrowser.Constants;
 import com.aditya.filebrowser.FileChooser;
@@ -53,7 +54,7 @@ public abstract class BaseReportFragment extends Fragment implements Step {
     protected void pickAttachments(int reqestCode) {
         Intent i2 = new Intent(getActivity(), FileChooser.class);
         i2.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.MULTIPLE_SELECTION.ordinal());
-        startActivityForResult(i2, reqestCode);
+        getActivity().startActivityForResult(i2, reqestCode);
     }
 
     protected void initAttachmentRV(RecyclerView recyclerView, List<Attachment> dataSource){
@@ -65,6 +66,15 @@ public abstract class BaseReportFragment extends Fragment implements Step {
         mRecyclerELEAdapter.setCurrentView(RecyclerELEAdapter.VIEW_EMPTY);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(mAttachmentsAdapter!=null){
+            if(mAttachmentsAdapter.getItemCount()!=0){
+                mRecyclerELEAdapter.setCurrentView(RecyclerELEAdapter.VIEW_NORMAL);
+            }
+        }
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -73,6 +83,13 @@ public abstract class BaseReportFragment extends Fragment implements Step {
                 .showErrors(true)
                 .build();
 
+    }
+
+
+    //AT SOME POINT YOU GET TIRED OF TYPYING Integer.parseInt(blablablaeditText.getText().toString());
+
+    public int editTextContentToInt(EditText editText){
+        return Integer.parseInt(editText.getText().toString());
     }
 
     public int getAttachmentsRequestCode(){

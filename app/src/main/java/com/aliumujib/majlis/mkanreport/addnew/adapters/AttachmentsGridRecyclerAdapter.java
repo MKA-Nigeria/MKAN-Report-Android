@@ -1,6 +1,7 @@
 package com.aliumujib.majlis.mkanreport.addnew.adapters;
 
 import android.content.Context;
+import android.support.annotation.DrawableRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by abdulmujibaliu on 6/12/17.
+ * Created by abdulmujibaliu on 8/12/17.
  */
 
 public class AttachmentsGridRecyclerAdapter extends RecyclerView.Adapter<AttachmentsGridRecyclerAdapter.AttachmentViewHolder> {
@@ -67,8 +68,21 @@ public class AttachmentsGridRecyclerAdapter extends RecyclerView.Adapter<Attachm
 
         public void bindAttachment(Attachment attachment) {
             fileName.setText("File No: "+ getAdapterPosition());
+            fileIcon.setImageResource(getResIDFromFileType(attachment.getmAttachmentType()));
         }
 
+    }
+
+    private @DrawableRes int getResIDFromFileType(Attachment.AttachmentType attachmentType){
+        if(attachmentType == Attachment.AttachmentType.WORD){
+            return R.drawable.ic_file_word_box_grey600_48dp;
+        }else if(attachmentType == Attachment.AttachmentType.EXCEL){
+            return R.drawable.ic_file_excel_grey600_48dp;
+        }else if(attachmentType == Attachment.AttachmentType.PDF){
+            return R.drawable.ic_file_pdf_grey600_48dp;
+        }else {
+            return R.drawable.ic_file_grey600_48dp;
+        }
     }
 
     public void setRecyclerClickListener(RecyclerClickListener recyclerClickListener) {

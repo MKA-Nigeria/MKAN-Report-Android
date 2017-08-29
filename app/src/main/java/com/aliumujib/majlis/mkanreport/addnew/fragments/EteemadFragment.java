@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alium.mkan_report_data.models.form_models.Etimad;
 import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.utils.ToastUtils;
 import com.aliumujib.majlis.mkanreport.utils.Utils;
@@ -67,15 +68,17 @@ public class EteemadFragment extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if (mForm.isValid()) {
-            mListener.getSharedMKanReport().setNumberOfExecutiveMeetings(Integer.parseInt(numberOfExecutiveMeetings.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfAttendeesAtExecutiveMeeting(Integer.parseInt(numberOfAttendees.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfMulkMembersinQaidat(Integer.parseInt(numberOfMulkMembers.getText().toString()));
-            mListener.getSharedMKanReport().setNumberPresentAtExecutiveMeetings(Integer.parseInt(numberOfMulkMembersPresentAtMeeting.getText().toString()));
-            mListener.getSharedMKanReport().setNumberAbsentAtExecutiveMeeting(Integer.parseInt(numberOfMulkMembersAbsentAtMeeting.getText().toString()));
-            mListener.getSharedMKanReport().setMutammadPhoneNumber(motammadsPhoneNumber.getText().toString());
-            mListener.getSharedMKanReport().setExecutiveMeetingConducted(false);
-            mListener.getSharedMKanReport().setHasQaidatSecretary(false);
-            mListener.getSharedMKanReport().setHasSubmittedLastMonthsReport(false);
+            Etimad etimad = new Etimad();
+            etimad.setNumberOfExecutiveMeetings(editTextContentToInt(numberOfExecutiveMeetings));
+            etimad.setNumberOfAttendeesAtExecutiveMeeting(editTextContentToInt(numberOfAttendees));
+            etimad.setNumberOfMulkMembersinQaidat(editTextContentToInt(numberOfMulkMembers));
+            etimad.setNumberPresentAtExecutiveMeetings(editTextContentToInt(numberOfMulkMembersPresentAtMeeting));
+            etimad.setNumberAbsentAtExecutiveMeeting(editTextContentToInt(numberOfMulkMembersPresentAtMeeting));
+            etimad.setMutammadPhoneNumber(motammadsPhoneNumber.getText().toString());
+            etimad.setExecutiveMeetingConducted(false);
+            etimad.setHasQaidatSecretary(false);
+            etimad.setHasSubmittedLastMonthsReport(false);
+            mListener.getSharedMKanReport().setEtimadData(etimad);
             return null;
         } else {
             return new  VerificationError("Please fill all fields");

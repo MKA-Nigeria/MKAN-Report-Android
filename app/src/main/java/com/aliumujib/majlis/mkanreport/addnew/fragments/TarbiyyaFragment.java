@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alium.mkan_report_data.models.form_models.Tarbiyya;
 import com.aliumujib.majlis.mkanreport.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -78,18 +79,14 @@ public class TarbiyyaFragment extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if(mForm.isValid()){
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfKhuddamThatObserveCongregationPrayer(Integer.parseInt(numberOfKhuddamWhoObserveCongregationPrayers.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTarbiyyaProgrammesConductedInMonth(Integer.parseInt(numberOfTarbiyyaProgrammes.getText().toString()));
-            mListener.getSharedMKanReport().setNazimTarbiyyahPhoneNumber(nazimTarbiyyaPhoneNumber.getText().toString());
+            Tarbiyya tarbiyya = new Tarbiyya();
+            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
+            tarbiyya.setNumberOfKhuddamThatObserveCongregationPrayer(editTextContentToInt(numberOfKhuddamWhoObserveCongregationPrayers));
+            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
+            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
+
+            //TODO COLLECT ALL FIELDS
+            mListener.getSharedMKanReport().setTarbiyyaData(tarbiyya);
             return null;
         } else {
             return new  VerificationError("Please fill all fields");

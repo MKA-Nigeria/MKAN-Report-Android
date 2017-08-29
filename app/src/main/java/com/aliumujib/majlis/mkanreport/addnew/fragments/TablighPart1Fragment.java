@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.alium.mkan_report_data.models.form_models.Tabligh;
 import com.aliumujib.majlis.mkanreport.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
@@ -72,16 +73,20 @@ public class TablighPart1Fragment extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if (mForm.isValid()) {
-            mListener.getSharedMKanReport().setNumberOfMediaCassettesDistributedInMonth(Integer.parseInt(numberOfMediaCasseteDistributed.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfQuestionsAndAnswerSessionsHeldInMonth(Integer.parseInt(numberOfQuestionAndAnsweSessionsConducted.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfPublicLecturesConductedInMonth(Integer.parseInt(numberOfPublicLectureHeld.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfHouseToHousePreachingEventsHeldInMonth(Integer.parseInt(numberOfHouseToHousePreachingEventsHeld.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfLiteratureBooksDistributedInMonth(Integer.parseInt(numberOfLiteratureBooksDistributed.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTablighMeetingsHeldInMonth(Integer.parseInt(numberOfTablighMeetingsHeld.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfLettersOnTablighSentInTheMonth(Integer.parseInt(numberOfLettersOnTablighInTheMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfBooksStallsMaintained(Integer.parseInt(numberOfBookstallsMaintained.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfTablighSMSandEMailSentInMonth(Integer.parseInt(numberOfTablighSmsAndEmailsSent.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfBiatsSignedInMonth(Integer.parseInt(numberOfBiatsSignedInMonth.getText().toString()));
+            Tabligh tabligh = new Tabligh();
+
+            tabligh.setNumberOfMediaCassettesDistributedInMonth(Integer.parseInt(numberOfMediaCasseteDistributed.getText().toString()));
+            tabligh.setNumberOfQuestionsAndAnswerSessionsHeldInMonth(Integer.parseInt(numberOfQuestionAndAnsweSessionsConducted.getText().toString()));
+            tabligh.setNumberOfPublicLecturesConductedInMonth(Integer.parseInt(numberOfPublicLectureHeld.getText().toString()));
+            tabligh.setNumberOfHouseToHousePreachingEventsHeldInMonth(Integer.parseInt(numberOfHouseToHousePreachingEventsHeld.getText().toString()));
+            tabligh.setNumberOfLiteratureBooksDistributedInMonth(Integer.parseInt(numberOfLiteratureBooksDistributed.getText().toString()));
+            tabligh.setNumberOfTablighMeetingsHeldInMonth(Integer.parseInt(numberOfTablighMeetingsHeld.getText().toString()));
+            tabligh.setNumberOfLettersOnTablighSentInTheMonth(Integer.parseInt(numberOfLettersOnTablighInTheMonth.getText().toString()));
+            tabligh.setNumberOfBooksStallsMaintained(Integer.parseInt(numberOfBookstallsMaintained.getText().toString()));
+            tabligh.setNumberOfTablighSMSandEMailSentInMonth(Integer.parseInt(numberOfTablighSmsAndEmailsSent.getText().toString()));
+            tabligh.setNumberOfBiatsSignedInMonth(Integer.parseInt(numberOfBiatsSignedInMonth.getText().toString()));
+
+            mListener.getSharedMKanReport().setTablighData(tabligh);
             return null;
 
         } else {

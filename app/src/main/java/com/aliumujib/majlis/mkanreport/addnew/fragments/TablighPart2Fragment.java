@@ -59,11 +59,8 @@ public class TablighPart2Fragment extends BaseReportFragment implements Step {
     @Override
     public VerificationError verifyStep() {
         if(mForm.isValid()){
-            mListener.getSharedMKanReport().setNumberOfTablighProgrammesOrganizedInMonth(Integer.parseInt(numberOfTablighProgrammesHeld.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfKhuddamParticipatingInTablighActivitiesOrganized(Integer.parseInt(totalNumberOfKhuddamParticipatingInTablighActivities.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfHoursSpentOnTablighProgrammes(Integer.parseInt(durationOfTablighProgrammesHeld.getText().toString()));
-            mListener.getSharedMKanReport().setNumberOfClassesConductedbyTheTabglighTeamInMonth(Integer.parseInt(totalNumberOfTablighClassesHeldInMonth.getText().toString()));
-            mListener.getSharedMKanReport().setNazimTablighPhoneNumber(numberOfTablighProgrammesHeld.getText().toString());
+            //TODO APPEND THEM FIELDS
+
         }else {
             return new VerificationError("Please input all fields");
         }
