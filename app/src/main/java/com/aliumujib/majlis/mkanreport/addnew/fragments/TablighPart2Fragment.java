@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.aliumujib.majlis.mkanreport.R;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -18,15 +19,15 @@ public class TablighPart2Fragment extends BaseReportFragment implements Step {
 
 
     @Bind(R.id.number_of_tabligh_programmes_held)
-    EditText numberOfTablighProgrammesHeld;
+    VerifiableEditText numberOfTablighProgrammesHeld;
     @Bind(R.id.total_number_of_khuddam_participating_in_tabligh_activities)
-    EditText totalNumberOfKhuddamParticipatingInTablighActivities;
+    VerifiableEditText totalNumberOfKhuddamParticipatingInTablighActivities;
     @Bind(R.id.duration_of_tabligh_programmes_held)
-    EditText durationOfTablighProgrammesHeld;
+    VerifiableEditText durationOfTablighProgrammesHeld;
     @Bind(R.id.total_number_of_tabligh_classes_held_in_month)
-    EditText totalNumberOfTablighClassesHeldInMonth;
+    VerifiableEditText totalNumberOfTablighClassesHeldInMonth;
     @Bind(R.id.nazim_tabligh_phone_number)
-    EditText nazimTablighPhoneNumber;
+    VerifiableEditText nazimTablighPhoneNumber;
 
     public TablighPart2Fragment() {
         // Required empty public constructor
