@@ -18,6 +18,7 @@ import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.addnew.adapters.AttachmentsGridRecyclerAdapter;
 import com.aliumujib.majlis.mkanreport.addnew.interfaces.EditReportActivityInteractor;
 import com.aliumujib.majlis.mkanreport.utils.inputvalidator.Form;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -89,6 +90,11 @@ public abstract class BaseReportFragment extends Fragment implements Step {
     //AT SOME POINT YOU GET TIRED OF TYPYING Integer.parseInt(blablablaeditText.getText().toString());
 
     public int editTextContentToInt(EditText editText){
+        return Integer.parseInt(editText.getText().toString());
+    }
+
+
+    public int editTextContentToInt(VerifiableEditText editText){
         return Integer.parseInt(editText.getText().toString());
     }
 

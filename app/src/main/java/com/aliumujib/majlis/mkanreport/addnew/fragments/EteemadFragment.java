@@ -12,6 +12,7 @@ import com.alium.mkan_report_data.models.form_models.Etimad;
 import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.utils.ToastUtils;
 import com.aliumujib.majlis.mkanreport.utils.Utils;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -21,19 +22,17 @@ import butterknife.ButterKnife;
 public class EteemadFragment extends BaseReportFragment implements Step {
 
     @Bind(R.id.number_of_executive_meetings)
-    EditText numberOfExecutiveMeetings;
+    VerifiableEditText numberOfExecutiveMeetings;
     @Bind(R.id.number_of_attendees)
-    EditText numberOfAttendees;
-    @Bind(R.id.textView)
-    TextView textView;
+    VerifiableEditText numberOfAttendees;
     @Bind(R.id.number_of_mulk_members)
-    EditText numberOfMulkMembers;
+    VerifiableEditText numberOfMulkMembers;
     @Bind(R.id.number_of_mulk_members_present_at_meeting)
-    EditText numberOfMulkMembersPresentAtMeeting;
+    VerifiableEditText numberOfMulkMembersPresentAtMeeting;
     @Bind(R.id.number_of_mulk_members_absent_at_meeting)
-    EditText numberOfMulkMembersAbsentAtMeeting;
+    VerifiableEditText numberOfMulkMembersAbsentAtMeeting;
     @Bind(R.id.motammads_phone_number)
-    EditText motammadsPhoneNumber;
+    VerifiableEditText motammadsPhoneNumber;
 
     public EteemadFragment() {
         // Required empty public constructor

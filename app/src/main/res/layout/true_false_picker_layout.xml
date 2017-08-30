@@ -4,14 +4,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
    >
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="vertical">
-
-
         <com.jaouan.compoundlayout.RadioLayoutGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +15,6 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginBottom="4dp"
-                app:checked="true"
                 android:background="@drawable/yes_no_radio_selector"> <!-- Checked or not -->
 
 
@@ -78,5 +69,4 @@
 
         </com.jaouan.compoundlayout.RadioLayoutGroup>
 
-    </LinearLayout>
 </merge>

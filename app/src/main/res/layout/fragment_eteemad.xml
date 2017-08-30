@@ -40,7 +40,9 @@
                     android:text="Were there Executive Committee Meetings conducted during  the month?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-                <include layout="@layout/true_false_picker_layout" />
+                <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,93 +50,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginTop="8dp"
                     android:orientation="horizontal">
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
+                    <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="24dp"
-                        android:layout_marginTop="8dp"
                         android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="How many?"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_executive_meetings"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
+                        android:id="@+id/number_of_executive_meetings"
+                        app:titleText="How many?"
+                        app:isrequired="true"
+                        android:layout_height="wrap_content"/>
 
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
+                    <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/number_of_attendees"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Number of attendees"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_attendees"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
+                        android:layout_marginRight="8dp"
+                        app:titleText="Number of attendees"
+                        app:isrequired="true"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -172,8 +108,9 @@
                     android:text="Do you have Qaida'at Secretary?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-                <include layout="@layout/true_false_picker_layout" />
-
+                <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <TextView
@@ -196,7 +133,9 @@
                     android:text="Was last month's report submitted?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-                <include layout="@layout/true_false_picker_layout" />
+                <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -216,143 +155,54 @@
                 android:text="4."
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
+
+
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="№ of Mulk Members in the Qaidat"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-                <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:required="true">
-
-                    <EditText
-                        android:id="@+id/number_of_mulk_members"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginTop="4dp"
-                        android:background="@color/transparent"
-                        android:hint="0000"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
+                    android:layout_weight="1"
+                    android:id="@+id/number_of_mulk_members"
+                    app:titleText="№ of Mulk Members in the Qaidat"
+                    app:isrequired="true"
+                    android:layout_height="wrap_content"/>
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:tools="http://schemas.android.com/tools"
                     android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
+                    <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:id="@+id/number_of_mulk_members_present_at_meeting"
+                        app:titleText="№ present at meeting?"
+                        app:isrequired="true"
+                        android:layout_height="wrap_content"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="№ present at meeting?"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_mulk_members_present_at_meeting"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
+                    <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
                         android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="№ absent at meeting"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_mulk_members_absent_at_meeting"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
+                        android:id="@+id/number_of_mulk_members_absent_at_meeting"
+                        app:titleText="№ absent at meeting"
+                        app:isrequired="true"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
-
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -370,49 +220,14 @@
                 android:text="5."
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mo'tamad’s Phone №"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:required="true">
-
-                    <EditText
-                        android:id="@+id/motammads_phone_number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginTop="4dp"
-                        android:background="@color/transparent"
-                        android:hint="0000"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
+                android:layout_marginLeft="8dp"
+                android:id="@+id/motammads_phone_number"
+                app:titleText="Mo'tamad’s Phone №"
+                app:isrequired="true"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 

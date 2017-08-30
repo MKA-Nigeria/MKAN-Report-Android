@@ -3,11 +3,11 @@
     <declare-styleable name="InputValidator">
         <attr name="required" format="boolean" />
         <attr name="validator" format="enum">
-            <enum name="isEmail" value="0"/>
-            <enum name="isPhoneNumber" value="1"/>
-            <enum name="isNumeric" value="2"/>
-            <enum name="isUrl" value="3"/>
-            <enum name="isIP" value="4"/>
+            <enum name="isEmail" value="0" />
+            <enum name="isPhoneNumber" value="1" />
+            <enum name="isNumeric" value="2" />
+            <enum name="isUrl" value="3" />
+            <enum name="isIP" value="4" />
         </attr>
         <attr name="minLength" format="integer" />
         <attr name="maxLength" format="integer" />
@@ -22,4 +22,12 @@
     <declare-styleable name="Form">
         <attr name="showErrors" format="boolean" />
     </declare-styleable>
+
+
+    <declare-styleable name="VerifiableEditText">
+        <attr name="titleText" format="string" localization="suggested" />
+        <attr name="isrequired" format="boolean" />
+        <attr name="hinttext" format="string" localization="suggested" />
+    </declare-styleable>
+
 </resources>
