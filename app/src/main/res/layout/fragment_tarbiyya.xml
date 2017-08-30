@@ -13,7 +13,6 @@
         android:orientation="vertical"
         tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.TarbiyyaFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
@@ -21,510 +20,156 @@
             android:orientation="horizontal"
             tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:questionnumber="1"
+                app:questiontitle="№ of Tarbiyya\nprogrammes\nconducted in the\nmonth">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_tarbiyya_programmes"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="№ of Tarbiyya\nprogrammes\nconducted in the\nmonth"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                    android:layout_marginLeft="16dp" />
 
-                <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:required="true">
+            </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
-                    <EditText
-                        android:id="@+id/number_of_tarbiyya_programmes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginTop="4dp"
-                        android:background="@color/transparent"
-                        android:hint="0000"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:questionnumber="2"
+                app:questiontitle="Nazim Tarbiyya’s\nPhone №\n\n">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/nazim_tarbiyya_phone_number"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nazim Tarbiyya’s\nPhone №\n\n"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                    android:layout_marginLeft="16dp" />
 
-                <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:required="true">
-
-                    <EditText
-                        android:id="@+id/nazim_tarbiyya_phone_number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginTop="4dp"
-                        android:background="@color/transparent"
-                        android:hint="0000"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-            </LinearLayout>
-
+            </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
         </LinearLayout>
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:orientation="vertical"
+            app:questionnumber="3"
+            app:questiontitle="No. of Khuddam who:">
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_who_observe_congregation_prayers"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No. of Khuddam who:"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    app:titleText="observe\ncongregational prayer" />
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="observe\ncongregational prayer"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_khuddam_who_observe_congregation_prayers"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Write\nletters to Huzoor"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_khuddam_who_write_to_huzur"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_who_write_to_huzur"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    app:titleText="Write\nletters to Huzoor" />
+            </LinearLayout>
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="listen to the\nFriday sermon"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_khuddam_who_listen_to_sermon"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Watch the\nMTA regularly"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_khuddam_who_watch_mta_regularly"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_who_listen_to_sermon"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    app:titleText="listen to the\nFriday sermon" />
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="are regular in\nTahajjud prayer"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_khuddam_regular_in_tahjudd"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="are regular in the\n5 daily prayers"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
-
-                            <EditText
-                                android:id="@+id/number_of_khuddam_regulat_in_daily_salat"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_who_watch_mta_regularly"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    app:titleText="Watch the\nMTA regularly" />
+            </LinearLayout>
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="engaged in voluntary fast"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
 
-                            <EditText
-                                android:id="@+id/number_of_khuddam_in_voluntary_fast"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_regular_in_tahjudd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="are regular in\nTahajjud prayer" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_regulat_in_daily_salat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="are regular in the\n5 daily prayers" />
 
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="read “Conditions of Baiat”"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-                        <com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            app:required="true">
 
-                            <EditText
-                                android:id="@+id/number_of_khuddam_who_read_conditions_of_biat"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="4dp"
-                                android:layout_marginTop="4dp"
-                                android:background="@color/transparent"
-                                android:hint="0000"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-                        </com.aliumujib.majlis.mkanreport.utils.inputvalidator.InputValidator>
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_in_voluntary_fast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="engaged in voluntary fast" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_khuddam_who_read_conditions_of_biat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="read “Conditions of Baiat" />
 
             </LinearLayout>
 
 
-        </LinearLayout>
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
 
     </LinearLayout>

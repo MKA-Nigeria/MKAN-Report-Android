@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.alium.mkan_report_data.models.form_models.Tarbiyya;
 import com.aliumujib.majlis.mkanreport.R;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -19,31 +20,26 @@ import butterknife.ButterKnife;
 
 public class TarbiyyaFragment extends BaseReportFragment implements Step {
 
-
-    @Bind(R.id.textView)
-    TextView textView;
     @Bind(R.id.number_of_tarbiyya_programmes)
-    EditText numberOfTarbiyyaProgrammes;
+    VerifiableEditText numberOfTarbiyyaProgrammes;
     @Bind(R.id.nazim_tarbiyya_phone_number)
-    EditText nazimTarbiyyaPhoneNumber;
+    VerifiableEditText nazimTarbiyyaPhoneNumber;
     @Bind(R.id.number_of_khuddam_who_observe_congregation_prayers)
-    EditText numberOfKhuddamWhoObserveCongregationPrayers;
+    VerifiableEditText numberOfKhuddamWhoObserveCongregationPrayers;
     @Bind(R.id.number_of_khuddam_who_write_to_huzur)
-    EditText numberOfKhuddamWhoWriteToHuzur;
+    VerifiableEditText numberOfKhuddamWhoWriteToHuzur;
     @Bind(R.id.number_of_khuddam_who_listen_to_sermon)
-    EditText numberOfKhuddamWhoListenToSermon;
+    VerifiableEditText numberOfKhuddamWhoListenToSermon;
     @Bind(R.id.number_of_khuddam_who_watch_mta_regularly)
-    EditText numberOfKhuddamWhoWatchMtaRegularly;
-    @Bind(R.id.textView2)
-    TextView textView2;
+    VerifiableEditText numberOfKhuddamWhoWatchMtaRegularly;
     @Bind(R.id.number_of_khuddam_regular_in_tahjudd)
-    EditText numberOfKhuddamRegularInTahjudd;
+    VerifiableEditText numberOfKhuddamRegularInTahjudd;
     @Bind(R.id.number_of_khuddam_regulat_in_daily_salat)
-    EditText numberOfKhuddamRegulatInDailySalat;
+    VerifiableEditText numberOfKhuddamRegulatInDailySalat;
     @Bind(R.id.number_of_khuddam_in_voluntary_fast)
-    EditText numberOfKhuddamInVoluntaryFast;
+    VerifiableEditText numberOfKhuddamInVoluntaryFast;
     @Bind(R.id.number_of_khuddam_who_read_conditions_of_biat)
-    EditText numberOfKhuddamWhoReadConditionsOfBiat;
+    VerifiableEditText numberOfKhuddamWhoReadConditionsOfBiat;
 
     public TarbiyyaFragment() {
         // Required empty public constructor
