@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.alium.mkan_report_data.models.form_models.Tajneed;
 import com.aliumujib.majlis.mkanreport.R;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -19,15 +20,15 @@ import butterknife.ButterKnife;
 public class TajneedFragment extends BaseReportFragment implements Step {
 
     @Bind(R.id.total_number_of_khuddam)
-    EditText totalNumberOfKhuddam;
+    VerifiableEditText totalNumberOfKhuddam;
     @Bind(R.id.number_of_khuddam_at_fourty_years_of_age_by_dec)
-    EditText numberOfKhuddamAtFourtyYearsOfAgeByDec;
+    VerifiableEditText numberOfKhuddamAtFourtyYearsOfAgeByDec;
     @Bind(R.id.total_number_of_khuddam_with_uniform)
-    EditText totalNumberOfKhuddamWithUniform;
+    VerifiableEditText totalNumberOfKhuddamWithUniform;
     @Bind(R.id.total_number_of_atfal)
-    EditText totalNumberOfAtfal;
+    VerifiableEditText totalNumberOfAtfal;
     @Bind(R.id.nazim_tajnid_phone_number)
-    EditText nazimTajnidPhoneNumber;
+    VerifiableEditText nazimTajnidPhoneNumber;
 
     public TajneedFragment() {
         // Required empty public constructor

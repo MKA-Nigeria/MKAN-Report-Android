@@ -58,7 +58,7 @@ public abstract class BaseReportFragment extends Fragment implements Step {
         getActivity().startActivityForResult(i2, reqestCode);
     }
 
-    protected void initAttachmentRV(RecyclerView recyclerView, List<Attachment> dataSource){
+    protected void initAttachmentRV(RecyclerView recyclerView, List<Attachment> dataSource) {
         mLayoutManager = new GridLayoutManager(getContext(), 3); //Kind of opimal for all screen sizes
         recyclerView.setLayoutManager(mLayoutManager);
         mAttachmentsAdapter = new AttachmentsGridRecyclerAdapter(dataSource, getContext());
@@ -70,8 +70,8 @@ public abstract class BaseReportFragment extends Fragment implements Step {
     @Override
     public void onResume() {
         super.onResume();
-        if(mAttachmentsAdapter!=null){
-            if(mAttachmentsAdapter.getItemCount()!=0){
+        if (mAttachmentsAdapter != null) {
+            if (mAttachmentsAdapter.getItemCount() != 0) {
                 mRecyclerELEAdapter.setCurrentView(RecyclerELEAdapter.VIEW_NORMAL);
             }
         }
@@ -89,16 +89,22 @@ public abstract class BaseReportFragment extends Fragment implements Step {
 
     //AT SOME POINT YOU GET TIRED OF TYPYING Integer.parseInt(blablablaeditText.getText().toString());
 
-    public int editTextContentToInt(EditText editText){
+    public int editTextContentToInt(EditText editText) {
         return Integer.parseInt(editText.getText().toString());
     }
 
 
-    public int editTextContentToInt(VerifiableEditText editText){
-        return Integer.parseInt(editText.getText().toString());
+    public int editTextContentToInt(VerifiableEditText editText) {
+        try {
+            return Integer.parseInt(editText.getText().toString());
+        } catch (NumberFormatException e) {
+            onError(new VerificationError(e.getMessage()));
+        } finally {
+            return 0;
+        }
     }
 
-    public int getAttachmentsRequestCode(){
+    public int getAttachmentsRequestCode() {
         return 0;
     }
 

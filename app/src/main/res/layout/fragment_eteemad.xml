@@ -13,72 +13,59 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:orientation="vertical"
+            app:questionnumber="1"
+            app:questiontitle="Were there Executive Committee Meetings conducted during  the month?">
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Were there Executive Committee Meetings conducted during  the month?"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
                 <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:tools="http://schemas.android.com/tools"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
                         android:id="@+id/number_of_executive_meetings"
-                        app:titleText="How many?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         app:isrequired="true"
-                        android:layout_height="wrap_content"/>
+                        app:titleText="How many?" />
 
 
                     <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
                         android:id="@+id/number_of_attendees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
-                        app:titleText="Number of attendees"
+                        android:layout_weight="1"
                         app:isrequired="true"
-                        android:layout_height="wrap_content"/>
+                        app:titleText="Number of attendees" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
 
-
-        </LinearLayout>
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -88,148 +75,110 @@
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Do you have Qaida'at Secretary?"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                android:orientation="vertical"
+                app:questionnumber="2"
+                app:questiontitle="Do you have Qaida'at Secretary?">
 
                 <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp" />
+            </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Was last month's report submitted?"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                android:orientation="vertical"
+                app:questionnumber="3"
+                app:questiontitle="Was last month's report submitted?">
 
                 <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-
-                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/number_of_mulk_members"
-                    app:titleText="№ of Mulk Members in the Qaidat"
-                    app:isrequired="true"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="8dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="16dp" />
+            </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
-                    <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:id="@+id/number_of_mulk_members_present_at_meeting"
-                        app:titleText="№ present at meeting?"
-                        app:isrequired="true"
-                        android:layout_height="wrap_content"/>
-
-                    <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
-                        android:layout_width="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_weight="1"
-                        android:id="@+id/number_of_mulk_members_absent_at_meeting"
-                        app:titleText="№ absent at meeting"
-                        app:isrequired="true"
-                        android:layout_height="wrap_content"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="4"
+            android:layout_marginRight="8dp"
+            app:questiontitle="№ of Mulk Members in the Qaidat">
 
             <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/number_of_mulk_members"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="8dp"
-                android:id="@+id/motammads_phone_number"
-                app:titleText="Mo'tamad’s Phone №"
-                app:isrequired="true"
-                android:layout_height="wrap_content"/>
+                app:isrequired="true" />
 
-        </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_mulk_members_present_at_meeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:isrequired="true"
+                    app:titleText="№ present at meeting?" />
+
+                <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_mulk_members_absent_at_meeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    app:isrequired="true"
+                    app:titleText="№ absent at meeting" />
+
+            </LinearLayout>
+
+
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="5"
+            android:layout_marginRight="8dp"
+            app:questiontitle="Mo'tamad’s Phone №"
+            >
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/motammads_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:isrequired="true" />
+
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
 
 
     </LinearLayout>

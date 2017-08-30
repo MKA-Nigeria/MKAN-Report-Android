@@ -27,7 +27,7 @@ public class VerifiableEditText extends LinearLayout {
     private View mRootView;
 
     public CharSequence getText() {
-        return mTitleText.getText();
+        return mContentEt.getText();
     }
 
     public VerifiableEditText(Context context, AttributeSet attrs) {
@@ -51,11 +51,19 @@ public class VerifiableEditText extends LinearLayout {
 
         initView();
 
-        mTitleText.setText(titleText);
-        mContentEt.setHint(hint);
+        if(titleText == null || titleText.matches("")){
+            mTitleText.setVisibility(GONE);
+        }else {
+            mTitleText.setText(titleText);
+        }
+
+        if(hint == null || hint.matches("")){
+            mContentEt.setHint("0000");
+        }else {
+            mContentEt.setHint(hint);
+        }
+
         mInputValidator.setRequired(isRequired);
-
-
     }
 
 

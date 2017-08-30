@@ -30,4 +30,9 @@
         <attr name="hinttext" format="string" localization="suggested" />
     </declare-styleable>
 
+    <declare-styleable name="QuestionLayout">
+        <attr name="questionnumber" format="integer" localization="suggested" />
+        <attr name="questiontitle" format="string" localization="suggested"/>
+    </declare-styleable>
+
 </resources>

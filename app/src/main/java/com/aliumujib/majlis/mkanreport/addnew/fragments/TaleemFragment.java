@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.alium.mkan_report_data.models.form_models.Taaleem;
 import com.aliumujib.majlis.mkanreport.R;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -19,23 +20,23 @@ import butterknife.ButterKnife;
 public class TaleemFragment extends BaseReportFragment implements Step {
 
     @Bind(R.id.number_of_taleem_classes_conducted_for_month)
-    EditText numberOfTaleemClassesConductedForMonth;
+    VerifiableEditText numberOfTaleemClassesConductedForMonth;
     @Bind(R.id.total_number_of_hours_spent)
-    EditText totalNumberOfHoursSpent;
+    VerifiableEditText totalNumberOfHoursSpent;
     @Bind(R.id.number_of_khuddam_in_talimul_quran_session)
-    EditText numberOfKhuddamInTalimulQuranSession;
+    VerifiableEditText numberOfKhuddamInTalimulQuranSession;
     @Bind(R.id.number_of_khuddam_in_age_group_book_review)
-    EditText numberOfKhuddamInAgeGroupBookReview;
+    VerifiableEditText numberOfKhuddamInAgeGroupBookReview;
     @Bind(R.id.number_of_khuddam_in_ICT_training)
-    EditText numberOfKhuddamInICTTraining;
+    VerifiableEditText numberOfKhuddamInICTTraining;
     @Bind(R.id.number_of_khuddam_in_proficiency_exams)
-    EditText numberOfKhuddamInProficiencyExams;
+    VerifiableEditText numberOfKhuddamInProficiencyExams;
     @Bind(R.id.total_number_of_khuddam_participating_in_taleem_activities)
-    EditText totalNumberOfKhuddamParticipatingInTaleemActivities;
+    VerifiableEditText totalNumberOfKhuddamParticipatingInTaleemActivities;
     @Bind(R.id.total_number_of_books_reviewed_in_month)
-    EditText totalNumberOfBooksReviewedInMonth;
+    VerifiableEditText totalNumberOfBooksReviewedInMonth;
     @Bind(R.id.nazim_taleem_phone_number)
-    EditText nazimTaleemPhoneNumber;
+    VerifiableEditText nazimTaleemPhoneNumber;
 
     public TaleemFragment() {
         // Required empty public constructor
