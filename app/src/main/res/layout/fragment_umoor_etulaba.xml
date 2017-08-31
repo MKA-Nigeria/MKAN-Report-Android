@@ -100,7 +100,6 @@
 
         </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
-
         <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
