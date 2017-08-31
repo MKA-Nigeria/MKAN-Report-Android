@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.alium.mkan_report_data.models.form_models.TarbiyyatiNauMubayeen;
 import com.aliumujib.majlis.mkanreport.R;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -19,21 +20,21 @@ public class TarbiyyatNouMubayeen extends BaseReportFragment implements Step {
 
 
     @Bind(R.id.number_of_nau_mubayeen_khuddam_participating_in_tarbiyya_class_in_month)
-    EditText numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth;
+    VerifiableEditText numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth;
     @Bind(R.id.number_of_nau_mubayeen_khuddam_participating_tarbiyya_camp_in_month)
-    EditText numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth;
+    VerifiableEditText numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth;
     @Bind(R.id.number_of_nau_mubayeen_khuddam_who_listened_to_live_huzur_sermon_in_month)
-    EditText numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth;
+    VerifiableEditText numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth;
     @Bind(R.id.number_of_nau_mubayeen_khuddam_who_wrote_to_huzur_in_month)
-    EditText numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth;
+    VerifiableEditText numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth;
     @Bind(R.id.number_of_nau_mubayeen_khuddam_who_observe_five_daily_prayers)
-    EditText numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers;
+    VerifiableEditText numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers;
     @Bind(R.id.number_of_nau_mubayeen_khuddam_who_recite_holy_quran)
-    EditText numberOfNauMubayeenKhuddamWhoReciteHolyQuran;
+    VerifiableEditText numberOfNauMubayeenKhuddamWhoReciteHolyQuran;
     @Bind(R.id.number_of_nau_mubayeen_khuddam_daiee_illallah_in_month)
-    EditText numberOfNauMubayeenKhuddamDaieeIllallahInMonth;
+    VerifiableEditText numberOfNauMubayeenKhuddamDaieeIllallahInMonth;
     @Bind(R.id.nazim_nau_mubaiyeen_phone_number)
-    EditText nazimNauMubaiyeenPhoneNumber;
+    VerifiableEditText nazimNauMubaiyeenPhoneNumber;
 
     public TarbiyyatNouMubayeen() {
         // Required empty public constructor
