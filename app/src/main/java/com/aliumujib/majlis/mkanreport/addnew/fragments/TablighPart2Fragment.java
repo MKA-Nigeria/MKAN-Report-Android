@@ -59,12 +59,13 @@ public class TablighPart2Fragment extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if(mForm.isValid()){
-            //TODO APPEND THEM FIELDS
-
-        }else {
-            return new VerificationError("Please input all fields");
-        }
+//        if(mForm.isValid()){
+//            //TODO APPEND THEM FIELDS
+//
+//        }else {
+//            return new VerificationError("Please input all fields");
+//        }
+//        return null;
         return null;
     }
 

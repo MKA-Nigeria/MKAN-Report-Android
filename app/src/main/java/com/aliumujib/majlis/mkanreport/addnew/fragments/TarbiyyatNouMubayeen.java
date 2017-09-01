@@ -67,22 +67,24 @@ public class TarbiyyatNouMubayeen extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if(mForm.isValid()){
-            TarbiyyatiNauMubayeen tarbiyyatiNauMubayeen = new TarbiyyatiNauMubayeen();
-            tarbiyyatiNauMubayeen.setNumberOfKhaddamParticipatingInTarbiyaatiMubayeenClassInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth));
-            tarbiyyatiNauMubayeen
-                    .setNumberOfKhaddamParticipatingInPlacesWhereTarviyyatiMubayeenCampWasOrganizedInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth));
-            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoListenedToHuzurSermon(editTextContentToInt(numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth));
-            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoWroteToHuzoorInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth));
-            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoObserveSalat(editTextContentToInt(numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers));
-            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoReciteQuran(editTextContentToInt(numberOfNauMubayeenKhuddamWhoReciteHolyQuran));
-            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoBecameDaillalah(editTextContentToInt(numberOfNauMubayeenKhuddamDaieeIllallahInMonth));
-            tarbiyyatiNauMubayeen.setNazimNauMubayeenPhoneNumber(nazimNauMubaiyeenPhoneNumber.getText().toString());
-            mListener.getSharedMKanReport().setTarbiyyatiNauMubayeenData(tarbiyyatiNauMubayeen);
-            return null;
-        }else {
-            return new VerificationError("Please fill fields");
-        }
+//        if(mForm.isValid()){
+//            TarbiyyatiNauMubayeen tarbiyyatiNauMubayeen = new TarbiyyatiNauMubayeen();
+//            tarbiyyatiNauMubayeen.setNumberOfKhaddamParticipatingInTarbiyaatiMubayeenClassInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth));
+//            tarbiyyatiNauMubayeen
+//                    .setNumberOfKhaddamParticipatingInPlacesWhereTarviyyatiMubayeenCampWasOrganizedInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth));
+//            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoListenedToHuzurSermon(editTextContentToInt(numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth));
+//            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoWroteToHuzoorInMonth(editTextContentToInt(numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth));
+//            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoObserveSalat(editTextContentToInt(numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers));
+//            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoReciteQuran(editTextContentToInt(numberOfNauMubayeenKhuddamWhoReciteHolyQuran));
+//            tarbiyyatiNauMubayeen.setNumberOfTarviyyatiMubayeenKhaddamWhoBecameDaillalah(editTextContentToInt(numberOfNauMubayeenKhuddamDaieeIllallahInMonth));
+//            tarbiyyatiNauMubayeen.setNazimNauMubayeenPhoneNumber(nazimNauMubaiyeenPhoneNumber.getText().toString());
+//            mListener.getSharedMKanReport().setTarbiyyatiNauMubayeenData(tarbiyyatiNauMubayeen);
+//            return null;
+//        }else {
+//            return new VerificationError("Please fill fields");
+//        }
+
+        return null;
     }
 
     @Override

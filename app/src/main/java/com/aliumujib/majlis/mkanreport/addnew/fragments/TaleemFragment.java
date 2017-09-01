@@ -70,21 +70,23 @@ public class TaleemFragment extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if (mForm.isValid()) {
-            Taaleem taaleem = new Taaleem();
-            taaleem.setTotalNumberOfTaleemClassesConductedInMonth(Integer.parseInt(numberOfTaleemClassesConductedForMonth.getText().toString()));
-            taaleem.setTotalNoOfHoursSpentInTaaleemClasses(Integer.parseInt(totalNumberOfHoursSpent.getText().toString()));
-            taaleem.setNumberOfKhuddamThatParticipatedInTalimulQuranSession(Integer.parseInt(numberOfKhuddamInTalimulQuranSession.getText().toString()));
-            taaleem.setNumberOfKhuddamThatParticipatedInAgeGroupBookReview(Integer.parseInt(numberOfKhuddamInAgeGroupBookReview.getText().toString()));
-            taaleem.setNumberOfKhuddamThatParticipatedInICTTraining(Integer.parseInt(numberOfKhuddamInICTTraining.getText().toString()));
-            taaleem.setNumberOfKhuddamThatParticipatedInProficiencyExamsPreparation(Integer.parseInt(numberOfKhuddamInProficiencyExams.getText().toString()));
-            taaleem.setNumberOfBooksReviewedInMonth(Integer.parseInt(totalNumberOfBooksReviewedInMonth.getText().toString()));
-            taaleem.setNazimTaaleemPhoneNumber(nazimTaleemPhoneNumber.getText().toString());
-            mListener.getSharedMKanReport().setTaaleemDaTa(taaleem);
-            return null;
-        } else {
-            return new VerificationError("Please fill fields");
-        }
+//        if (mForm.isValid()) {
+//            Taaleem taaleem = new Taaleem();
+//            taaleem.setTotalNumberOfTaleemClassesConductedInMonth(Integer.parseInt(numberOfTaleemClassesConductedForMonth.getText().toString()));
+//            taaleem.setTotalNoOfHoursSpentInTaaleemClasses(Integer.parseInt(totalNumberOfHoursSpent.getText().toString()));
+//            taaleem.setNumberOfKhuddamThatParticipatedInTalimulQuranSession(Integer.parseInt(numberOfKhuddamInTalimulQuranSession.getText().toString()));
+//            taaleem.setNumberOfKhuddamThatParticipatedInAgeGroupBookReview(Integer.parseInt(numberOfKhuddamInAgeGroupBookReview.getText().toString()));
+//            taaleem.setNumberOfKhuddamThatParticipatedInICTTraining(Integer.parseInt(numberOfKhuddamInICTTraining.getText().toString()));
+//            taaleem.setNumberOfKhuddamThatParticipatedInProficiencyExamsPreparation(Integer.parseInt(numberOfKhuddamInProficiencyExams.getText().toString()));
+//            taaleem.setNumberOfBooksReviewedInMonth(Integer.parseInt(totalNumberOfBooksReviewedInMonth.getText().toString()));
+//            taaleem.setNazimTaaleemPhoneNumber(nazimTaleemPhoneNumber.getText().toString());
+//            mListener.getSharedMKanReport().setTaaleemDaTa(taaleem);
+//            return null;
+//        } else {
+//            return new VerificationError("Please fill fields");
+//        }
+
+        return null;
     }
 
     @Override

@@ -73,26 +73,27 @@ public class TablighPart1Fragment extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if (mForm.isValid()) {
-            Tabligh tabligh = new Tabligh();
-
-            tabligh.setNumberOfMediaCassettesDistributedInMonth(Integer.parseInt(numberOfMediaCasseteDistributed.getText().toString()));
-            tabligh.setNumberOfQuestionsAndAnswerSessionsHeldInMonth(Integer.parseInt(numberOfQuestionAndAnsweSessionsConducted.getText().toString()));
-            tabligh.setNumberOfPublicLecturesConductedInMonth(Integer.parseInt(numberOfPublicLectureHeld.getText().toString()));
-            tabligh.setNumberOfHouseToHousePreachingEventsHeldInMonth(Integer.parseInt(numberOfHouseToHousePreachingEventsHeld.getText().toString()));
-            tabligh.setNumberOfLiteratureBooksDistributedInMonth(Integer.parseInt(numberOfLiteratureBooksDistributed.getText().toString()));
-            tabligh.setNumberOfTablighMeetingsHeldInMonth(Integer.parseInt(numberOfTablighMeetingsHeld.getText().toString()));
-            tabligh.setNumberOfLettersOnTablighSentInTheMonth(Integer.parseInt(numberOfLettersOnTablighInTheMonth.getText().toString()));
-            tabligh.setNumberOfBooksStallsMaintained(Integer.parseInt(numberOfBookstallsMaintained.getText().toString()));
-            tabligh.setNumberOfTablighSMSandEMailSentInMonth(Integer.parseInt(numberOfTablighSmsAndEmailsSent.getText().toString()));
-            tabligh.setNumberOfBiatsSignedInMonth(Integer.parseInt(numberOfBiatsSignedInMonth.getText().toString()));
-
-            mListener.getSharedMKanReport().setTablighData(tabligh);
-            return null;
-
-        } else {
-            return new VerificationError("Please input all fields");
-        }
+//        if (mForm.isValid()) {
+//            Tabligh tabligh = new Tabligh();
+//
+//            tabligh.setNumberOfMediaCassettesDistributedInMonth(Integer.parseInt(numberOfMediaCasseteDistributed.getText().toString()));
+//            tabligh.setNumberOfQuestionsAndAnswerSessionsHeldInMonth(Integer.parseInt(numberOfQuestionAndAnsweSessionsConducted.getText().toString()));
+//            tabligh.setNumberOfPublicLecturesConductedInMonth(Integer.parseInt(numberOfPublicLectureHeld.getText().toString()));
+//            tabligh.setNumberOfHouseToHousePreachingEventsHeldInMonth(Integer.parseInt(numberOfHouseToHousePreachingEventsHeld.getText().toString()));
+//            tabligh.setNumberOfLiteratureBooksDistributedInMonth(Integer.parseInt(numberOfLiteratureBooksDistributed.getText().toString()));
+//            tabligh.setNumberOfTablighMeetingsHeldInMonth(Integer.parseInt(numberOfTablighMeetingsHeld.getText().toString()));
+//            tabligh.setNumberOfLettersOnTablighSentInTheMonth(Integer.parseInt(numberOfLettersOnTablighInTheMonth.getText().toString()));
+//            tabligh.setNumberOfBooksStallsMaintained(Integer.parseInt(numberOfBookstallsMaintained.getText().toString()));
+//            tabligh.setNumberOfTablighSMSandEMailSentInMonth(Integer.parseInt(numberOfTablighSmsAndEmailsSent.getText().toString()));
+//            tabligh.setNumberOfBiatsSignedInMonth(Integer.parseInt(numberOfBiatsSignedInMonth.getText().toString()));
+//
+//            mListener.getSharedMKanReport().setTablighData(tabligh);
+//            return null;
+//
+//        } else {
+//            return new VerificationError("Please input all fields");
+//        }
+        return null;
     }
 
     @Override

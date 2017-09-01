@@ -74,19 +74,20 @@ public class TarbiyyaFragment extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if(mForm.isValid()){
-            Tarbiyya tarbiyya = new Tarbiyya();
-            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
-            tarbiyya.setNumberOfKhuddamThatObserveCongregationPrayer(editTextContentToInt(numberOfKhuddamWhoObserveCongregationPrayers));
-            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
-            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
-
-            //TODO COLLECT ALL FIELDS
-            mListener.getSharedMKanReport().setTarbiyyaData(tarbiyya);
-            return null;
-        } else {
-            return new  VerificationError("Please fill all fields");
-        }
+//        if(mForm.isValid()){
+//            Tarbiyya tarbiyya = new Tarbiyya();
+//            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
+//            tarbiyya.setNumberOfKhuddamThatObserveCongregationPrayer(editTextContentToInt(numberOfKhuddamWhoObserveCongregationPrayers));
+//            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
+//            tarbiyya.setNumberOfTarbiyyaProgrammesConductedInMonth(editTextContentToInt(numberOfTarbiyyaProgrammes));
+//
+//            //TODO COLLECT ALL FIELDS
+//            mListener.getSharedMKanReport().setTarbiyyaData(tarbiyya);
+//            return null;
+//        } else {
+//            return new  VerificationError("Please fill all fields");
+//        }
+        return null;
     }
 
     @Override

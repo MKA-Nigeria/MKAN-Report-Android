@@ -66,22 +66,23 @@ public class EteemadFragment extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if (mForm.isValid()) {
-            Etimad etimad = new Etimad();
-            etimad.setNumberOfExecutiveMeetings(editTextContentToInt(numberOfExecutiveMeetings));
-            etimad.setNumberOfAttendeesAtExecutiveMeeting(editTextContentToInt(numberOfAttendees));
-            etimad.setNumberOfMulkMembersinQaidat(editTextContentToInt(numberOfMulkMembers));
-            etimad.setNumberPresentAtExecutiveMeetings(editTextContentToInt(numberOfMulkMembersPresentAtMeeting));
-            etimad.setNumberAbsentAtExecutiveMeeting(editTextContentToInt(numberOfMulkMembersPresentAtMeeting));
-            etimad.setMutammadPhoneNumber(motammadsPhoneNumber.getText().toString());
-            etimad.setExecutiveMeetingConducted(false);
-            etimad.setHasQaidatSecretary(false);
-            etimad.setHasSubmittedLastMonthsReport(false);
-            mListener.getSharedMKanReport().setEtimadData(etimad);
-            return null;
-        } else {
-            return new  VerificationError("Please fill all fields");
-        }
+//        if (mForm.isValid()) {
+//            Etimad etimad = new Etimad();
+//            etimad.setNumberOfExecutiveMeetings(editTextContentToInt(numberOfExecutiveMeetings));
+//            etimad.setNumberOfAttendeesAtExecutiveMeeting(editTextContentToInt(numberOfAttendees));
+//            etimad.setNumberOfMulkMembersinQaidat(editTextContentToInt(numberOfMulkMembers));
+//            etimad.setNumberPresentAtExecutiveMeetings(editTextContentToInt(numberOfMulkMembersPresentAtMeeting));
+//            etimad.setNumberAbsentAtExecutiveMeeting(editTextContentToInt(numberOfMulkMembersPresentAtMeeting));
+//            etimad.setMutammadPhoneNumber(motammadsPhoneNumber.getText().toString());
+//            etimad.setExecutiveMeetingConducted(false);
+//            etimad.setHasQaidatSecretary(false);
+//            etimad.setHasSubmittedLastMonthsReport(false);
+//            mListener.getSharedMKanReport().setEtimadData(etimad);
+//            return null;
+//        } else {
+//            return new  VerificationError("Please fill all fields");
+//        }
+        return null;
     }
 
     @Override
@@ -89,10 +90,6 @@ public class EteemadFragment extends BaseReportFragment implements Step {
 
     }
 
-    @Override
-    public void onError(@NonNull VerificationError error) {
-
-    }
 
     @Override
     public void onDestroyView() {
