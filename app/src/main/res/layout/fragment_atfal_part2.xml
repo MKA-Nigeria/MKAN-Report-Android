@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,57 +12,25 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="5"
+            app:questiontitle="If Atfal organisation is not established , state reasons thereof  and also mention what efforts have been done in this regard">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/motammads_phone_number"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="4dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:isrequired="true" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="If Atfal organisation is not established , state reasons thereof  and also mention what efforts have been done in this regard"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:height="100dp"
-                    android:gravity="top"
-                    android:maxLines="3"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-            </LinearLayout>
-
-
-        </LinearLayout>
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -69,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_weight="2"
             android:orientation="horizontal"
             tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
 
@@ -86,11 +56,10 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
+                <com.aliumujib.majlis.mkanreport.utils.views.attachmentpickerview.AttachmentPickerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Attachments"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                    android:layout_height="match_parent"
+                    app:request_code="200" />
 
             </LinearLayout>
 

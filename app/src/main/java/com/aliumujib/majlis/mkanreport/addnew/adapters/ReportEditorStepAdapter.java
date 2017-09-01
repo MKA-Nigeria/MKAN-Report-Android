@@ -97,9 +97,9 @@ public class ReportEditorStepAdapter extends EditReportStepAdapter {
     @Override
     public StepViewModel getViewModel(@IntRange(from = 0) int position) {
         String[] titles = {"Eteemad", "Tajneed", "Taaleem", "Tarbiyya", "Tabligh Section 1", "Tabligh Section 2",
-                "Tarbiyat Nou Mubayeen", "Umoor e Tulaba", "Waqar e Amal","Atfal Section 1", "Atfal Section 2",
-                "Maal","Tahrik Jadeed", "Muhasba", "Sihat - e - Jismana","Sinat - o - Tijarat Section 1","Sinat - o - Tijarat Section 2", "Ishaat",
-                "Khidmat - e - Khalq Section 1","Khidmat - e - Khalq Section 2","Umoomi Section 1", "Umoomi Section 2"};
+                "Tarbiyat Nou Mubayeen", "Umoor e Tulaba", "Waqar e Amal", "Atfal Section 1", "Atfal Section 2",
+                "Maal", "Tahrik Jadeed", "Muhasba", "Sihat - e - Jismana", "Sinat - o - Tijarat Section 1", "Sinat - o - Tijarat Section 2", "Ishaat",
+                "Khidmat - e - Khalq Section 1", "Khidmat - e - Khalq Section 2", "Umoomi Section 1", "Umoomi Section 2"};
         context.setActionBarTitle(titles[position]);
         return new StepViewModel.Builder(context)
                 .setTitle(titles[position])

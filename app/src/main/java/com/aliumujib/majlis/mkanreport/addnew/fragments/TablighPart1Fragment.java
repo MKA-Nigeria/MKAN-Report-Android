@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.alium.mkan_report_data.models.form_models.Tabligh;
 import com.aliumujib.majlis.mkanreport.R;
+import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
@@ -20,25 +21,25 @@ public class TablighPart1Fragment extends BaseReportFragment implements Step {
 
 
     @Bind(R.id.number_of_media_cassete_distributed)
-    EditText numberOfMediaCasseteDistributed;
+    VerifiableEditText numberOfMediaCasseteDistributed;
     @Bind(R.id.number_of_question_and_answe_sessions_conducted)
-    EditText numberOfQuestionAndAnsweSessionsConducted;
+    VerifiableEditText numberOfQuestionAndAnsweSessionsConducted;
     @Bind(R.id.number_of_public_lecture_held)
-    EditText numberOfPublicLectureHeld;
+    VerifiableEditText numberOfPublicLectureHeld;
     @Bind(R.id.number_of_house_to_house_preaching_events_held)
-    EditText numberOfHouseToHousePreachingEventsHeld;
+    VerifiableEditText numberOfHouseToHousePreachingEventsHeld;
     @Bind(R.id.number_of_literature_books_distributed)
-    EditText numberOfLiteratureBooksDistributed;
+    VerifiableEditText numberOfLiteratureBooksDistributed;
     @Bind(R.id.number_of_tabligh_meetings_held)
-    EditText numberOfTablighMeetingsHeld;
+    VerifiableEditText numberOfTablighMeetingsHeld;
     @Bind(R.id.number_of_letters_on_tabligh_in_the_month)
-    EditText numberOfLettersOnTablighInTheMonth;
+    VerifiableEditText numberOfLettersOnTablighInTheMonth;
     @Bind(R.id.number_of_bookstalls_maintained)
-    EditText numberOfBookstallsMaintained;
+    VerifiableEditText numberOfBookstallsMaintained;
     @Bind(R.id.number_of_tabligh_sms_and_emails_sent)
-    EditText numberOfTablighSmsAndEmailsSent;
+    VerifiableEditText numberOfTablighSmsAndEmailsSent;
     @Bind(R.id.number_of_biats_signed_in_month)
-    EditText numberOfBiatsSignedInMonth;
+    VerifiableEditText numberOfBiatsSignedInMonth;
 
     public TablighPart1Fragment() {
         // Required empty public constructor

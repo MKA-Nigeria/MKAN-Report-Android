@@ -1,480 +1,194 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     android:orientation="vertical"
     tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.TablighPart2Fragment">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:orientation="vertical"
-        tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.TablighPart2Fragment">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Annual Budget\n"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="total collection/receipt\nfor the month"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Summary of maal report:"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="MKA Chanda"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Operation 220"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Tahrik-e-Jadid"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Review of Religion"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Ijtema"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Others"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
-            <TextView
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/total_number_of_books_reviewed_in_month"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                android:layout_weight="1"
+                app:titleText="Annual Budget\n" />
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/nazim_taleem_phone_number"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Were awareness\nprograms on Maal\nobserved?"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <include layout="@layout/true_false_picker_layout" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Please attache your report for Maal\n"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <include layout="@layout/true_false_picker_layout" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Nazim Maal’s Phone №"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
+                app:titleText="total collection/receipt\nfor the month" />
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:questionnumber="2"
+        app:questiontitle="Summary of maal report:">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/number_of_khuddam_in_talimul_quran_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:titleText="MKA Chanda" />
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:id="@+id/number_of_khuddam_in_age_group_book_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:titleText="Operation 220" />
+
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:titleText="Tahrik-e-Jadid" />
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:titleText="Review of Religion" />
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                app:titleText="Ijtema" />
+
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                app:titleText="Others" />
+
+        </LinearLayout>
+
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="3"
+            app:questiontitle="Were awareness\nprograms on Maal\nobserved?">
+
+            <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="4"
+            app:questiontitle="Please attache your report for Maal\n">
+
+            <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+
+    </LinearLayout>
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:questionnumber="4"
+        app:questiontitle="Nazim Maal’s Phone №:">
+
+        <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1" />
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
 </LinearLayout>

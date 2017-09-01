@@ -30,6 +30,12 @@
         <attr name="hinttext" format="string" localization="suggested" />
     </declare-styleable>
 
+    <declare-styleable name="AttachmentPickerView">
+        <attr name="picker_view_title" format="string" localization="suggested" />
+        <attr name="picker_button_text" format="string" localization="suggested" />
+        <attr name="request_code" format="integer" localization="suggested" />
+    </declare-styleable>
+
     <declare-styleable name="QuestionLayout">
         <attr name="questionnumber" format="integer" localization="suggested" />
         <attr name="questiontitle" format="string" localization="suggested"/>

@@ -1,4 +1,4 @@
-package com.aliumujib.majlis.mkanreport.addnew.adapters;
+package com.aliumujib.majlis.mkanreport.utils.views.attachmentpickerview;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
@@ -67,7 +67,7 @@ public class AttachmentsGridRecyclerAdapter extends RecyclerView.Adapter<Attachm
 
 
         public void bindAttachment(Attachment attachment) {
-            fileName.setText("File No: "+ getAdapterPosition());
+            fileName.setText(attachment.getmFileName());
             fileIcon.setImageResource(getResIDFromFileType(attachment.getmAttachmentType()));
         }
 

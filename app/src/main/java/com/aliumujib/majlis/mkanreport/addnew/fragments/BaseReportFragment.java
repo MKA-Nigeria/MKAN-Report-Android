@@ -15,14 +15,13 @@ import com.aditya.filebrowser.Constants;
 import com.aditya.filebrowser.FileChooser;
 import com.alium.mkan_report_data.models.Attachment;
 import com.aliumujib.majlis.mkanreport.R;
-import com.aliumujib.majlis.mkanreport.addnew.adapters.AttachmentsGridRecyclerAdapter;
+import com.aliumujib.majlis.mkanreport.utils.views.attachmentpickerview.AttachmentsGridRecyclerAdapter;
 import com.aliumujib.majlis.mkanreport.addnew.interfaces.EditReportActivityInteractor;
 import com.aliumujib.majlis.mkanreport.utils.inputvalidator.Form;
 import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import xyz.cybersapien.recyclerele.RecyclerELEAdapter;

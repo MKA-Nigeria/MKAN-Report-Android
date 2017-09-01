@@ -46,7 +46,7 @@
 
 
                 <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
-                    android:id="@+id/duration_of_tabligh_programmes_held"
+                    android:id="@+id/number_of_nau_mubayeen_khuddam_participating_tarbiyya_camp_in_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"

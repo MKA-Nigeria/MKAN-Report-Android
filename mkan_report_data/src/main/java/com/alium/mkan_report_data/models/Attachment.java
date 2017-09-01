@@ -2,13 +2,13 @@ package com.alium.mkan_report_data.models;
 
 import android.net.Uri;
 
+import com.alium.mkan_report_data.constants.Constants;
+
 import java.net.URI;
 
 /**
  * Created by abdulmujibaliu on 8/21/17.
  */
-
-
 
 
 public class Attachment {
@@ -29,10 +29,22 @@ public class Attachment {
     }
 
     public Attachment() {
+
     }
 
     private AttachmentType mAttachmentType;
     private Uri mFileURI;
+    private String mFileName = "NO NAME";
+
+    public String getmFileName() {
+        if (!mFileURI.getPath().matches("")) {
+            String[] strings = mFileURI.getPath().split("/");
+            if (strings.length > 0) {
+                mFileName = strings[strings.length - 1];
+            }
+        }
+        return mFileName;
+    }
 
     public Uri getmFileURI() {
         return mFileURI;
