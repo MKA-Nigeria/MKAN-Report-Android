@@ -9,6 +9,7 @@ import com.aliumujib.majlis.mkanreport.addnew.activity.BaseReportEditorActivity;
 
 import com.aliumujib.majlis.mkanreport.addnew.fragments.AtfalPart1Fragment;
 import com.aliumujib.majlis.mkanreport.addnew.fragments.AtfalPart2Fragment;
+import com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment;
 import com.aliumujib.majlis.mkanreport.addnew.fragments.IshaatPart1Fragment;
 import com.aliumujib.majlis.mkanreport.addnew.fragments.IshaatPart2Fragment;
 import com.aliumujib.majlis.mkanreport.addnew.fragments.KhidmatEKhalqPart1Fragment;
@@ -46,8 +47,7 @@ public class ReportEditorStepAdapter extends EditReportStepAdapter {
     public Step createStep(int position) {
         switch (position) {
             case 0:
-                return IshaatPart2Fragment.newInstance();
-            //return EteemadFragment.newInstance();
+                return EteemadFragment.newInstance();
             case 1:
                 return TajneedFragment.newInstance();
             case 2:
@@ -114,6 +114,6 @@ public class ReportEditorStepAdapter extends EditReportStepAdapter {
 
     @Override
     public int getCount() {
-        return 22;
+        return 24;
     }
 }

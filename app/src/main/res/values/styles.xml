@@ -12,6 +12,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="ms_stepperStyle">@style/CustomStepperLayoutThemeSample</item>
     </style>
 
     <style name="DialogAnimations" />
@@ -22,6 +23,32 @@
         <item name="@android:windowExitAnimation">@anim/fadeout</item>
     </style>
 
+    <style name="CustomStepperLayoutThemeSample">
+        <item name="ms_stepperType">tabs</item>
+        <item name="ms_stepperLayoutTheme">@style/DarkCustomStepperLayoutTheme</item>
+    </style>
+
+    <style name="DarkCustomStepperLayoutTheme" parent="MSDefaultStepperLayoutTheme">
+        <item name="ms_bottomNavigationStyle">@style/DarkBottomNavigationStyle</item>
+        <item name="ms_tabsContainerStyle">@style/DarkStepTabsContainerStyle</item>
+        <item name="ms_stepTabTitleStyle">@style/DarkStepTabTitleStyle</item>
+    </style>
+
+    <style name="DarkBottomNavigationStyle" parent="MSBottomNavigation">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="DarkStepTabsContainerStyle" parent="MSStepTabsContainer">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="DarkStepTabTitleStyle" parent="MSStepTabTitle">
+        <item name="android:textColor">@color/ms_white</item>
+    </style>
+
+    <style name="MSStepTabDividerTheme">
+        <item name="android:background">@drawable/ms_vertical_tab_divider</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
