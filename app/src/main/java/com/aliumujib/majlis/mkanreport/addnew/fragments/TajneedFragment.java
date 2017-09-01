@@ -62,18 +62,19 @@ public class TajneedFragment extends BaseReportFragment implements Step {
 
     @Override
     public VerificationError verifyStep() {
-        if (mForm.isValid()) {
-            Tajneed tajneed = new Tajneed();
-            tajneed.setTotalNumberNoOfKhuddam(Integer.parseInt(totalNumberOfKhuddam.getText().toString()));
-            tajneed.setTotalNumberOfKhuddamWithUniform(Integer.parseInt(totalNumberOfKhuddamWithUniform.getText().toString()));
-            tajneed.setTotalNumberOfAtfal(Integer.parseInt(totalNumberOfAtfal.getText().toString()));
-            tajneed.setTotalNumberOfKhuddamAtAge40ByDec(Integer.parseInt(numberOfKhuddamAtFourtyYearsOfAgeByDec.getText().toString()));
-            tajneed.setNazimTajnidPhoneNumber(nazimTajnidPhoneNumber.getText().toString());
-            mListener.getSharedMKanReport().setTajneedData(tajneed);
-            return null;
-        } else {
-            return new VerificationError("Please fill all fields");
-        }
+//        if (mForm.isValid()) {
+//            Tajneed tajneed = new Tajneed();
+//            tajneed.setTotalNumberNoOfKhuddam(Integer.parseInt(totalNumberOfKhuddam.getText().toString()));
+//            tajneed.setTotalNumberOfKhuddamWithUniform(Integer.parseInt(totalNumberOfKhuddamWithUniform.getText().toString()));
+//            tajneed.setTotalNumberOfAtfal(Integer.parseInt(totalNumberOfAtfal.getText().toString()));
+//            tajneed.setTotalNumberOfKhuddamAtAge40ByDec(Integer.parseInt(numberOfKhuddamAtFourtyYearsOfAgeByDec.getText().toString()));
+//            tajneed.setNazimTajnidPhoneNumber(nazimTajnidPhoneNumber.getText().toString());
+//            mListener.getSharedMKanReport().setTajneedData(tajneed);
+//            return null;
+//        } else {
+//            return new VerificationError("Please fill all fields");
+//        }
+        return null;
     }
 
     @Override
