@@ -2,251 +2,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:questionnumber="1"
+        app:questiontitle="No. of Khuddam subscribers of the following periodicals / journals in your Majlis :">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="No. of Khuddam subscribers of the following periodicals / journals in your Majlis :"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="The Truth"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rev. of Rel."
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Al-Irfan"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                        xmlns:tools="http://schemas.android.com/tools"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Jama’at websites"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@color/transparent"
-                            android:hint="0000"
-                            android:maxLines="1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="0dp"
-                            android:background="@color/divider"
-                            android:visibility="visible" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
-            <TextView
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:titleText="The Truth" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Attach copies of the publications in the month"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="3"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-            </LinearLayout>
-
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                app:titleText="Rev. of Rel." />
 
         </LinearLayout>
 
@@ -254,144 +42,86 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="No. of Khuddam who contributed towards issuing Jamaat periodicals for Tabligh "
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Nazim Isha’at’s Phone No \n\n"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
-            <TextView
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:titleText="Al-Irfan" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="News items about your Qaidaat "
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:gravity="top"
-                    android:maxLines="3"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-            </LinearLayout>
-
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                app:titleText="Jama’at websites" />
 
         </LinearLayout>
 
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="2"
+            app:questiontitle="No. of Khuddam who\ncontributed towards\nissuing Jamaat\nperiodicals\n\n">
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+        <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="3"
+            app:questiontitle="No. of Khuddam who\ncontributed during the\nmonths towards\nissuing Jamaat\nperiodicals for Tabligh\npurpose ">
+
+            <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
     </LinearLayout>
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:questionnumber="4"
+        android:layout_marginTop="8dp"
+        app:questiontitle="News items about your Qaidaat">
+
+        <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp" />
+
+        <com.aliumujib.majlis.mkanreport.utils.views.attachmentpickerview.AttachmentPickerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:request_code="700" />
+
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
 </LinearLayout>

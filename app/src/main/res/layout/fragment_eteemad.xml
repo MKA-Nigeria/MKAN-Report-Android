@@ -3,15 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="16dp"
     android:orientation="vertical"
     tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
 
         <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
             android:layout_width="match_parent"
@@ -181,5 +175,4 @@
 
 
 
-    </LinearLayout>
-</LinearLayout>
+[</LinearLayout>

@@ -1,27 +1,27 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.IshaatPart2Fragment">
 
     <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:questiontitle="Attach copies of the publications in the month"
         android:orientation="vertical"
-        app:questionnumber="3"
-        app:questiontitle="Attach the following:\n1. list of the newly employed Khuddam\n2. list to the Secretariat\n3. list with full particulars of skills in which Khuddam are experts\n\nNote:Please use appropriate names for each file">
+        app:questionnumber="5">
 
         <com.aliumujib.majlis.mkanreport.utils.views.attachmentpickerview.AttachmentPickerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginTop="8dp"
             android:layout_marginLeft="16dp"
-            app:request_code="500" />
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:request_code="800" />
 
     </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
-
-</LinearLayout>
+</FrameLayout>

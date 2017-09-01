@@ -1,191 +1,74 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:questionnumber="1"
+        app:questiontitle="Was Income &amp; Expenditure accounts audited this month?">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
+        <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp" />
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:questionnumber="2"
+        android:layout_marginTop="8dp"
+        app:questiontitle="Was a copy of the Quarterly Audit Report sent to National Office?">
+
+        <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp" />
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        app:questionnumber="3"
+        app:questiontitle="Was Day-Book &amp; Ledgers prescribed by National Office being maintained in your Majlis?">
+
+        <com.aliumujib.majlis.mkanreport.utils.views.YesNoLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp" />
+
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
+
+
+    <com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:questionnumber="5"
+        android:layout_marginRight="8dp"
+        app:questiontitle="Muhasib’s Phone №"
+        >
+
+        <com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText
+            android:id="@+id/motammads_phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            app:isrequired="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+    </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Was Income &amp; Expenditure accounts audited this month?"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <include layout="@layout/true_false_picker_layout" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Was a copy of the Quarterly Audit Report sent to National Office?"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                    <include layout="@layout/true_false_picker_layout" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Was Day-Book &amp; Ledgers prescribed by National Office being maintained in your Majlis?"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <include layout="@layout/true_false_picker_layout" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4."
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Muhasib’s Phone №"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/transparent"
-                    android:hint="0000"
-                    android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="0dp"
-                    android:background="@color/divider"
-                    android:visibility="visible" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 </LinearLayout>
