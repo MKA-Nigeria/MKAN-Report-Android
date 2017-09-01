@@ -10,11 +10,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:questionnumber="3"
+        app:questiontitle="Attachlist of individual tournaments"
         >
     <com.aliumujib.majlis.mkanreport.utils.views.attachmentpickerview.AttachmentPickerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:request_code="400"
-        app:picker_view_title="Attachlist of individual tournaments"/>
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:picker_view_title="Pick attachments"/>
 </com.aliumujib.majlis.mkanreport.utils.views.QuestionLayout>
 </FrameLayout>
