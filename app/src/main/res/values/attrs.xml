@@ -30,6 +30,10 @@
         <attr name="hinttext" format="string" localization="suggested" />
     </declare-styleable>
 
+    <declare-styleable name="YesNoLayout">
+        <attr name="yes_no_title" format="string" localization="suggested" />
+    </declare-styleable>
+
     <declare-styleable name="AttachmentPickerView">
         <attr name="picker_view_title" format="string" localization="suggested" />
         <attr name="picker_button_text" format="string" localization="suggested" />

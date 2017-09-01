@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-   >
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.aliumujib.majlis.mkanreport.addnew.fragments.EteemadFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/true_false_title"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:layout_height="wrap_content"
+           />
 
         <com.jaouan.compoundlayout.RadioLayoutGroup
             android:layout_width="wrap_content"
@@ -12,9 +26,9 @@
             <com.jaouan.compoundlayout.RadioLayout
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
                 android:background="@drawable/yes_no_radio_selector"> <!-- Checked or not -->
 
 
@@ -27,11 +41,11 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:drawablePadding="2dp"
-                        android:gravity="center"
-                        android:textSize="8sp"
-                        android:textColor="@color/white"
                         android:drawableTop="@drawable/ic_checkbox_marked_white_18dp"
-                        android:text="Yes" />
+                        android:gravity="center"
+                        android:text="Yes"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
                 </RelativeLayout>
 
 
@@ -40,9 +54,9 @@
             <com.jaouan.compoundlayout.RadioLayout
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
                 android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
                 android:background="@drawable/yes_no_radio_selector"> <!-- Checked or not -->
 
                 <RelativeLayout
@@ -52,21 +66,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:drawableTop="@drawable/ic_close_box_white_18dp"
-                        android:text="No"
-                        android:drawablePadding="2dp"
-                        android:textSize="8sp"
-                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true" />
+                        android:drawablePadding="2dp"
+                        android:drawableTop="@drawable/ic_close_box_white_18dp"
+                        android:gravity="center"
+                        android:text="No"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
                 </RelativeLayout>
 
 
             </com.jaouan.compoundlayout.RadioLayout>
 
 
-
         </com.jaouan.compoundlayout.RadioLayoutGroup>
-
+    </LinearLayout>
 </merge>

@@ -47,7 +47,8 @@ public class ReportEditorStepAdapter extends EditReportStepAdapter {
     public Step createStep(int position) {
         switch (position) {
             case 0:
-                return EteemadFragment.newInstance();
+                return UmmomiPart1Fragment.newInstance();
+            //return EteemadFragment.newInstance();
             case 1:
                 return TajneedFragment.newInstance();
             case 2:
