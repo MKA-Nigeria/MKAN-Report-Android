@@ -7,9 +7,9 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.alium.mkan_report_data.constants.Constants;
@@ -23,19 +23,26 @@ public class MainActivity extends AppCompatActivity
 
     private DrawerLayout mDrawer;
     private NavigationView mNavigationView;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, mDrawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawer.setDrawerListener(toggle);
+        toggle.syncState();
+
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
-
-
-
     }
 
 
@@ -68,12 +75,13 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_calendar) {
 
         } else if (id == R.id.nav_podcasts) {
+            setToolBarTitle("Podcasts");
             replaceCurrentFragmentWithBackState(PodcastsFragment.newInstance());
         } else if (id == R.id.nav_shop) {
 
         }
 
-        mDrawer.closeDrawer(GravityCompat.START);
+        closeDrawer();
         return true;
     }
 
@@ -91,5 +99,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void closeDrawer() {
         mDrawer.closeDrawer(GravityCompat.START);
+    }
+
+
+    public void setToolBarTitle(String toolBarTitle) {
+        mToolbar.setTitle(toolBarTitle);
     }
 }

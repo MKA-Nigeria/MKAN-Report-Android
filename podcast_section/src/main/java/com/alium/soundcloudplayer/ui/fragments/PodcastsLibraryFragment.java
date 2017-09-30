@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -66,9 +67,6 @@ public abstract class PodcastsLibraryFragment extends Fragment implements IPodca
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(getNavigationIcon());
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
 
         mPodcastPlayerPresenter = new PodcastPlayerPresenter(this);
         mPlayer = (JcPlayerView) view.findViewById(R.id.jcplayer);
@@ -188,9 +186,6 @@ public abstract class PodcastsLibraryFragment extends Fragment implements IPodca
             }
         });
     }
-
-    @DrawableRes
-    public abstract int getNavigationIcon();
 
     @Override
     public void onCompletedAudioStatus(JcStatus jcStatus) {

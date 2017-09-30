@@ -25,17 +25,12 @@ public class PodcastsFragment extends PodcastsLibraryFragment {
     }
 
 
-    @Override
-    public int getNavigationIcon() {
-        return R.drawable.ic_menu_white_18dp;
-    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mToolbar.setNavigationOnClickListener(v -> mMainActivityView.openDrawer());
-        mToolbar.setTitle("Podcasts");
+
 
     }
 

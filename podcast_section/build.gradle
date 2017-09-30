@@ -11,7 +11,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0.0"
-        buildConfigField "String", "SOUNDCLOUD_API_KEY", "\"YAYAYAY\""
+        buildConfigField "String", "SOUNDCLOUD_API_KEY", "\"vCrJOCBiaW5wdhpBD0bV6nUaNYCbYNZI\""
     }
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
