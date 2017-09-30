@@ -1,4 +1,4 @@
-package com.aliumujib.majlis.mkanreport.auth.Fragments;
+package com.aliumujib.majlis.mkanreport.auth.fragments;
 
 
 import android.os.Bundle;
@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 
 import com.alium.mkan_report_data.models.Profile;
 import com.aliumujib.majlis.mkanreport.R;
-import com.aliumujib.majlis.mkanreport.auth.view.LoginActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

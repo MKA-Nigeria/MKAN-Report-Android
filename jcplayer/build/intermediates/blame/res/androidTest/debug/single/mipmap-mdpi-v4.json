@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/abdulmujibaliu/Desktop/Android_Projects/MyApplication/jcplayer/build/intermediates/res/merged/androidTest/debug/mipmap-mdpi-v4/ic_launcher.png",
+        "source": "/Users/abdulmujibaliu/Desktop/Android_Projects/MyApplication/jcplayer/build/intermediates/bundles/debug/res/mipmap-mdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/abdulmujibaliu/Desktop/My-Music-Android-demo-app/jcplayer/build/intermediates/res/merged/androidTest/debug/mipmap-mdpi-v4/ic_launcher.png",
+        "source": "/Users/abdulmujibaliu/Desktop/My-Music-Android-demo-app/jcplayer/build/intermediates/bundles/debug/res/mipmap-mdpi-v4/ic_launcher.png"
+    }
+]

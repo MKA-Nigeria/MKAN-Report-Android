@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment android:name="com.alium.soundcloudplayer.ui.fragments.PodcastsLibraryFragment"
+    android:id="@+id/viewer"
+    android:layout_weight="2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

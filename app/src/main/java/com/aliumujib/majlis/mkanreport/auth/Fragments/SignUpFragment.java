@@ -1,4 +1,4 @@
-package com.aliumujib.majlis.mkanreport.auth.Fragments;
+package com.aliumujib.majlis.mkanreport.auth.fragments;
 
 
 import android.app.DatePickerDialog;
@@ -19,26 +19,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alium.mkan_report_data.models.Muqami;
 import com.alium.mkan_report_data.models.Profile;
 import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.auth.Tools.MyTimeUtils;
-import com.aliumujib.majlis.mkanreport.auth.view.LoginActivity;
-import com.aliumujib.majlis.mkanreport.main.MainActivity;
-import com.aliumujib.majlis.mkanreport.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import in.galaxyofandroid.spinerdialog.IdentifiableObject;
-import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
 
 
 /**

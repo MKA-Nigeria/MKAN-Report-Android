@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MKAN Podcasts</string>
+    <string name="tracks">Tracks</string>
+    <string name="plays_count">Plays</string>
+    <string name="downloads_count">Downloads</string>
+    <string name="loading">Loading… try again</string>
+    <string name="podcasts">PODCASTS</string>
+    <string name="playlists">PLAYLISTS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

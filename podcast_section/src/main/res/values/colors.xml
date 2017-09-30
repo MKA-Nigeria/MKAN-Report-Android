@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f50</color>
+    <color name="colorPrimaryDark">#f30</color>
+    <color name="colorAccent">#333</color>
+    <color name="light_gray">#f3f3f3</color>
+    <color name="divider_action_icon">#1f000000</color>
+    <color name="grey_600">#757575</color>
+</resources>

@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.aliumujib.majlis.mkanreport.auth.Fragments.LoginFragment;
-import com.aliumujib.majlis.mkanreport.auth.Fragments.ResetPasswordFragment;
-import com.aliumujib.majlis.mkanreport.auth.Fragments.SignUpFragment;
+import com.aliumujib.majlis.mkanreport.auth.fragments.LoginFragment;
+import com.aliumujib.majlis.mkanreport.auth.fragments.ResetPasswordFragment;
+import com.aliumujib.majlis.mkanreport.auth.fragments.SignUpFragment;
 
 
 /**

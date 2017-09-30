@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <dimen name="icon_height">80dp</dimen>
+    <dimen name="icon_with">65dp</dimen>
+    <dimen name="notification_big_image_size">128dp</dimen>
+    <dimen name="player_height">120dp</dimen>
+    <dimen name="text_size">10sp</dimen>
+    <dimen name="touch_default">45dp</dimen>
+    <string name="app_name" title="app_name">JCPlayer</string>
+    <string name="play_initial_time">00:00</string>
+    <string name="text_test">fadsfasdfadsf</string>
+    <string name="track_number">Track</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.Phonograph.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent"/>
+    <style name="Theme.Phonograph.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+</resources>

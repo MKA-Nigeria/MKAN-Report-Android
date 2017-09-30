@@ -1,4 +1,4 @@
-package com.aliumujib.majlis.mkanreport.auth.Fragments;
+package com.aliumujib.majlis.mkanreport.auth.fragments;
 
 
 import android.os.Bundle;

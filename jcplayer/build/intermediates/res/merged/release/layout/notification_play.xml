@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <FrameLayout
+            android:layout_width="@dimen/notification_large_icon_width"
+            android:layout_height="@dimen/notification_large_icon_height"
+            android:layout_weight="0">
+
+            <ImageView
+                android:id="@+id/icon_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/media_titles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_weight="1"
+            android:minHeight="@dimen/notification_large_icon_height"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_current_music_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:textAppearance="@style/Theme.Phonograph.Notification.Title"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/txt_duration_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:singleLine="true"
+                android:textAppearance="@style/Theme.Phonograph.Notification" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/media_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layoutDirection="ltr"
+            android:orientation="horizontal"
+            tools:ignore="UnusedAttribute">
+
+            <!-- media buttons will be added here -->
+            <ImageButton
+                android:id="@+id/btn_prev_notification"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/notification_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_previous_white"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/btn_play_notification"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/notification_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play_white"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/btn_next_notification"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/notification_selector"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_next_white"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/icon_player"
+            android:layout_width="@dimen/icon_with"
+            android:layout_height="@dimen/icon_with"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp">
+
+            <ImageButton
+                android:id="@+id/btn_play_notification"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_play_white"
+                android:layout_gravity="center"
+                android:layout_alignTop="@+id/btn_prev_notification"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:id="@+id/btn_prev_notification"
+                android:layout_width="@dimen/touch_default"
+                android:layout_height="@dimen/touch_default"
+                android:background="@drawable/ic_previous_white"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/txt_current_music_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:marqueeRepeatLimit ="marquee_forever"
+                android:maxLines="1"
+                android:focusable="true"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:ellipsize="marquee"
+                android:requiresFadingEdge="horizontal"
+                android:scrollHorizontally="true"
+                android:textColor="@android:color/white"
+                android:text="@string/text_test"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true">
+                <requestFocus/>
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/btn_next_notification"
+                android:layout_width="@dimen/touch_default"
+                android:layout_height="@dimen/touch_default"
+                android:background="@drawable/ic_next_white"
+                android:layout_alignTop="@+id/btn_play_notification"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/txt_duration_notification"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+                android:maxLines="1"
+                android:text="@string/text_test"
+                android:layout_below="@+id/btn_play_notification"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>-->

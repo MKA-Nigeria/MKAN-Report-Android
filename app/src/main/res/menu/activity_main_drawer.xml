@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_file_chart_grey600_24dp"
+            android:title="Monthly Report" />
+        <item
+            android:id="@+id/nav_bullettin"
+            android:icon="@drawable/ic_book_variant_grey600_24dp"
+            android:title="Bulletin" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_calendar_grey600_24dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_podcasts"
+            android:icon="@drawable/ic_microphone_grey600_24dp"
+            android:title="Podcasts" />
+
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_video_grey600_24dp"
+            android:title="Video" />
+
+        <item
+            android:id="@+id/nav_shop"
+            android:icon="@drawable/ic_shopping_grey600_24dp"
+            android:title="Shop" />
+
+        <item
+            android:id="@+id/nav_social"
+            android:icon="@drawable/ic_facebook_box_grey600_24dp"
+            android:title="Social" />
+    </group>
+
+</menu>

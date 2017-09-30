@@ -26,6 +26,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -581,6 +582,25 @@ public class Utils {
         return (context.getResources().getConfiguration().screenLayout
                 & Configuration.SCREENLAYOUT_SIZE_MASK)
                 >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+    }
+
+
+    public static void replaceFragmentWithorWithoutBackState(Fragment fragment, Context context, int mode, @IdRes int resId) {
+        String backStateName = fragment.getClass().getName();
+
+        FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
+        manager.executePendingTransactions();
+
+        FragmentTransaction ft = manager.beginTransaction();
+        ft.replace(resId, fragment, Constants.SEARCH_FRAGMENT_TAG);
+        if (mode == Constants.WITHBSTATE) {
+            Log.d(TAG, "Adding to backstack");
+            ft.addToBackStack(backStateName);
+        } else {
+            Log.d(TAG, "Not adding to backstack");
+            //ft.addToBackStack(null);
+        }
+        ft.commit();
     }
 
     public static int getScreenWidth(Context c) {
