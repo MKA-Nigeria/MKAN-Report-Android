@@ -83,6 +83,7 @@ public abstract class PodcastsLibraryFragment extends Fragment implements IPodca
         List<User> users = new ArrayList<>();
         users.add(new User(getString(R.string.podcasts), DataManager.MKAN_NG));
         users.add(new User(getString(R.string.playlists), DataManager.VOICE_OF_ISLAM));
+
         TrackListsPagerAdapter trackListsPagerAdapter = new TrackListsPagerAdapter(getChildFragmentManager(), users);
 
         mViewPager = (ViewPager) view.findViewById(R.id.container);

@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/mkan_report_data/mkan_report_data.iml" filepath="$PROJECT_DIR$/mkan_report_data/mkan_report_data.iml" />
       <module fileurl="file://$PROJECT_DIR$/podcast_section/podcast_section.iml" filepath="$PROJECT_DIR$/podcast_section/podcast_section.iml" />
       <module fileurl="file://$PROJECT_DIR$/spinnerdialog/spinnerdialog.iml" filepath="$PROJECT_DIR$/spinnerdialog/spinnerdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/videos_section/videos_section.iml" filepath="$PROJECT_DIR$/videos_section/videos_section.iml" />
     </modules>
   </component>
 </project>

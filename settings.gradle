@@ -1,1 +1,1 @@
-include ':app', ':loca_man_mod', ':mkan_report_data', ':spinnerdialog', ':filebrowser', ':jcplayer', ':podcast_section'
+include ':app', ':loca_man_mod', ':mkan_report_data', ':spinnerdialog', ':filebrowser', ':jcplayer', ':podcast_section', ':videos_section'

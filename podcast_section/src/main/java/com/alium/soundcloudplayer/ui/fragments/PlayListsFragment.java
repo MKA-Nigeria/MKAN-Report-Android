@@ -128,8 +128,10 @@ public class PlayListsFragment extends BaseLibraryChildFragment {
                 for (Playlist playlist : playlists) {
                     Section<Playlist, Track> section = new Section<>();
                     section.parent = playlist;
-                    section.children.addAll(playlist.getTrackList());
-                    mSectionLinearLayout.addSection(section);
+                    if(playlist.getTrackList()!=null){
+                        section.children.addAll(playlist.getTrackList());
+                        mSectionLinearLayout.addSection(section);
+                    }
                 }
             }
         }, new Consumer<Throwable>() {

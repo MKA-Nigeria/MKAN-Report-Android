@@ -7,15 +7,22 @@ package com.aliumujib.majlis.mkanreport.utils;
 import android.content.Context;
 import android.net.Uri;
 
-import com.squareup.okhttp.Cache;
-import com.squareup.okhttp.Interceptor;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Response;
+
+import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Downloader;
 import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Cache;
+import okhttp3.CacheControl;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Response;
+
 
 public class PicassoCache {
 
@@ -23,30 +30,37 @@ public class PicassoCache {
 
     private PicassoCache(Context context) {
 
-        Downloader downloader = new OkHttpDownloader(context, Integer.MAX_VALUE);
-        OkHttpClient okHttpClient = new OkHttpClient();
-        okHttpClient.networkInterceptors().add(new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Response originalResponse = chain.proceed(chain.request());
-                return originalResponse.newBuilder().header("Cache-Control", "max-age=" + (60 * 60 * 24 * 365)).build();
-            }
-        });
-
-        okHttpClient.setCache(new Cache(context.getCacheDir(), Integer.MAX_VALUE));
-        OkHttpDownloader okHttpDownloader = new OkHttpDownloader(okHttpClient);
+        Cache cache = new Cache(new File(context.getCacheDir(), "http-cache"), 10 * 1024 * 1024);
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .addNetworkInterceptor(provideCacheInterceptor())
+                .cache(cache)
+                .build();
 
         Picasso.Builder builder = new Picasso.Builder(context);
-        builder.listener(new Picasso.Listener() {
-            @Override
-            public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception) {
-                exception.printStackTrace();
-            }
-        });
+        builder.listener((picasso, uri, exception) -> exception.printStackTrace());
 
-        builder.downloader(okHttpDownloader);
+        Downloader downloader = new OkHttp3Downloader(okHttpClient);
+
+
+        builder.downloader(downloader);
         picassoInstance = builder.build();
         picassoInstance.setLoggingEnabled(true);
+    }
+
+    Interceptor provideCacheInterceptor () {
+        return new Interceptor() {
+            @Override
+            public Response intercept (Interceptor.Chain chain) throws IOException {
+                Response response = chain.proceed( chain.request() );
+                CacheControl cacheControl = new CacheControl.Builder()
+                        .maxAge( 2, TimeUnit.MINUTES )
+                        .build();
+
+                return response.newBuilder()
+                        .header("Cache-Control", cacheControl.toString() )
+                        .build();
+            }
+        };
     }
 
     public static Picasso getPicassoInstance(Context context) {

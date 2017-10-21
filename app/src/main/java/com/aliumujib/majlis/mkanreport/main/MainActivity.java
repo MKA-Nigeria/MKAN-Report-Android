@@ -16,6 +16,7 @@ import com.alium.mkan_report_data.constants.Constants;
 import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.main.mvp.IMainActivityView;
 import com.aliumujib.majlis.mkanreport.podcast.PodcastsFragment;
+import com.aliumujib.majlis.mkanreport.reportslist.ReportsFragment;
 import com.aliumujib.majlis.mkanreport.utils.Utils;
 
 public class MainActivity extends AppCompatActivity
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity
         mDrawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        setToolBarTitle("Reports");
+        replaceCurrentFragmentWithBackState(ReportsFragment.newInstance());
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
@@ -57,9 +60,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         if (mDrawer.isDrawerOpen(GravityCompat.START)) {
-           closeDrawer();
+            closeDrawer();
         } else {
-            super.onBackPressed();
+            try {
+                super.onBackPressed();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -69,15 +76,17 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_bullettin) {
+        if (id == R.id.nav_reports) {
+            setToolBarTitle("Reports");
+            replaceCurrentFragmentWithBackState(ReportsFragment.newInstance());
+        } else if (id == R.id.nav_bullettin) {
             // Handle the camera action
         } else if (id == R.id.nav_calendar) {
 
         } else if (id == R.id.nav_podcasts) {
             setToolBarTitle("Podcasts");
             replaceCurrentFragmentWithBackState(PodcastsFragment.newInstance());
-        } else if (id == R.id.nav_shop) {
+        } else if (id == R.id.nv) {
 
         }
 

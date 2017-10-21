@@ -10,8 +10,9 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
+        vectorDrawables.useSupportLibrary = true
         versionName "1.0.0"
-        buildConfigField "String", "SOUNDCLOUD_API_KEY", "\"PUT_YOUR_OWN\""
+        buildConfigField "String", "SOUNDCLOUD_API_KEY", "\"vCrJOCBiaW5wdhpBD0bV6nUaNYCbYNZI\""
     }
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
