@@ -14,7 +14,7 @@ import com.aliumujib.majlis.mkanreport.R;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -55,9 +55,9 @@ public class AttachmentsGridRecyclerAdapter extends RecyclerView.Adapter<Attachm
     }
 
     public class AttachmentViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.file_icon)
+        @BindView(R.id.file_icon)
         ImageView fileIcon;
-        @Bind(R.id.file_name)
+        @BindView(R.id.file_name)
         TextView fileName;
 
         AttachmentViewHolder(View view) {

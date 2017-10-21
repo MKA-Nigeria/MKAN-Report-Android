@@ -13,21 +13,21 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class TajneedFragment extends BaseReportFragment implements Step {
 
-    @Bind(R.id.total_number_of_khuddam)
+    @BindView(R.id.total_number_of_khuddam)
     VerifiableEditText totalNumberOfKhuddam;
-    @Bind(R.id.number_of_khuddam_at_fourty_years_of_age_by_dec)
+    @BindView(R.id.number_of_khuddam_at_fourty_years_of_age_by_dec)
     VerifiableEditText numberOfKhuddamAtFourtyYearsOfAgeByDec;
-    @Bind(R.id.total_number_of_khuddam_with_uniform)
+    @BindView(R.id.total_number_of_khuddam_with_uniform)
     VerifiableEditText totalNumberOfKhuddamWithUniform;
-    @Bind(R.id.total_number_of_atfal)
+    @BindView(R.id.total_number_of_atfal)
     VerifiableEditText totalNumberOfAtfal;
-    @Bind(R.id.nazim_tajnid_phone_number)
+    @BindView(R.id.nazim_tajnid_phone_number)
     VerifiableEditText nazimTajnidPhoneNumber;
 
     public TajneedFragment() {
@@ -91,6 +91,5 @@ public class TajneedFragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }

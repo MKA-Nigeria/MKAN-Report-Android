@@ -26,7 +26,7 @@ import com.aliumujib.majlis.mkanreport.auth.Tools.MyTimeUtils;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import in.galaxyofandroid.spinerdialog.IdentifiableObject;
@@ -37,67 +37,67 @@ import in.galaxyofandroid.spinerdialog.SpinnerDialog;
  * A simple {@link Fragment} subclass.
  */
 public class SignUpFragment extends BaseAuthFragment {
-    @Bind(R.id.profile_picture)
+    @BindView(R.id.profile_picture)
     ImageView profilePicture;
-    @Bind(R.id.back_button)
+    @BindView(R.id.back_button)
     LinearLayout backButton;
-    @Bind(R.id.text_layout)
+    @BindView(R.id.text_layout)
     LinearLayout textLayout;
-    @Bind(R.id.photo_button)
+    @BindView(R.id.photo_button)
     LinearLayout photoButton;
-    @Bind(R.id.user_icon)
+    @BindView(R.id.user_icon)
     ImageView userIcon;
-    @Bind(R.id.username_edittext)
+    @BindView(R.id.username_edittext)
     EditText usernameEdittext;
-    @Bind(R.id.name_layout)
+    @BindView(R.id.name_layout)
     RelativeLayout nameLayout;
-    @Bind(R.id.email_icon)
+    @BindView(R.id.email_icon)
     ImageView emailIcon;
-    @Bind(R.id.email_edittext)
+    @BindView(R.id.email_edittext)
     EditText emailEdittext;
-    @Bind(R.id.email_layout)
+    @BindView(R.id.email_layout)
     RelativeLayout emailLayout;
-    @Bind(R.id.password_icon)
+    @BindView(R.id.password_icon)
     ImageView passwordIcon;
-    @Bind(R.id.password_edittext)
+    @BindView(R.id.password_edittext)
     EditText passwordEdittext;
-    @Bind(R.id.password_layout)
+    @BindView(R.id.password_layout)
     RelativeLayout passwordLayout;
-    @Bind(R.id.ilaqa_layout_icon)
+    @BindView(R.id.ilaqa_layout_icon)
     ImageView ilaqaLayoutIcon;
-    @Bind(R.id.ilaqa_edittext)
+    @BindView(R.id.ilaqa_edittext)
     EditText ilaqaEdittext;
-    @Bind(R.id.ilaqa_layout)
+    @BindView(R.id.ilaqa_layout)
     RelativeLayout ilaqaLayout;
-    @Bind(R.id.dila_icon)
+    @BindView(R.id.dila_icon)
     ImageView dilaIcon;
-    @Bind(R.id.dila_edittext)
+    @BindView(R.id.dila_edittext)
     EditText dilaEdittext;
-    @Bind(R.id.dila_layout)
+    @BindView(R.id.dila_layout)
     RelativeLayout dilaLayout;
-    @Bind(R.id.muqami_icon)
+    @BindView(R.id.muqami_icon)
     ImageView muqamiIcon;
-    @Bind(R.id.muqami_edittext)
+    @BindView(R.id.muqami_edittext)
     EditText muqamiEdittext;
-    @Bind(R.id.muqami_layout)
+    @BindView(R.id.muqami_layout)
     RelativeLayout muqamiLayout;
-    @Bind(R.id.birthday_icon)
+    @BindView(R.id.birthday_icon)
     ImageView birthdayIcon;
-    @Bind(R.id.birthday_edittext)
+    @BindView(R.id.birthday_edittext)
     EditText birthdayEdittext;
-    @Bind(R.id.clickable_birthday_layout)
+    @BindView(R.id.clickable_birthday_layout)
     LinearLayout clickableBirthdayLayout;
-    @Bind(R.id.birthday_layout)
+    @BindView(R.id.birthday_layout)
     RelativeLayout birthdayLayout;
-    @Bind(R.id.form_container)
+    @BindView(R.id.form_container)
     LinearLayout formContainer;
-    @Bind(R.id.myTextView)
+    @BindView(R.id.myTextView)
     TextView myTextView;
-    @Bind(R.id.sign_up_button_overlay)
+    @BindView(R.id.sign_up_button_overlay)
     LinearLayout signUpButton;
-    @Bind(R.id.signin_layout)
+    @BindView(R.id.signin_layout)
     RelativeLayout signinLayout;
-    @Bind(R.id.content_sign_up)
+    @BindView(R.id.content_sign_up)
     RelativeLayout contentSignUp;
     private ImageView imageView;
 
@@ -192,7 +192,6 @@ public class SignUpFragment extends BaseAuthFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     @OnClick({R.id.ilaqa_edittext, R.id.dila_edittext, R.id.muqami_edittext})

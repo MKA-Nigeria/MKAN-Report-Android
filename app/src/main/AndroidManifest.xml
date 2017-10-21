@@ -49,7 +49,6 @@
 
         <activity
             android:name=".main.MainActivity"
-            android:label="@string/title_activity_main"
             android:parentActivityName=".auth.view.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

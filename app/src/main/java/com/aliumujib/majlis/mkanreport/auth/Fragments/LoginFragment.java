@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 import com.alium.mkan_report_data.models.Profile;
 import com.aliumujib.majlis.mkanreport.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -24,25 +24,25 @@ import butterknife.ButterKnife;
 public class LoginFragment extends BaseAuthFragment {
 
 
-    @Bind(R.id.email_icon)
+    @BindView(R.id.email_icon)
     ImageView emailIcon;
-    @Bind(R.id.email_edittext)
+    @BindView(R.id.email_edittext)
     EditText emailEdittext;
-    @Bind(R.id.email_layout)
+    @BindView(R.id.email_layout)
     RelativeLayout emailLayout;
-    @Bind(R.id.password_icon)
+    @BindView(R.id.password_icon)
     ImageView passwordIcon;
-    @Bind(R.id.password_edittext)
+    @BindView(R.id.password_edittext)
     EditText passwordEdittext;
-    @Bind(R.id.password_layout)
+    @BindView(R.id.password_layout)
     RelativeLayout passwordLayout;
-    @Bind(R.id.login_button)
+    @BindView(R.id.login_button)
     LinearLayout loginButton;
-    @Bind(R.id.button_layout)
+    @BindView(R.id.button_layout)
     RelativeLayout buttonLayout;
-    @Bind(R.id.forgot_layout)
+    @BindView(R.id.forgot_layout)
     RelativeLayout forgotLayout;
-    @Bind(R.id.content_login)
+    @BindView(R.id.content_login)
     RelativeLayout contentLogin;
 
     public LoginFragment() {
@@ -82,6 +82,5 @@ public class LoginFragment extends BaseAuthFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }

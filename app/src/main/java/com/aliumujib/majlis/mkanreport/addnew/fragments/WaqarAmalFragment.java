@@ -21,7 +21,7 @@ import com.stepstone.stepper.VerificationError;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import xyz.cybersapien.recyclerele.RecyclerELEAdapter;
@@ -31,9 +31,9 @@ import static com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayo
 public class WaqarAmalFragment extends BaseReportFragment implements Step {
 
 
-    @Bind(R.id.number_of_waqar_e_amal_organized_in_month)
+    @BindView(R.id.number_of_waqar_e_amal_organized_in_month)
     VerifiableEditText numberOfWaqarEAmalOrganizedInMonth;
-    @Bind(R.id.nazim_nau_waqar_e_amal_phone_number)
+    @BindView(R.id.nazim_nau_waqar_e_amal_phone_number)
     VerifiableEditText nazimNauWaqarEAmalPhoneNumber;
 
     List<Attachment> mAttachmentList = new ArrayList<>();
@@ -92,7 +92,6 @@ public class WaqarAmalFragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
 }

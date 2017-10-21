@@ -13,32 +13,32 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class TablighPart1Fragment extends BaseReportFragment implements Step {
 
 
-    @Bind(R.id.number_of_media_cassete_distributed)
+    @BindView(R.id.number_of_media_cassete_distributed)
     VerifiableEditText numberOfMediaCasseteDistributed;
-    @Bind(R.id.number_of_question_and_answe_sessions_conducted)
+    @BindView(R.id.number_of_question_and_answe_sessions_conducted)
     VerifiableEditText numberOfQuestionAndAnsweSessionsConducted;
-    @Bind(R.id.number_of_public_lecture_held)
+    @BindView(R.id.number_of_public_lecture_held)
     VerifiableEditText numberOfPublicLectureHeld;
-    @Bind(R.id.number_of_house_to_house_preaching_events_held)
+    @BindView(R.id.number_of_house_to_house_preaching_events_held)
     VerifiableEditText numberOfHouseToHousePreachingEventsHeld;
-    @Bind(R.id.number_of_literature_books_distributed)
+    @BindView(R.id.number_of_literature_books_distributed)
     VerifiableEditText numberOfLiteratureBooksDistributed;
-    @Bind(R.id.number_of_tabligh_meetings_held)
+    @BindView(R.id.number_of_tabligh_meetings_held)
     VerifiableEditText numberOfTablighMeetingsHeld;
-    @Bind(R.id.number_of_letters_on_tabligh_in_the_month)
+    @BindView(R.id.number_of_letters_on_tabligh_in_the_month)
     VerifiableEditText numberOfLettersOnTablighInTheMonth;
-    @Bind(R.id.number_of_bookstalls_maintained)
+    @BindView(R.id.number_of_bookstalls_maintained)
     VerifiableEditText numberOfBookstallsMaintained;
-    @Bind(R.id.number_of_tabligh_sms_and_emails_sent)
+    @BindView(R.id.number_of_tabligh_sms_and_emails_sent)
     VerifiableEditText numberOfTablighSmsAndEmailsSent;
-    @Bind(R.id.number_of_biats_signed_in_month)
+    @BindView(R.id.number_of_biats_signed_in_month)
     VerifiableEditText numberOfBiatsSignedInMonth;
 
     public TablighPart1Fragment() {
@@ -109,6 +109,6 @@ public class TablighPart1Fragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 }

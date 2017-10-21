@@ -12,7 +12,7 @@ import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.addnew.activity.EditReportActivity;
 import com.aliumujib.majlis.mkanreport.base.BaseFragment;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -21,9 +21,9 @@ import butterknife.OnClick;
  */
 public class ReportsFragment extends BaseFragment {
 
-    @Bind(R.id.attachments_rv)
+    @BindView(R.id.attachments_rv)
     RecyclerView attachmentsRv;
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton fab;
 
     public ReportsFragment() {
@@ -61,6 +61,5 @@ public class ReportsFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }

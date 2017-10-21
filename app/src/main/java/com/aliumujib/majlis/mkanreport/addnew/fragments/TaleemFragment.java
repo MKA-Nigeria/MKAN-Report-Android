@@ -13,29 +13,29 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class TaleemFragment extends BaseReportFragment implements Step {
 
-    @Bind(R.id.number_of_taleem_classes_conducted_for_month)
+    @BindView(R.id.number_of_taleem_classes_conducted_for_month)
     VerifiableEditText numberOfTaleemClassesConductedForMonth;
-    @Bind(R.id.total_number_of_hours_spent)
+    @BindView(R.id.total_number_of_hours_spent)
     VerifiableEditText totalNumberOfHoursSpent;
-    @Bind(R.id.number_of_khuddam_in_talimul_quran_session)
+    @BindView(R.id.number_of_khuddam_in_talimul_quran_session)
     VerifiableEditText numberOfKhuddamInTalimulQuranSession;
-    @Bind(R.id.number_of_khuddam_in_age_group_book_review)
+    @BindView(R.id.number_of_khuddam_in_age_group_book_review)
     VerifiableEditText numberOfKhuddamInAgeGroupBookReview;
-    @Bind(R.id.number_of_khuddam_in_ICT_training)
+    @BindView(R.id.number_of_khuddam_in_ICT_training)
     VerifiableEditText numberOfKhuddamInICTTraining;
-    @Bind(R.id.number_of_khuddam_in_proficiency_exams)
+    @BindView(R.id.number_of_khuddam_in_proficiency_exams)
     VerifiableEditText numberOfKhuddamInProficiencyExams;
-    @Bind(R.id.total_number_of_khuddam_participating_in_taleem_activities)
+    @BindView(R.id.total_number_of_khuddam_participating_in_taleem_activities)
     VerifiableEditText totalNumberOfKhuddamParticipatingInTaleemActivities;
-    @Bind(R.id.total_number_of_books_reviewed_in_month)
+    @BindView(R.id.total_number_of_books_reviewed_in_month)
     VerifiableEditText totalNumberOfBooksReviewedInMonth;
-    @Bind(R.id.nazim_taleem_phone_number)
+    @BindView(R.id.nazim_taleem_phone_number)
     VerifiableEditText nazimTaleemPhoneNumber;
 
     public TaleemFragment() {
@@ -103,6 +103,6 @@ public class TaleemFragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+
     }
 }

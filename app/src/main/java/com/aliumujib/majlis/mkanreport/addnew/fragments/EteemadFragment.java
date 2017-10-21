@@ -16,22 +16,22 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class EteemadFragment extends BaseReportFragment implements Step {
 
-    @Bind(R.id.number_of_executive_meetings)
+    @BindView(R.id.number_of_executive_meetings)
     VerifiableEditText numberOfExecutiveMeetings;
-    @Bind(R.id.number_of_attendees)
+    @BindView(R.id.number_of_attendees)
     VerifiableEditText numberOfAttendees;
-    @Bind(R.id.number_of_mulk_members)
+    @BindView(R.id.number_of_mulk_members)
     VerifiableEditText numberOfMulkMembers;
-    @Bind(R.id.number_of_mulk_members_present_at_meeting)
+    @BindView(R.id.number_of_mulk_members_present_at_meeting)
     VerifiableEditText numberOfMulkMembersPresentAtMeeting;
-    @Bind(R.id.number_of_mulk_members_absent_at_meeting)
+    @BindView(R.id.number_of_mulk_members_absent_at_meeting)
     VerifiableEditText numberOfMulkMembersAbsentAtMeeting;
-    @Bind(R.id.motammads_phone_number)
+    @BindView(R.id.motammads_phone_number)
     VerifiableEditText motammadsPhoneNumber;
 
     public EteemadFragment() {
@@ -94,6 +94,5 @@ public class EteemadFragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }

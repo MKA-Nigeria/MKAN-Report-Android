@@ -15,30 +15,30 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class TarbiyyaFragment extends BaseReportFragment implements Step {
 
-    @Bind(R.id.number_of_tarbiyya_programmes)
+    @BindView(R.id.number_of_tarbiyya_programmes)
     VerifiableEditText numberOfTarbiyyaProgrammes;
-    @Bind(R.id.nazim_tarbiyya_phone_number)
+    @BindView(R.id.nazim_tarbiyya_phone_number)
     VerifiableEditText nazimTarbiyyaPhoneNumber;
-    @Bind(R.id.number_of_khuddam_who_observe_congregation_prayers)
+    @BindView(R.id.number_of_khuddam_who_observe_congregation_prayers)
     VerifiableEditText numberOfKhuddamWhoObserveCongregationPrayers;
-    @Bind(R.id.number_of_khuddam_who_write_to_huzur)
+    @BindView(R.id.number_of_khuddam_who_write_to_huzur)
     VerifiableEditText numberOfKhuddamWhoWriteToHuzur;
-    @Bind(R.id.number_of_khuddam_who_listen_to_sermon)
+    @BindView(R.id.number_of_khuddam_who_listen_to_sermon)
     VerifiableEditText numberOfKhuddamWhoListenToSermon;
-    @Bind(R.id.number_of_khuddam_who_watch_mta_regularly)
+    @BindView(R.id.number_of_khuddam_who_watch_mta_regularly)
     VerifiableEditText numberOfKhuddamWhoWatchMtaRegularly;
-    @Bind(R.id.number_of_khuddam_regular_in_tahjudd)
+    @BindView(R.id.number_of_khuddam_regular_in_tahjudd)
     VerifiableEditText numberOfKhuddamRegularInTahjudd;
-    @Bind(R.id.number_of_khuddam_regulat_in_daily_salat)
+    @BindView(R.id.number_of_khuddam_regulat_in_daily_salat)
     VerifiableEditText numberOfKhuddamRegulatInDailySalat;
-    @Bind(R.id.number_of_khuddam_in_voluntary_fast)
+    @BindView(R.id.number_of_khuddam_in_voluntary_fast)
     VerifiableEditText numberOfKhuddamInVoluntaryFast;
-    @Bind(R.id.number_of_khuddam_who_read_conditions_of_biat)
+    @BindView(R.id.number_of_khuddam_who_read_conditions_of_biat)
     VerifiableEditText numberOfKhuddamWhoReadConditionsOfBiat;
 
     public TarbiyyaFragment() {
@@ -104,6 +104,5 @@ public class TarbiyyaFragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }

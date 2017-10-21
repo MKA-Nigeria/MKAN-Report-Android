@@ -76,7 +76,9 @@ class PlayListItemRowView : LinearLayout {
 
     fun setPlayListItemResult(playListItemResult: PlayListItemsResult) {
         this.setmDataSource(playListItemResult.items)
-        this.setSectionTitle("${playListItemResult.items[0].itemTitle} (${playListItemResult.items.size} videos)" )
+        if(!playListItemResult.items.isEmpty()){
+            this.setSectionTitle("${playListItemResult.items[0].itemTitle} (${playListItemResult.items.size} videos)" )
+        }
     }
 
     fun setmDataSource(youtubeVideos: List<BaseModel>) {

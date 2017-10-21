@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.playlist_item_row_view.view.*
 /**
  * Created by abdulmujibaliu on 10/18/17.
  */
-class PlaylistRVAdapter (context: Context, videoClickListener: VideoClickListener) : RecyclerView.Adapter<PlaylistRVAdapter.ViewHolder>() {
+class PlaylistRVAdapter(context: Context, videoClickListener: VideoClickListener) : RecyclerView.Adapter<PlaylistRVAdapter.ViewHolder>() {
 
     val context = context
     val videoClickListener = videoClickListener
@@ -27,7 +27,9 @@ class PlaylistRVAdapter (context: Context, videoClickListener: VideoClickListene
 
 
     fun addAll(data: List<PlayListItemsResult>) {
-        this.data.addAll(data)
+        data
+                .filterNot { it.items.isEmpty() }
+                .forEach { this.data.add(it) }
         notifyDataSetChanged()
     }
 

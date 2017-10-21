@@ -28,6 +28,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true //I hate this thing too but apache commons is in the file picker module
     }
+
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
@@ -37,6 +38,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -74,12 +77,13 @@ configurations.all {
 }
 
 dependencies {
+    implementation 'com.android.support:support-v4:26.1.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile project(path: ':loca_man_mod')
-
+    compile project(path: ':videos_section')
     compile project(path: ':mkan_report_data')
     compile project(path: ':filebrowser')
 
@@ -110,7 +114,10 @@ dependencies {
     compile "com.github.jaouan:compoundlayout:1.0.1"
     compile "solar.blaz:week-date-picker:1.2"
     compile "com.squareup.picasso:picasso:2.5.2"
-    compile "com.jakewharton:butterknife:7.0.1"
+
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknife" //woo new Gradle API!
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknife"
+
     compile "jp.wasabeef:picasso-transformations:2.1.0"
     compile "com.muddzdev:styleabletoast:1.0.8"
     compile "com.github.myinnos:AppFontChanger:1.0"
@@ -121,3 +128,6 @@ dependencies {
     testCompile "junit:junit:4.12"
     compile project(path: ':podcast_section')
 }
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

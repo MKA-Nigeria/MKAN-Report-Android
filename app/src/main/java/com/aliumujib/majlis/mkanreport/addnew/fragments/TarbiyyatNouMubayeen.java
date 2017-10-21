@@ -13,27 +13,27 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class TarbiyyatNouMubayeen extends BaseReportFragment implements Step {
 
 
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_participating_in_tarbiyya_class_in_month)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_participating_in_tarbiyya_class_in_month)
     VerifiableEditText numberOfNauMubayeenKhuddamParticipatingInTarbiyyaClassInMonth;
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_participating_tarbiyya_camp_in_month)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_participating_tarbiyya_camp_in_month)
     VerifiableEditText numberOfNauMubayeenKhuddamParticipatingTarbiyyaCampInMonth;
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_who_listened_to_live_huzur_sermon_in_month)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_who_listened_to_live_huzur_sermon_in_month)
     VerifiableEditText numberOfNauMubayeenKhuddamWhoListenedToLiveHuzurSermonInMonth;
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_who_wrote_to_huzur_in_month)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_who_wrote_to_huzur_in_month)
     VerifiableEditText numberOfNauMubayeenKhuddamWhoWroteToHuzurInMonth;
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_who_observe_five_daily_prayers)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_who_observe_five_daily_prayers)
     VerifiableEditText numberOfNauMubayeenKhuddamWhoObserveFiveDailyPrayers;
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_who_recite_holy_quran)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_who_recite_holy_quran)
     VerifiableEditText numberOfNauMubayeenKhuddamWhoReciteHolyQuran;
-    @Bind(R.id.number_of_nau_mubayeen_khuddam_daiee_illallah_in_month)
+    @BindView(R.id.number_of_nau_mubayeen_khuddam_daiee_illallah_in_month)
     VerifiableEditText numberOfNauMubayeenKhuddamDaieeIllallahInMonth;
-    @Bind(R.id.nazim_nau_mubaiyeen_phone_number)
+    @BindView(R.id.nazim_nau_mubaiyeen_phone_number)
     VerifiableEditText nazimNauMubaiyeenPhoneNumber;
 
     public TarbiyyatNouMubayeen() {
@@ -100,6 +100,5 @@ public class TarbiyyatNouMubayeen extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }

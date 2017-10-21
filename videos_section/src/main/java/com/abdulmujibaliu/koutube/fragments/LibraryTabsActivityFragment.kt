@@ -24,13 +24,14 @@ import kotlinx.android.synthetic.main.fragment_library_tabs.*
 /**
  * A placeholder fragment containing a simple view.
  */
-class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeLikeBehavior.OnBehaviorStateListener {
+open class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeLikeBehavior.OnBehaviorStateListener {
 
     var media: YouTubePlayerView? = null
     var description: View? = null
     val TAG = javaClass.simpleName
     var rootCordinator: CoordinatorLayout? = null
     private var player: YouTubePlayer? = null
+
 
     override fun getPresenter(): MainContract.Presenter {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -57,7 +58,7 @@ class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeLikeBe
 
         val playListRepo: RepositoryContracts.IPlaylistRepository = PlayListRepository.getInstance()!!
 
-        playListRepo.getPlayListsAndVideosForChannels(listOf("UCsooa4yRKGN_zEE8iknghZA"))
+        playListRepo.getPlayListsAndVideosForChannels(listOf("UCpEHs4jtfj1sTo1g-ubDyMg"))
     }
 
 
@@ -106,6 +107,13 @@ class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeLikeBe
             rootCordinator?.removeView(media)
             rootCordinator?.removeView(description)
             val behavior = YoutubeLikeBehavior.from(media)
+        }
+    }
+
+    companion object {
+        fun newInstance(): LibraryTabsActivityFragment {
+            val libraryTabs = LibraryTabsActivityFragment()
+            return libraryTabs
         }
     }
 }

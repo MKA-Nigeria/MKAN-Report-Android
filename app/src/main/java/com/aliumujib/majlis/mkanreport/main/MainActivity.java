@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.abdulmujibaliu.koutube.fragments.LibraryTabsActivityFragment;
 import com.alium.mkan_report_data.constants.Constants;
 import com.aliumujib.majlis.mkanreport.R;
 import com.aliumujib.majlis.mkanreport.main.mvp.IMainActivityView;
@@ -41,11 +42,13 @@ public class MainActivity extends AppCompatActivity
         mDrawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        setToolBarTitle("Reports");
-        replaceCurrentFragmentWithBackState(ReportsFragment.newInstance());
+
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
+
+        setToolBarTitle("Reports");
+        replaceCurrentFragmentWithBackState(ReportsFragment.newInstance());
     }
 
 
@@ -86,8 +89,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_podcasts) {
             setToolBarTitle("Podcasts");
             replaceCurrentFragmentWithBackState(PodcastsFragment.newInstance());
-        } else if (id == R.id.nv) {
-
+        } else if (id == R.id.nav_videos) {
+            setToolBarTitle("Videos");
+            replaceCurrentFragmentWithBackState(new LibraryTabsActivityFragment());
         }
 
         closeDrawer();

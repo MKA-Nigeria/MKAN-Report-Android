@@ -12,21 +12,21 @@ import com.aliumujib.majlis.mkanreport.utils.views.VerifiableEditText;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class TablighPart2Fragment extends BaseReportFragment implements Step {
 
 
-    @Bind(R.id.number_of_tabligh_programmes_held)
+    @BindView(R.id.number_of_tabligh_programmes_held)
     VerifiableEditText numberOfTablighProgrammesHeld;
-    @Bind(R.id.total_number_of_khuddam_participating_in_tabligh_activities)
+    @BindView(R.id.total_number_of_khuddam_participating_in_tabligh_activities)
     VerifiableEditText totalNumberOfKhuddamParticipatingInTablighActivities;
-    @Bind(R.id.duration_of_tabligh_programmes_held)
+    @BindView(R.id.duration_of_tabligh_programmes_held)
     VerifiableEditText durationOfTablighProgrammesHeld;
-    @Bind(R.id.total_number_of_tabligh_classes_held_in_month)
+    @BindView(R.id.total_number_of_tabligh_classes_held_in_month)
     VerifiableEditText totalNumberOfTablighClassesHeldInMonth;
-    @Bind(R.id.nazim_tabligh_phone_number)
+    @BindView(R.id.nazim_tabligh_phone_number)
     VerifiableEditText nazimTablighPhoneNumber;
 
     public TablighPart2Fragment() {
@@ -82,6 +82,5 @@ public class TablighPart2Fragment extends BaseReportFragment implements Step {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }
