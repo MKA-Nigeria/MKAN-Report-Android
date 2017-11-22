@@ -64,8 +64,8 @@ open class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeL
 
     override fun showVideoView(video: YoutubeVideo, data: List<YoutubeVideo>) {
 
-        media = layoutInflater.inflate(R.layout.youtubevideo_player, rootCordinator, false) as YouTubePlayerView
-        description = layoutInflater.inflate(R.layout.video_description, rootCordinator, false)
+        media = activity.layoutInflater.inflate(R.layout.youtubevideo_player, rootCordinator, false) as YouTubePlayerView
+        description = activity.layoutInflater.inflate(R.layout.video_description, rootCordinator, false)
 
         if (media?.parent != null) {
             rootCordinator?.removeView(media)
@@ -111,6 +111,7 @@ open class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeL
     }
 
     companion object {
+        @JvmStatic
         fun newInstance(): LibraryTabsActivityFragment {
             val libraryTabs = LibraryTabsActivityFragment()
             return libraryTabs

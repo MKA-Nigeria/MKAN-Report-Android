@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity
             replaceCurrentFragmentWithBackState(PodcastsFragment.newInstance());
         } else if (id == R.id.nav_videos) {
             setToolBarTitle("Videos");
-            replaceCurrentFragmentWithBackState(new LibraryTabsActivityFragment());
+            replaceCurrentFragmentWithBackState(LibraryTabsActivityFragment.newInstance());
         }
 
         closeDrawer();

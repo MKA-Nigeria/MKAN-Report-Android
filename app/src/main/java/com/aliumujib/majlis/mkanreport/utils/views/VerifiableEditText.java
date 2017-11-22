@@ -2,6 +2,7 @@ package com.aliumujib.majlis.mkanreport.utils.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -30,6 +31,10 @@ public class VerifiableEditText extends LinearLayout {
         return mContentEt.getText();
     }
 
+    public void setmContentEtText(String contentEt) {
+        this.mContentEt.setText(contentEt);
+    }
+
     public VerifiableEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -37,6 +42,7 @@ public class VerifiableEditText extends LinearLayout {
                 R.styleable.VerifiableEditText, 0, 0);
         String titleText = a.getString(R.styleable.VerifiableEditText_titleText);
         boolean isRequired = a.getBoolean(R.styleable.VerifiableEditText_isrequired, true);
+        boolean isEditable = a.getBoolean(R.styleable.VerifiableEditText_editable, true);
         String hint = a.getString(R.styleable.VerifiableEditText_hinttext);
 
         a.recycle();
@@ -51,21 +57,29 @@ public class VerifiableEditText extends LinearLayout {
 
         initView();
 
-        if(titleText == null || titleText.matches("")){
+        if (titleText == null || titleText.matches("")) {
             mTitleText.setVisibility(GONE);
-        }else {
+        } else {
             mTitleText.setText(titleText);
         }
 
-        if(hint == null || hint.matches("")){
+        mContentEt.setFocusableInTouchMode(isEditable);
+
+
+        if (hint == null || hint.matches("")) {
             mContentEt.setHint("0000");
-        }else {
+        } else {
             mContentEt.setHint(hint);
         }
 
         mInputValidator.setRequired(isRequired);
     }
 
+    @Override
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
+        mContentEt.setOnClickListener(l);
+    }
 
     public VerifiableEditText(Context context) {
         super(context);

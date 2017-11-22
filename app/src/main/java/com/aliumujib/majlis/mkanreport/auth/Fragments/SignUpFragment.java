@@ -158,7 +158,7 @@ public class SignUpFragment extends BaseAuthFragment {
                         temp.set(Calendar.YEAR, year);
                         temp.set(Calendar.MONTH, monthOfYear);
                         temp.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                        ((TextView) getView().findViewById(R.id.birthday_edittext)).setText(MyTimeUtils.formatDate(temp.getTimeInMillis(), MyTimeUtils.BIRTHDAY_FORMAT));
+                        ((TextView) getView().findViewById(R.id.birthday_edittext)).setText(MyTimeUtils.formatDate(temp.getTimeInMillis(), MyTimeUtils.REPORT_DATE_FORMAT));
                     }
                 }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         dpd.show();

@@ -15,7 +15,7 @@ public class MyTimeUtils {
     public static final String YEAR_FORMAT = "yyyy";
     public static final String TITLE_DATE_FORMAT = "MMMM dd";
 
-    public static final String BIRTHDAY_FORMAT = "MMMdd yyyy";
+    public static final String REPORT_DATE_FORMAT = "MMMM yyyy";
 
 
     public static String formatDate(long date_millis, String format) {
