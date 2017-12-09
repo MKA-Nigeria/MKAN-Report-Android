@@ -2,13 +2,10 @@ package com.alium.soundcloudplayer.ui.fragments;
 
 
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -16,10 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.jean.podplayer.CollapsedPlayerView;
-import com.example.jean.podplayer.JcAudio;
-import com.example.jean.podplayer.JcPlayerView;
-import com.example.jean.podplayer.JcStatus;
+import com.aliumujib.jean.podplayer.CollapsedPlayerView;
+import com.aliumujib.jean.podplayer.JcAudio;
+import com.aliumujib.jean.podplayer.JcPlayerView;
+import com.aliumujib.jean.podplayer.JcStatus;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.util.ArrayList;
@@ -34,7 +31,7 @@ import com.alium.soundcloudplayer.ui.mvp.IPodcastPlayerContracts;
 import com.alium.soundcloudplayer.ui.mvp.PodcastPlayerPresenter;
 
 
-public abstract class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerContracts.PodcastPlayerView,
+public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerContracts.PodcastPlayerView,
         JcPlayerView.OnInvalidPathListener,
         JcPlayerView.JcPlayerViewStatusListener,
         SlidingUpPanelLayout.PanelSlideListener {
@@ -52,6 +49,15 @@ public abstract class PodcastsLibraryFragment extends Fragment implements IPodca
 
     public PodcastsLibraryFragment() {
         // Required empty public constructor
+    }
+
+    public static PodcastsLibraryFragment newInstance() {
+        
+        Bundle args = new Bundle();
+        
+        PodcastsLibraryFragment fragment = new PodcastsLibraryFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 

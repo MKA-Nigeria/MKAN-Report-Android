@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abdulmujibaliu/Desktop/Android_Projects/MyApplication/jcplayer/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v13/values-v13.xml",
+            "outputFile": "C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v13\\values-v13.xml",
             "map": [
                 {
-                    "source": "/Users/abdulmujibaliu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/5de07d41828ca3871d69e73604f0803e/res/values-v13/values-v13.xml",
+                    "source": "C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\2c876dcc1ad77c54f9fb9e136f9e70c6\\res\\values-v13\\values-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

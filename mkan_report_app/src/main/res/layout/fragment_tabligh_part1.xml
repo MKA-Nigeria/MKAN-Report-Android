@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.TablighPart1Fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.TablighPart1Fragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copies of Bai'at forms of new converts to be included with the report and sent to the National Office."
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="1"
+            app:questiontitle="Summary of activities in respect of Dawat ilallah:">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_media_cassete_distributed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Media\nDistributed(Cassette)" />
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_question_and_answe_sessions_conducted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Questions and Answer\nSessions" />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_public_lecture_held"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Public Lectures in the\nmonth" />
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_house_to_house_preaching_events_held"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="House-to-House\nPreaching" />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_literature_books_distributed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Literature books\ndistributed" />
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_tabligh_meetings_held"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Tabligh Meetings\n" />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_letters_on_tabligh_in_the_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Letters on Tabligh in the month" />
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_bookstalls_maintained"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Book Stall\n" />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_tabligh_sms_and_emails_sent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Tabligh SMS\n\\Emails sent" />
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/number_of_biats_signed_in_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    app:titleText="Number of\nBai'ats" />
+
+            </LinearLayout>
+
+        </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.TablighPart2Fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questiontitle="No. of Khuddam\ncontribution in Tahrik\n–e- Jadid"
+            app:questionnumber="1">
+
+            <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                android:id="@+id/total_number_of_khuddam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                 />
+        </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:questionnumber="2"
+            app:questiontitle="Collections of Tahrik –e-Jadid Chanda during the month">
+
+            <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                android:id="@+id/total_number_of_khuddam_with_uniform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+    </LinearLayout>
+
+
+    <com.aliumujib.majlis.mkan_report_app.utils.views.attachmentpickerview.AttachmentPickerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:picker_view_title="Attach list of participating khuddam"
+        app:request_code="300" />
+
+    <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:questionnumber="3"
+        app:questiontitle="Update on Tahrik-Jadid magazines for the month">
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+            android:id="@+id/total_number_of_atfal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp" />
+    </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+
+    <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:questionnumber="4"
+        app:questiontitle="Nazim Tahrik-e-Jadeed’s Phone №">
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+            android:id="@+id/nazim_tajnid_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp" />
+    </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+</LinearLayout>

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MKAN-Report-Android.iml" filepath="$PROJECT_DIR$/MKAN-Report-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coremodule/coremodule.iml" filepath="$PROJECT_DIR$/coremodule/coremodule.iml" />
       <module fileurl="file://$PROJECT_DIR$/filebrowser/filebrowser.iml" filepath="$PROJECT_DIR$/filebrowser/filebrowser.iml" />
       <module fileurl="file://$PROJECT_DIR$/jcplayer/jcplayer.iml" filepath="$PROJECT_DIR$/jcplayer/jcplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/loca_man_mod/loca_man_mod.iml" filepath="$PROJECT_DIR$/loca_man_mod/loca_man_mod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mkan_report_app/mkan_report_app.iml" filepath="$PROJECT_DIR$/mkan_report_app/mkan_report_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mkan_report_data/mkan_report_data.iml" filepath="$PROJECT_DIR$/mkan_report_data/mkan_report_data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mkanmediaapp/mkanmediaapp.iml" filepath="$PROJECT_DIR$/mkanmediaapp/mkanmediaapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/podcast_section/podcast_section.iml" filepath="$PROJECT_DIR$/podcast_section/podcast_section.iml" />
       <module fileurl="file://$PROJECT_DIR$/spinnerdialog/spinnerdialog.iml" filepath="$PROJECT_DIR$/spinnerdialog/spinnerdialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/videos_section/videos_section.iml" filepath="$PROJECT_DIR$/videos_section/videos_section.iml" />

@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.IshaatPart2Fragment">
+
+    <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:questiontitle="Attach copies of the publications in the month"
+        android:orientation="vertical"
+        app:questionnumber="5">
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.attachmentpickerview.AttachmentPickerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:request_code="800" />
+
+    </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+</FrameLayout>

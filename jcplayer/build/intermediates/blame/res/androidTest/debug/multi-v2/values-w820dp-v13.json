@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abdulmujibaliu/Desktop/Android_Projects/MyApplication/jcplayer/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/abdulmujibaliu/Desktop/Android_Projects/MyApplication/jcplayer/build/intermediates/bundles/debug/res/values-w820dp-v13/values-w820dp-v13.xml",
+                    "source": "C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\bundles\\debug\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",

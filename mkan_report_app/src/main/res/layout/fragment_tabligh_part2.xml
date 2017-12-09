@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.TablighPart2Fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.TablighPart2Fragment">
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:questionnumber="2"
+            app:questiontitle="Number of Tabligh programmes organized in the month">
+
+            <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                android:id="@+id/number_of_tabligh_programmes_held"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.EteemadFragment">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3."
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:orientation="horizontal">
+
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/total_number_of_khuddam_participating_in_tabligh_activities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    app:titleText="Number of participating Khuddam" />
+
+
+                <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                    android:id="@+id/duration_of_tabligh_programmes_held"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    app:titleText="Duration of\ntabligh programmes" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:questionnumber="4"
+            app:questiontitle="How many classes were conducted for the Tabligh Team this month">
+
+            <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                android:id="@+id/total_number_of_tabligh_classes_held_in_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+        <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:questionnumber="5"
+            app:questiontitle="Nazim Tabligh’s Phone №">
+
+            <com.aliumujib.majlis.mkan_report_app.utils.views.VerifiableEditText
+                android:id="@+id/nazim_tabligh_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+
+    </LinearLayout>
+</LinearLayout>

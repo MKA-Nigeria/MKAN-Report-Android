@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jean.podplayer.test" >
+    package="com.aliumujib.jean.podplayer.test" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -10,8 +10,8 @@
         android:name="android.support.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.example.jean.podplayer.test"
-        android:targetPackage="com.example.jean.podplayer.test" />
+        android:label="Tests for com.aliumujib.jean.podplayer.test"
+        android:targetPackage="com.aliumujib.jean.podplayer.test" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -22,10 +22,10 @@
         android:supportsRtl="true" >
         <uses-library android:name="android.test.runner" />
 
-        <service android:name="com.example.jean.podplayer.JcPlayerService" />
+        <service android:name="com.aliumujib.jean.podplayer.JcPlayerService" />
 
         <receiver
-            android:name="com.example.jean.podplayer.JcPlayerNotificationReceiver"
+            android:name="com.aliumujib.jean.podplayer.JcPlayerNotificationReceiver"
             android:enabled="true"
             android:exported="false" />
 

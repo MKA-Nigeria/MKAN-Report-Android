@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context="com.aliumujib.majlis.mkan_report_app.addnew.fragments.SihateJismaniPart2">
+    <com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:questionnumber="3"
+        app:questiontitle="Attachlist of individual tournaments"
+        >
+    <com.aliumujib.majlis.mkan_report_app.utils.views.attachmentpickerview.AttachmentPickerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:request_code="400"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:picker_view_title="Pick attachments"/>
+</com.aliumujib.majlis.mkan_report_app.utils.views.QuestionLayout>
+</FrameLayout>

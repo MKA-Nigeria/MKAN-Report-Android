@@ -8,7 +8,7 @@
     android:background="@android:color/white"
     >
 
-    <com.example.jean.podplayer.SquareImageView
+    <com.aliumujib.jean.podplayer.SquareImageView
         android:id="@+id/album_art_nowplayingcard"
         android:layout_width="55dp"
         android:layout_height="60dp"
