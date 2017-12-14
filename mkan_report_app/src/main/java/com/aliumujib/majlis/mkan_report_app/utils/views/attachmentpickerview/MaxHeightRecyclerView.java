@@ -3,7 +3,8 @@ package com.aliumujib.majlis.mkan_report_app.utils.views.attachmentpickerview;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
-import com.aliumujib.majlis.mkan_report_app.utils.Utils;
+import com.aliumujib.mkanapps.coremodule.utils.Utils;
+
 
 /**
  * Created by abdulmujibaliu on 9/1/17.

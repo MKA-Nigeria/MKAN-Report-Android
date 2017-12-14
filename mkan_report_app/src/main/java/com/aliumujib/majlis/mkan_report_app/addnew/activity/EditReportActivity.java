@@ -16,7 +16,7 @@ import com.aliumujib.majlis.mkan_report_app.addnew.interfaces.EditReportMVPContr
 import com.alium.mkan_report_data.models.MKANReport;
 import com.aliumujib.majlis.mkan_report_app.addnew.model.AttachmentHolder;
 import com.aliumujib.majlis.mkan_report_app.addnew.presenter.EditReportPresenter;
-import com.aliumujib.majlis.mkan_report_app.utils.UtilConstants;
+import com.aliumujib.mkanapps.coremodule.utils.UtilConstants;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 

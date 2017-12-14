@@ -51,7 +51,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     compile "com.android.support:support-v13:$rootProject.ext.supportVersion"
     compile "com.android.support:palette-v7:$rootProject.ext.supportVersion"
-    compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.actinarium.aligned:aligned:0.1'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'

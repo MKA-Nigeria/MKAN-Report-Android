@@ -43,9 +43,10 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     compile "com.android.support:support-v13:$rootProject.ext.supportVersion"
     compile "com.android.support:palette-v7:$rootProject.ext.supportVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
     compile "com.mikhaellopez:circularimageview:3.0.2"
     compile "com.stepstone.stepper:material-stepper:3.2.1"
-    compile "com.android.support:multidex:1.0.1"
+    compile "com.android.support:multidex:1.0.2"
     compile("com.crashlytics.sdk.android:crashlytics:2.6.8@aar") {
         transitive = true;
     }

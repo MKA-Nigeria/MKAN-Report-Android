@@ -32,10 +32,13 @@ public class BaseApplication extends MultiDexApplication {
         super.onCreate();
         instance = this;
         reInitPArse(instance);
-        Fabric.with(this, new Crashlytics());
 
         //TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/raleway-regular.ttf");
 
+    }
+
+    protected void initCrashLytics(){
+        Fabric.with(this, new Crashlytics());
     }
 
     public static Context getContext() {

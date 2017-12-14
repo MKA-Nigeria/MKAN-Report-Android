@@ -19,7 +19,7 @@ import com.aditya.filebrowser.FileChooser;
 import com.alium.mkan_report_data.models.Attachment;
 import com.aliumujib.majlis.mkan_report_app.R;
 import com.aliumujib.majlis.mkan_report_app.addnew.interfaces.EditReportActivityInteractor;
-import com.aliumujib.majlis.mkan_report_app.utils.ToastUtils;
+import com.aliumujib.mkanapps.coremodule.utils.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
