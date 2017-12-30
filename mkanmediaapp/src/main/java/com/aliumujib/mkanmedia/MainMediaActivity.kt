@@ -9,6 +9,7 @@ import com.alium.soundcloudplayer.ui.fragments.PodcastsLibraryFragment
 import com.aliumujib.mkanapps.coremodule.base.BaseMainActivity
 
 class MainMediaActivity : BaseMainActivity() {
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.nav_podcasts) {

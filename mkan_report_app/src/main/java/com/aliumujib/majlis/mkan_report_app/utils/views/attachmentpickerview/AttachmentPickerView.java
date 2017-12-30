@@ -98,6 +98,12 @@ public class AttachmentPickerView extends LinearLayout {
     }
 
 
+    protected void pickAttachments(int reqestCode) {
+        Intent i2 = new Intent(getActivity(), FileChooser.class);
+        i2.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.MULTIPLE_SELECTION.ordinal());
+        getActivity().startActivityForResult(i2, reqestCode);
+    }
+
     public Activity getActivity() {
         Context context = getContext();
         while (context instanceof ContextWrapper) {
@@ -109,11 +115,6 @@ public class AttachmentPickerView extends LinearLayout {
         return null;
     }
 
-    protected void pickAttachments(int reqestCode) {
-        Intent i2 = new Intent(getActivity(), FileChooser.class);
-        i2.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.MULTIPLE_SELECTION.ordinal());
-        getActivity().startActivityForResult(i2, reqestCode);
-    }
 
     public RecyclerELEAdapter wrapInELEAdapter(RecyclerView.Adapter adapter, RecyclerView recyclerView) {
         View loadingViewDrugs = getActivity().getLayoutInflater().inflate(R.layout.loading_layout, recyclerView, false);
