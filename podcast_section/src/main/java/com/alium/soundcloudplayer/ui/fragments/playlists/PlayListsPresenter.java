@@ -44,14 +44,17 @@ public class PlayListsPresenter implements PlayListsContracts.PlayListsPresenter
 
     @Override
     public void getAllPlayLists() {
+        view.showLoading();
         soundCloudRepository.getAllPlayLists().subscribe(new Consumer<List<Playlist>>() {
             @Override
             public void accept(List<Playlist> playlists) throws Exception {
+                view.hideLoading();
                 view.setData(playlists);
             }
         }, new Consumer<Throwable>() {
             @Override
             public void accept(Throwable throwable) throws Exception {
+                view.hideLoading();
                 view.showMessage(throwable.getMessage());
             }
         });

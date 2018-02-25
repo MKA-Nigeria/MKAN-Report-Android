@@ -18,6 +18,7 @@ class PlayListPresenter(val view: PlayListContracts.PlayListView, val dataSource
     }
 
     override fun getPlayLists() {
+        view.showLoading()
         dataSource.getPlayListObservable()?.subscribe({ data ->
             view.hideLoading()
             view.setData(data)

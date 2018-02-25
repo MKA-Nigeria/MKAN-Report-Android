@@ -28,6 +28,7 @@ public class TrackListPresenter implements TrackListContracts.TrackListPresenter
 
     @Override
     public void getAllTracks() {
+        view.showLoading();
         soundCloudRepository.getAllPodcasts().subscribe(new Consumer<List<Track>>() {
             @Override
             public void accept(List<Track> tracks) throws Exception {
@@ -37,6 +38,7 @@ public class TrackListPresenter implements TrackListContracts.TrackListPresenter
         }, new Consumer<Throwable>() {
             @Override
             public void accept(Throwable throwable) throws Exception {
+                view.hideLoading();
                 view.showError();
                 view.showMessage(throwable.getMessage());
             }

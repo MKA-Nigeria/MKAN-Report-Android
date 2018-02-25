@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 
 import com.abdulmujibaliu.koutube.R
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
@@ -21,7 +22,9 @@ import com.aliumujib.mkanapps.coremodule.base.BaseFragment
 abstract class BaseVideoTabFragment : BaseFragment(), VideoClickListener {
 
     //val TAG: String = javaClass.simpleName
-    protected var parentView: ParentViewContract.View ? = null
+    protected var parentView: ParentViewContract.View? = null
+    protected var loadingIndicator: ProgressBar? = null
+
     val dataSource: RepositoryContracts.IDataSource = PlayListRepository.getInstance()!!
 
 
@@ -29,7 +32,6 @@ abstract class BaseVideoTabFragment : BaseFragment(), VideoClickListener {
                               savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.fragment_base, container, false)
     }
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +43,15 @@ abstract class BaseVideoTabFragment : BaseFragment(), VideoClickListener {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        loadingIndicator = view!!.findViewById(R.id.progressBar)
+    }
 
+    override fun hideLoading() {
+        loadingIndicator!!.visibility = View.GONE
+    }
+
+    override fun showLoading() {
+        loadingIndicator!!.visibility = View.VISIBLE
     }
 
     // In the child fragment.

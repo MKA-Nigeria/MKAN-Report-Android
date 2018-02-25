@@ -32,7 +32,7 @@ open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, Yo
 
     var media: YouTubePlayerView? = null
     var draggableView: DraggableView? = null
-    var description: View? = null
+    var description: VideoDetailsView? = null
     val TAG = javaClass.simpleName
     var rootCordinator: RelativeLayout? = null
     private var player: YouTubePlayer? = null
@@ -51,6 +51,7 @@ open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, Yo
         rootCordinator = view!!.findViewById(R.id.root_view)
         draggableView = view!!.findViewById(R.id.draggable_view)
         media = view!!.findViewById(R.id.media)
+        description = view!!.findViewById(R.id.video_details)
 
         val videoTabsAdapter = VideoTabsAdapter(childFragmentManager)
         toolbar.setTitle("Koutube")
@@ -116,6 +117,7 @@ open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, Yo
         }, true)
 
         //TODO GET RELATED VIDEOS
+        description!!.setVideo(video)
     }
 
 

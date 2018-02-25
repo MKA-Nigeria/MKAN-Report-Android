@@ -15,19 +15,61 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f010000;
+    public static final int bottom_view_id=0x7f010000;
     /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
      */
-    public static final int fontProviderAuthority=0x7f010001;
+    public static final int enable_click_to_maximize_panel=0x7f010001;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int enable_click_to_maximize_view=0x7f010002;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int enable_click_to_minimize_panel=0x7f010003;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int enable_click_to_minimize_view=0x7f010004;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int enable_horizontal_alpha_effect=0x7f010005;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int enable_minimized_horizontal_alpha_effect=0x7f010006;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int enable_touch_listener_panel=0x7f010007;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f010002;
+    public static final int font=0x7f010008;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int fontProviderAuthority=0x7f010009;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int fontProviderCerts=0x7f01000a;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -39,7 +81,7 @@ public final class R {
      * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f010003;
+    public static final int fontProviderFetchStrategy=0x7f01000b;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -51,17 +93,17 @@ public final class R {
      * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f010004;
+    public static final int fontProviderFetchTimeout=0x7f01000c;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f010005;
+    public static final int fontProviderPackage=0x7f01000d;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f010006;
+    public static final int fontProviderQuery=0x7f01000e;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -73,11 +115,87 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f010007;
+    public static final int fontStyle=0x7f01000f;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f010008;
+    public static final int fontWeight=0x7f010010;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int top_fragment_height=0x7f010011;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int top_fragment_margin_bottom=0x7f010012;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int top_fragment_margin_right=0x7f010013;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int top_view_height=0x7f010014;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int top_view_id=0x7f010015;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int top_view_margin_bottom=0x7f010016;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int top_view_margin_right=0x7f010017;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int top_view_resize=0x7f010018;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int top_view_x_scale_factor=0x7f010019;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int top_view_y_scale_factor=0x7f01001a;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int x_scale_factor=0x7f01001b;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int y_scale_factor=0x7f01001c;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f020000;
@@ -138,47 +256,51 @@ public final class R {
     public static final int blocking=0x7f060007;
     public static final int cancel_action=0x7f060008;
     public static final int chronometer=0x7f060009;
-    public static final int end_padder=0x7f06000a;
-    public static final int forever=0x7f06000b;
-    public static final int icon=0x7f06000c;
-    public static final int icon_group=0x7f06000d;
-    public static final int info=0x7f06000e;
-    public static final int italic=0x7f06000f;
-    public static final int line1=0x7f060010;
-    public static final int line3=0x7f060011;
-    public static final int media_actions=0x7f060012;
-    public static final int normal=0x7f060013;
-    public static final int notification_background=0x7f060014;
-    public static final int notification_main_column=0x7f060015;
-    public static final int notification_main_column_container=0x7f060016;
-    public static final int right_icon=0x7f060017;
-    public static final int right_side=0x7f060018;
-    public static final int status_bar_latest_event_content=0x7f060019;
-    public static final int text=0x7f06001a;
-    public static final int text2=0x7f06001b;
-    public static final int time=0x7f06001c;
-    public static final int title=0x7f06001d;
+    public static final int drag_view=0x7f06000a;
+    public static final int draggable_view=0x7f06000b;
+    public static final int end_padder=0x7f06000c;
+    public static final int forever=0x7f06000d;
+    public static final int icon=0x7f06000e;
+    public static final int icon_group=0x7f06000f;
+    public static final int info=0x7f060010;
+    public static final int italic=0x7f060011;
+    public static final int line1=0x7f060012;
+    public static final int line3=0x7f060013;
+    public static final int media_actions=0x7f060014;
+    public static final int normal=0x7f060015;
+    public static final int notification_background=0x7f060016;
+    public static final int notification_main_column=0x7f060017;
+    public static final int notification_main_column_container=0x7f060018;
+    public static final int right_icon=0x7f060019;
+    public static final int right_side=0x7f06001a;
+    public static final int second_view=0x7f06001b;
+    public static final int status_bar_latest_event_content=0x7f06001c;
+    public static final int text=0x7f06001d;
+    public static final int text2=0x7f06001e;
+    public static final int time=0x7f06001f;
+    public static final int title=0x7f060020;
   }
   public static final class integer {
     public static final int cancel_button_image_alpha=0x7f070000;
     public static final int status_bar_notification_info_maxnum=0x7f070001;
   }
   public static final class layout {
-    public static final int notification_action=0x7f080000;
-    public static final int notification_action_tombstone=0x7f080001;
-    public static final int notification_media_action=0x7f080002;
-    public static final int notification_media_cancel_action=0x7f080003;
-    public static final int notification_template_big_media=0x7f080004;
-    public static final int notification_template_big_media_custom=0x7f080005;
-    public static final int notification_template_big_media_narrow=0x7f080006;
-    public static final int notification_template_big_media_narrow_custom=0x7f080007;
-    public static final int notification_template_custom_big=0x7f080008;
-    public static final int notification_template_icon_group=0x7f080009;
-    public static final int notification_template_lines_media=0x7f08000a;
-    public static final int notification_template_media=0x7f08000b;
-    public static final int notification_template_media_custom=0x7f08000c;
-    public static final int notification_template_part_chronometer=0x7f08000d;
-    public static final int notification_template_part_time=0x7f08000e;
+    public static final int draggable_panel=0x7f080000;
+    public static final int notification_action=0x7f080001;
+    public static final int notification_action_tombstone=0x7f080002;
+    public static final int notification_media_action=0x7f080003;
+    public static final int notification_media_cancel_action=0x7f080004;
+    public static final int notification_template_big_media=0x7f080005;
+    public static final int notification_template_big_media_custom=0x7f080006;
+    public static final int notification_template_big_media_narrow=0x7f080007;
+    public static final int notification_template_big_media_narrow_custom=0x7f080008;
+    public static final int notification_template_custom_big=0x7f080009;
+    public static final int notification_template_icon_group=0x7f08000a;
+    public static final int notification_template_lines_media=0x7f08000b;
+    public static final int notification_template_media=0x7f08000c;
+    public static final int notification_template_media_custom=0x7f08000d;
+    public static final int notification_template_part_chronometer=0x7f08000e;
+    public static final int notification_template_part_time=0x7f08000f;
   }
   public static final class string {
     public static final int status_bar_notification_info_overflow=0x7f090000;
@@ -220,8 +342,8 @@ public final class R {
      * @see #FontFamily_fontProviderQuery
      */
     public static final int[] FontFamily={
-        0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 
-        0x7f010005, 0x7f010006
+        0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c, 
+        0x7f01000d, 0x7f01000e
       };
     /**
      * Attributes that can be used with a FontFamilyFont.
@@ -239,7 +361,7 @@ public final class R {
      * @see #FontFamilyFont_fontWeight
      */
     public static final int[] FontFamilyFont={
-        0x7f010000, 0x7f010007, 0x7f010008
+        0x7f010008, 0x7f01000f, 0x7f010010
       };
     /**
      * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#font}
@@ -355,5 +477,291 @@ public final class R {
      * @attr name com.github.pedrovgs.test:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
+    /**
+     * Attributes that can be used with a draggable_panel.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #draggable_panel_enable_click_to_maximize_panel com.github.pedrovgs.test:enable_click_to_maximize_panel}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_enable_click_to_minimize_panel com.github.pedrovgs.test:enable_click_to_minimize_panel}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_enable_horizontal_alpha_effect com.github.pedrovgs.test:enable_horizontal_alpha_effect}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_enable_touch_listener_panel com.github.pedrovgs.test:enable_touch_listener_panel}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_top_fragment_height com.github.pedrovgs.test:top_fragment_height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_top_fragment_margin_bottom com.github.pedrovgs.test:top_fragment_margin_bottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_top_fragment_margin_right com.github.pedrovgs.test:top_fragment_margin_right}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_x_scale_factor com.github.pedrovgs.test:x_scale_factor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_panel_y_scale_factor com.github.pedrovgs.test:y_scale_factor}</code></td><td></td></tr>
+     * </table>
+     * @see #draggable_panel_enable_click_to_maximize_panel
+     * @see #draggable_panel_enable_click_to_minimize_panel
+     * @see #draggable_panel_enable_horizontal_alpha_effect
+     * @see #draggable_panel_enable_touch_listener_panel
+     * @see #draggable_panel_top_fragment_height
+     * @see #draggable_panel_top_fragment_margin_bottom
+     * @see #draggable_panel_top_fragment_margin_right
+     * @see #draggable_panel_x_scale_factor
+     * @see #draggable_panel_y_scale_factor
+     */
+    public static final int[] draggable_panel={
+        0x7f010001, 0x7f010003, 0x7f010005, 0x7f010007, 
+        0x7f010011, 0x7f010012, 0x7f010013, 0x7f01001b, 
+        0x7f01001c
+      };
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_click_to_maximize_panel}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_click_to_maximize_panel
+     */
+    public static final int draggable_panel_enable_click_to_maximize_panel=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_click_to_minimize_panel}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_click_to_minimize_panel
+     */
+    public static final int draggable_panel_enable_click_to_minimize_panel=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_horizontal_alpha_effect}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_horizontal_alpha_effect
+     */
+    public static final int draggable_panel_enable_horizontal_alpha_effect=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_touch_listener_panel}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_touch_listener_panel
+     */
+    public static final int draggable_panel_enable_touch_listener_panel=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_fragment_height}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.github.pedrovgs.test:top_fragment_height
+     */
+    public static final int draggable_panel_top_fragment_height=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_fragment_margin_bottom}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.github.pedrovgs.test:top_fragment_margin_bottom
+     */
+    public static final int draggable_panel_top_fragment_margin_bottom=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_fragment_margin_right}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.github.pedrovgs.test:top_fragment_margin_right
+     */
+    public static final int draggable_panel_top_fragment_margin_right=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#x_scale_factor}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.github.pedrovgs.test:x_scale_factor
+     */
+    public static final int draggable_panel_x_scale_factor=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#y_scale_factor}
+     * attribute's value can be found in the {@link #draggable_panel} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.github.pedrovgs.test:y_scale_factor
+     */
+    public static final int draggable_panel_y_scale_factor=8;
+    /**
+     * Attributes that can be used with a draggable_view.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #draggable_view_bottom_view_id com.github.pedrovgs.test:bottom_view_id}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_enable_click_to_maximize_view com.github.pedrovgs.test:enable_click_to_maximize_view}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_enable_click_to_minimize_view com.github.pedrovgs.test:enable_click_to_minimize_view}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_enable_minimized_horizontal_alpha_effect com.github.pedrovgs.test:enable_minimized_horizontal_alpha_effect}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_height com.github.pedrovgs.test:top_view_height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_id com.github.pedrovgs.test:top_view_id}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_margin_bottom com.github.pedrovgs.test:top_view_margin_bottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_margin_right com.github.pedrovgs.test:top_view_margin_right}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_resize com.github.pedrovgs.test:top_view_resize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_x_scale_factor com.github.pedrovgs.test:top_view_x_scale_factor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #draggable_view_top_view_y_scale_factor com.github.pedrovgs.test:top_view_y_scale_factor}</code></td><td></td></tr>
+     * </table>
+     * @see #draggable_view_bottom_view_id
+     * @see #draggable_view_enable_click_to_maximize_view
+     * @see #draggable_view_enable_click_to_minimize_view
+     * @see #draggable_view_enable_minimized_horizontal_alpha_effect
+     * @see #draggable_view_top_view_height
+     * @see #draggable_view_top_view_id
+     * @see #draggable_view_top_view_margin_bottom
+     * @see #draggable_view_top_view_margin_right
+     * @see #draggable_view_top_view_resize
+     * @see #draggable_view_top_view_x_scale_factor
+     * @see #draggable_view_top_view_y_scale_factor
+     */
+    public static final int[] draggable_view={
+        0x7f010000, 0x7f010002, 0x7f010004, 0x7f010006, 
+        0x7f010014, 0x7f010015, 0x7f010016, 0x7f010017, 
+        0x7f010018, 0x7f010019, 0x7f01001a
+      };
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#bottom_view_id}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.github.pedrovgs.test:bottom_view_id
+     */
+    public static final int draggable_view_bottom_view_id=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_click_to_maximize_view}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_click_to_maximize_view
+     */
+    public static final int draggable_view_enable_click_to_maximize_view=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_click_to_minimize_view}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_click_to_minimize_view
+     */
+    public static final int draggable_view_enable_click_to_minimize_view=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#enable_minimized_horizontal_alpha_effect}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:enable_minimized_horizontal_alpha_effect
+     */
+    public static final int draggable_view_enable_minimized_horizontal_alpha_effect=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_height}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.github.pedrovgs.test:top_view_height
+     */
+    public static final int draggable_view_top_view_height=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_id}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.github.pedrovgs.test:top_view_id
+     */
+    public static final int draggable_view_top_view_id=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_margin_bottom}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.github.pedrovgs.test:top_view_margin_bottom
+     */
+    public static final int draggable_view_top_view_margin_bottom=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_margin_right}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.github.pedrovgs.test:top_view_margin_right
+     */
+    public static final int draggable_view_top_view_margin_right=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_resize}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.github.pedrovgs.test:top_view_resize
+     */
+    public static final int draggable_view_top_view_resize=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_x_scale_factor}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.github.pedrovgs.test:top_view_x_scale_factor
+     */
+    public static final int draggable_view_top_view_x_scale_factor=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.github.pedrovgs.test.R.attr#top_view_y_scale_factor}
+     * attribute's value can be found in the {@link #draggable_view} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.github.pedrovgs.test:top_view_y_scale_factor
+     */
+    public static final int draggable_view_top_view_y_scale_factor=10;
   }
 }

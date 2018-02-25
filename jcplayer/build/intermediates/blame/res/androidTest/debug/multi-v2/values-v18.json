@@ -1,21 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v18\\values-v18.xml",
-            "map": [
-                {
-                    "source": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\2c876dcc1ad77c54f9fb9e136f9e70c6\\res\\values-v18\\values-v18.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "48",
-                        "endOffsets": "99"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/jcplayer/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v18/values-v18.xml",
             "map": [
                 {

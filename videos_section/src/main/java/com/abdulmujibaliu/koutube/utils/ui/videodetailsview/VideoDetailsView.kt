@@ -52,10 +52,18 @@ class VideoDetailsView : LinearLayout {
 
     }
 
+    fun setVideo(currentVideo: YoutubeVideo){
+        mVideoTitle!!.text = currentVideo.itemTitle
+        mVideoDesc!!.text = currentVideo.itemDesc
+        mVideoStatistics!!.text = "- views • ${currentVideo.getPublishText()}"
+        mChannelName!!.text = currentVideo.channelName
+
+    }
+
     fun setVideos(currentVideo: YoutubeVideo, list: List<YoutubeVideo>) {
         mVideoTitle!!.text = currentVideo.itemTitle
         mVideoDesc!!.text = currentVideo.itemDesc
-        mVideoStatistics!!.text = "122200 views • ${currentVideo.getPublishText()}"
+        mVideoStatistics!!.text = "- views • ${currentVideo.getPublishText()}"
         mChannelName!!.text = currentVideo.channelName
 
         Picasso.with(context).load(currentVideo.itemImageURL).fit().centerCrop().into(mChannelImage)

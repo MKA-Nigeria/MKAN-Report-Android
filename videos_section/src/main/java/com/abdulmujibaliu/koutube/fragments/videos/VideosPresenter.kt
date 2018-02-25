@@ -23,12 +23,14 @@ class VideosPresenter(val view: VideosContracts.VideosView, val dataSource: Repo
     }
 
     override fun getVideos() {
-        dataSource.getVideosObservable()?.subscribe(
-                { data ->
-                    view.setData(data.items as List<YoutubeVideo>)
-                }, { error ->
-                    view.showMessage(error.message)
-                    error.printStackTrace()
+        view.showLoading()
+        dataSource.getVideosObservable()?.subscribe({ data ->
+            view.hideLoading()
+            view.setData(data.items as List<YoutubeVideo>)
+        }, { error ->
+            view.hideLoading()
+            view.showMessage(error.message)
+            error.printStackTrace()
         })
     }
 

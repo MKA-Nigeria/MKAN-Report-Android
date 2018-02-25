@@ -14,21 +14,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
-            "map": [
-                {
-                    "source": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\bundles\\debug\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,98,139,184,225",
-                        "endColumns": "42,40,44,40,44",
-                        "endOffsets": "93,134,179,220,265"
-                    }
-                }
-            ]
         }
     ]
 }
