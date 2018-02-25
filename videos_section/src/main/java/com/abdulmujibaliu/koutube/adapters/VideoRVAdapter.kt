@@ -1,4 +1,4 @@
-package com.abdulmujibaliu.koutube.fragments.rvadapter
+package com.abdulmujibaliu.koutube.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.abdulmujibaliu.koutube.R
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
-import com.abdulmujibaliu.koutube.fragments.childfragments.VideoClickListener
+import com.abdulmujibaliu.koutube.fragments.videos.VideoClickListener
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_video_card.view.*
 

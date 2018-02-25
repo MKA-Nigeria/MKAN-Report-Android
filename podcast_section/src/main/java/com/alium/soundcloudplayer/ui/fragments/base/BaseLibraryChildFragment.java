@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.alium.soundcloudplayer.R;
-import com.alium.soundcloudplayer.managers.DataManager;
+import com.alium.soundcloudplayer.repositories.SoundCloudRepository;
 import com.alium.soundcloudplayer.ui.fragments.parent.IPodcastPlayerContracts;
 import com.aliumujib.mkanapps.coremodule.base.BaseFragment;
 
@@ -23,7 +23,7 @@ public abstract class BaseLibraryChildFragment extends BaseFragment {
     protected IPodcastPlayerContracts.PodcastPlayerView parentView;
     protected ProgressBar progressBar;
     protected SwipeRefreshLayout mSwipeRefreshLayout;
-    protected DataManager dataManager = new DataManager();
+    protected SoundCloudRepository soundCloudRepository = new SoundCloudRepository();
 
     public void onAttachToParentFragment(Fragment fragment) {
         try {

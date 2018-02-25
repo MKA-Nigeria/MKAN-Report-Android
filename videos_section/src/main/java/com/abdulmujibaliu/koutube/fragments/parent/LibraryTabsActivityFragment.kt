@@ -1,4 +1,4 @@
-package com.abdulmujibaliu.koutube.fragments
+package com.abdulmujibaliu.koutube.fragments.parent
 
 import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
@@ -12,7 +12,7 @@ import com.abdulmujibaliu.koutube.R
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
 import com.abdulmujibaliu.koutube.data.repositories.PlayListRepository
 import com.abdulmujibaliu.koutube.data.repositories.contracts.RepositoryContracts
-import com.abdulmujibaliu.koutube.tabsadapter.VideoTabsAdapter
+import com.abdulmujibaliu.koutube.adapters.VideoTabsAdapter
 import com.abdulmujibaliu.koutube.utils.ui.videodetailsview.VideoDetailsView
 import com.pierfrancescosoffritti.youtubeplayer.player.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayer
@@ -24,7 +24,7 @@ import kotlinx.android.synthetic.main.fragment_library_tabs.*
 /**
  * A placeholder fragment containing a simple view.
  */
-open class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeLikeBehavior.OnBehaviorStateListener {
+open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, YoutubeLikeBehavior.OnBehaviorStateListener {
 
     var media: YouTubePlayerView? = null
     var description: View? = null
@@ -32,10 +32,6 @@ open class LibraryTabsActivityFragment : Fragment(), MainContract.View, YoutubeL
     var rootCordinator: CoordinatorLayout? = null
     private var player: YouTubePlayer? = null
 
-
-    override fun getPresenter(): MainContract.Presenter {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

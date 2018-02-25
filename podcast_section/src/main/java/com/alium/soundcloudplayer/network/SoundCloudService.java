@@ -17,11 +17,11 @@ import retrofit2.http.Path;
  */
 public interface SoundCloudService {
 
-    @GET(WSConstants.USERS_ENDPOINT + "{userId}/" + WSConstants.TRACKS_ENDPOINT)
+    @GET(PodcastModuleConstants.USERS_ENDPOINT + "{userId}/" + PodcastModuleConstants.TRACKS_ENDPOINT)
     Observable<List<Track>> getTracks(@Path("userId") String userId);
 
 
-    @GET(WSConstants.USERS_ENDPOINT + "{userId}/" + WSConstants.PLAY_LIST_ENDPOINT)
+    @GET(PodcastModuleConstants.USERS_ENDPOINT + "{userId}/" + PodcastModuleConstants.PLAY_LIST_ENDPOINT)
     Observable<List<Playlist>> getPlayLists(@Path("userId") String userId);
 
 }

@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.alium.soundcloudplayer.R;
 import com.alium.soundcloudplayer.data.models.Playlist;
 import com.alium.soundcloudplayer.data.models.Track;
-import com.alium.soundcloudplayer.managers.DataManager;
 import com.alium.soundcloudplayer.ui.fragments.base.BaseLibraryChildFragment;
 import com.squareup.picasso.Picasso;
 
@@ -22,7 +21,6 @@ import java.util.List;
 import iammert.com.expandablelib.ExpandCollapseListener;
 import iammert.com.expandablelib.ExpandableLayout;
 import iammert.com.expandablelib.Section;
-import io.reactivex.functions.Consumer;
 
 
 public class PlayListsFragment extends BaseLibraryChildFragment implements PlayListsContracts.PlayListsView {
@@ -50,7 +48,7 @@ public class PlayListsFragment extends BaseLibraryChildFragment implements PlayL
 
         initView(view);
 
-        setPresenter(new PlayListsPresenter(this, parentView, dataManager));
+        setPresenter(new PlayListsPresenter(this, parentView, soundCloudRepository));
         presenter.onCreate();
 
     }

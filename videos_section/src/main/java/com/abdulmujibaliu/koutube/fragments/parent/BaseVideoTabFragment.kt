@@ -1,4 +1,4 @@
-package com.abdulmujibaliu.koutube.fragments.childfragments
+package com.abdulmujibaliu.koutube.fragments.parent
 
 
 import android.os.Bundle
@@ -11,26 +11,26 @@ import com.abdulmujibaliu.koutube.R
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
 import com.abdulmujibaliu.koutube.data.repositories.PlayListRepository
 import com.abdulmujibaliu.koutube.data.repositories.contracts.RepositoryContracts
-import com.abdulmujibaliu.koutube.fragments.MainContract
+import com.abdulmujibaliu.koutube.fragments.videos.VideoClickListener
+import com.aliumujib.mkanapps.coremodule.base.BaseFragment
 
 
 /**
  * A simple [Fragment] subclass.
  */
-abstract class BaseFragment : Fragment(), VideoClickListener {
-    val TAG: String = javaClass.simpleName
+abstract class BaseVideoTabFragment : BaseFragment(), VideoClickListener {
 
-    override fun onVideoClicked(youtubeVideo: YoutubeVideo, data: List<YoutubeVideo>) {
-        parentView?.showVideoView(youtubeVideo, data)
-    }
-
-    protected var parentView: MainContract.View ? = null
+    //val TAG: String = javaClass.simpleName
+    protected var parentView: ParentViewContract.View ? = null
     val dataSource: RepositoryContracts.IDataSource = PlayListRepository.getInstance()!!
+
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.fragment_base, container, false)
     }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +47,11 @@ abstract class BaseFragment : Fragment(), VideoClickListener {
     // In the child fragment.
     private fun onAttachToParentFragment(fragment: Fragment) {
         try {
-            parentView = fragment as MainContract.View
+            parentView = fragment as ParentViewContract.View
 
         } catch (e: ClassCastException) {
             throw ClassCastException(
-                    fragment.toString() + " must implement MainContract.View")
+                    fragment.toString() + " must implement ParentViewContract.View")
         }
 
     }

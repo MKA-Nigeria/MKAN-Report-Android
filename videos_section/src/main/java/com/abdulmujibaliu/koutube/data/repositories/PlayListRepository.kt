@@ -1,10 +1,10 @@
 package com.abdulmujibaliu.koutube.data.repositories
 
 import android.util.Log
-import com.abdulmujibaliu.koutube.data.PlaylistGetterInterface
-import com.abdulmujibaliu.koutube.data.RetrofitFactory
-import com.abdulmujibaliu.koutube.data.VideoGetterInterface
-import com.abdulmujibaliu.koutube.data.models.*
+import com.abdulmujibaliu.koutube.data.VideosNetworkHandler
+import com.abdulmujibaliu.koutube.data.models.PlayListItemsResult
+import com.abdulmujibaliu.koutube.data.models.PlayListsResult
+import com.abdulmujibaliu.koutube.data.models.VideoResult
 import com.abdulmujibaliu.koutube.data.repositories.contracts.RepositoryContracts
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -25,9 +25,7 @@ class PlayListRepository : RepositoryContracts.IPlaylistRepository {
 
     val TAG = javaClass.simpleName
 
-    var playListserviceInstance = RetrofitFactory.getInstance().create(PlaylistGetterInterface::class.java)
-    var videosServiceInstance = RetrofitFactory.getInstance().create(VideoGetterInterface::class.java)
-
+    val videosNetworkHandler = VideosNetworkHandler.getInstance()
 
     var videosListSubject = ReplaySubject.create<VideoResult>()
     var playListSubject = ReplaySubject.create<List<PlayListItemsResult>>()
@@ -41,7 +39,7 @@ class PlayListRepository : RepositoryContracts.IPlaylistRepository {
 
         for (channelID in channelIDs) {
             Log.d(TAG, "Getting for channelID" + channelID)
-            observablesList.add(playListserviceInstance.getPlaylistsForChannel(channelID)
+            observablesList.add(videosNetworkHandler.getPlayListService().getPlaylistsForChannel(channelID)
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribeOn(Schedulers.io()))
         }
@@ -71,7 +69,7 @@ class PlayListRepository : RepositoryContracts.IPlaylistRepository {
         val observablesList: MutableList<Observable<PlayListItemsResult>> = mutableListOf()
 
         for (playListID in playListIDs) {
-            observablesList.add(playListserviceInstance.getPlaylistItems(playListID).observeOn(AndroidSchedulers.mainThread())
+            observablesList.add(videosNetworkHandler.getPlayListService().getPlaylistItems(playListID).observeOn(AndroidSchedulers.mainThread())
                     .subscribeOn(Schedulers.io()))
         }
 
@@ -111,7 +109,7 @@ class PlayListRepository : RepositoryContracts.IPlaylistRepository {
     }
 
     fun getVideoItems(idStrings: String) {
-        videosServiceInstance.getVideoItems(idStrings)
+        videosNetworkHandler.getVideosService().getVideoItems(idStrings)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe({ data ->

@@ -7,7 +7,7 @@ import com.alium.soundcloudplayer.BuildConfig;
  * <p>
  * All constants that will be used for web services
  */
-public class WSConstants {
+public class PodcastModuleConstants {
     public static final String BASE_URL = "https://api.soundcloud.com/";
     public static final String USERS_ENDPOINT = "users/";
     public static final String TRACKS_ENDPOINT = "tracks/";
@@ -22,6 +22,6 @@ public class WSConstants {
 
     public static final String KEY_TRACKS = "tracks";
 
-    public static final String QUERY_API_KEY = "?" + WSConstants.CLIENT_ID_QUERY + "=" + BuildConfig.SOUNDCLOUD_API_KEY;
+    public static final String QUERY_API_KEY = "?" + PodcastModuleConstants.CLIENT_ID_QUERY + "=" + BuildConfig.SOUNDCLOUD_API_KEY;
     public static final String PAGE_LIMIT = "limit";
 }

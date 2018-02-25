@@ -1,10 +1,8 @@
 package com.alium.soundcloudplayer.data.deserializers;
 
-import android.util.Log;
-
 import com.alium.soundcloudplayer.data.models.Playlist;
 import com.alium.soundcloudplayer.data.models.Track;
-import com.alium.soundcloudplayer.network.WSConstants;
+import com.alium.soundcloudplayer.network.PodcastModuleConstants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -33,16 +31,16 @@ public class PlaylistDeserializer implements JsonDeserializer<Playlist> {
      * @return owner username
      */
     private String findOwner(JsonObject data) {
-        JsonObject obj = data.get(WSConstants.KEY_USER).getAsJsonObject();
+        JsonObject obj = data.get(PodcastModuleConstants.KEY_USER).getAsJsonObject();
         if (obj != null && !obj.isJsonNull()) {
-            return obj.get(WSConstants.KEY_USERNAME).getAsString();
+            return obj.get(PodcastModuleConstants.KEY_USERNAME).getAsString();
         }
         return null;
     }
 
 
     private List<Track> findTrackList(JsonObject data) {
-        JsonArray jsonArray = data.get(WSConstants.KEY_TRACKS).getAsJsonArray();
+        JsonArray jsonArray = data.get(PodcastModuleConstants.KEY_TRACKS).getAsJsonArray();
         if (jsonArray != null && !jsonArray.isJsonNull() && !(jsonArray.size() == 0)) {
             List<Track> trackList = new ArrayList<>();
             for (JsonElement jsonObject : jsonArray) {
@@ -63,7 +61,7 @@ public class PlaylistDeserializer implements JsonDeserializer<Playlist> {
      * @return image url
      */
     private String getBigArtwork(JsonObject data) {
-        JsonElement obj = data.get(WSConstants.KEY_ARTWORK_URL);
+        JsonElement obj = data.get(PodcastModuleConstants.KEY_ARTWORK_URL);
         if (obj != null && !obj.isJsonNull()) {
             return obj.getAsString().replace("large", "t500x500");
         }

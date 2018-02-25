@@ -1,6 +1,5 @@
 package com.alium.soundcloudplayer.data.deserializers;
 
-import com.alium.soundcloudplayer.BuildConfig;
 import com.google.gson.Gson;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -11,7 +10,7 @@ import com.google.gson.JsonParseException;
 import java.lang.reflect.Type;
 
 import com.alium.soundcloudplayer.data.models.Track;
-import com.alium.soundcloudplayer.network.WSConstants;
+import com.alium.soundcloudplayer.network.PodcastModuleConstants;
 
 
 /**
@@ -29,8 +28,8 @@ public class TrackDeserializer implements JsonDeserializer<Track> {
             Track track = new Gson().fromJson(data, Track.class);
             track.setOwner(findOwner(data));
             track.setImageUrl(getBigArtwork(data));
-            track.setDownloadUrl(updateAuthUrl(data, WSConstants.KEY_DOWNLOAD_URL));
-            track.setStreamUrl(updateAuthUrl(data, WSConstants.KEY_STREAM_URL));
+            track.setDownloadUrl(updateAuthUrl(data, PodcastModuleConstants.KEY_DOWNLOAD_URL));
+            track.setStreamUrl(updateAuthUrl(data, PodcastModuleConstants.KEY_STREAM_URL));
             return track;
         }
         return null;
@@ -46,7 +45,7 @@ public class TrackDeserializer implements JsonDeserializer<Track> {
     private String updateAuthUrl(JsonObject data, String key) {
         JsonElement obj = data.get(key);
         if (obj != null && !obj.isJsonNull()) {
-            return obj.getAsString() + WSConstants.QUERY_API_KEY;
+            return obj.getAsString() + PodcastModuleConstants.QUERY_API_KEY;
         }
         return null;
     }
@@ -58,7 +57,7 @@ public class TrackDeserializer implements JsonDeserializer<Track> {
      * @return image url
      */
     private String getBigArtwork(JsonObject data) {
-        JsonElement obj = data.get(WSConstants.KEY_ARTWORK_URL);
+        JsonElement obj = data.get(PodcastModuleConstants.KEY_ARTWORK_URL);
         if (obj != null && !obj.isJsonNull()) {
             return obj.getAsString().replace("large", "t500x500");
         }
@@ -72,9 +71,9 @@ public class TrackDeserializer implements JsonDeserializer<Track> {
      * @return owner username
      */
     private String findOwner(JsonObject data) {
-        JsonObject obj = data.get(WSConstants.KEY_USER).getAsJsonObject();
+        JsonObject obj = data.get(PodcastModuleConstants.KEY_USER).getAsJsonObject();
         if (obj != null && !obj.isJsonNull()) {
-            return obj.get(WSConstants.KEY_USERNAME).getAsString();
+            return obj.get(PodcastModuleConstants.KEY_USERNAME).getAsString();
         }
         return null;
     }

@@ -1,14 +1,13 @@
-package com.abdulmujibaliu.koutube.fragments
+package com.abdulmujibaliu.koutube.fragments.parent
 
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
 
 /**
  * Created by abdulmujibaliu on 10/15/17.
  */
-interface MainContract {
+interface ParentViewContract {
 
     interface View{
-        fun getPresenter  () : Presenter
         fun showVideoView(video: YoutubeVideo, data: List<YoutubeVideo>)
     }
 

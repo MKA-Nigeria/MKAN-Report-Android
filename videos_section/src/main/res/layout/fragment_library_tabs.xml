@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/root_view"
     android:orientation="vertical"
-    tools:context="com.abdulmujibaliu.koutube.fragments.LibraryTabsActivityFragment"
+    tools:context="com.abdulmujibaliu.koutube.fragments.parent.LibraryTabsActivityFragment"
     tools:showIn="@layout/activity_library_tabs">
 
     <LinearLayout

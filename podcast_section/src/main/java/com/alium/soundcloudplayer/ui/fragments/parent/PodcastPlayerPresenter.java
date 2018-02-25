@@ -1,13 +1,9 @@
 package com.alium.soundcloudplayer.ui.fragments.parent;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import io.reactivex.Observable;
-
-import com.alium.soundcloudplayer.data.models.Playlist;
 import com.alium.soundcloudplayer.data.models.Track;
-import com.alium.soundcloudplayer.managers.DataManager;
+import com.alium.soundcloudplayer.repositories.SoundCloudRepository;
 import com.aliumujib.jean.podplayer.JcAudio;
 
 /**
@@ -16,7 +12,7 @@ import com.aliumujib.jean.podplayer.JcAudio;
 
 public class PodcastPlayerPresenter implements IPodcastPlayerContracts.PodcastPlayerPresenter {
 
-    private DataManager dataManager = new DataManager();
+    private SoundCloudRepository soundCloudRepository = new SoundCloudRepository();
     private IPodcastPlayerContracts.PodcastPlayerView mPodcastPlayerView;
 
     public PodcastPlayerPresenter(IPodcastPlayerContracts.PodcastPlayerView podcastPlayerView) {

@@ -9,7 +9,7 @@ import retrofit2.http.Query
  * Created by abdulmujibaliu on 10/16/17.
  */
 
-interface VideoGetterInterface{
+interface VideosService {
 
     @GET("videos")
     fun getVideoItems(@Query("id") videoIDs :String) : Observable<VideoResult>

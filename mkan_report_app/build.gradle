@@ -101,7 +101,6 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknife"
 
 
-
     compile "com.github.the-cybersapien:recyclerELE:v1.1"
     compile "com.github.mmoamenn:ProgressImage_Android:0.0.2"
     testCompile "junit:junit:4.12"

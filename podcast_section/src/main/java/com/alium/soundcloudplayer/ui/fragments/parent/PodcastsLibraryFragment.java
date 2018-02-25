@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.alium.soundcloudplayer.repositories.SoundCloudRepository;
 import com.aliumujib.jean.podplayer.CollapsedPlayerView;
 import com.aliumujib.jean.podplayer.JcAudio;
 import com.aliumujib.jean.podplayer.JcPlayerView;
@@ -25,7 +26,6 @@ import java.util.List;
 import com.alium.soundcloudplayer.R;
 import com.alium.soundcloudplayer.data.models.Track;
 import com.alium.soundcloudplayer.data.models.User;
-import com.alium.soundcloudplayer.managers.DataManager;
 import com.alium.soundcloudplayer.ui.adapters.TrackListsPagerAdapter;
 
 
@@ -83,8 +83,8 @@ public class PodcastsLibraryFragment extends BaseFragment implements IPodcastPla
 
         // Set users for fragments in view pager
         List<User> users = new ArrayList<>();
-        users.add(new User(getString(R.string.podcasts), DataManager.MKAN_NG));
-        users.add(new User(getString(R.string.playlists), DataManager.VOICE_OF_ISLAM));
+        users.add(new User(getString(R.string.podcasts), SoundCloudRepository.MKAN_NG));
+        users.add(new User(getString(R.string.playlists), SoundCloudRepository.VOICE_OF_ISLAM));
 
         TrackListsPagerAdapter trackListsPagerAdapter = new TrackListsPagerAdapter(getChildFragmentManager(), users);
 

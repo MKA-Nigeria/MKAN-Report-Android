@@ -2,6 +2,7 @@ package com.alium.soundcloudplayer.network;
 
 import com.alium.soundcloudplayer.data.deserializers.PlaylistDeserializer;
 import com.alium.soundcloudplayer.data.models.Playlist;
+import com.aliumujib.mkanapps.coremodule.utils.BaseNetworkHandler;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -27,7 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * The NetworkHandler is a singleton and will setup the needed stuff to make network requests.
  * Settings as logging, interceptors
  */
-public class NetworkHandler {
+public class NetworkHandler extends BaseNetworkHandler{
     /*************************************
      * VARIABLES
      *************************************/
@@ -62,55 +63,39 @@ public class NetworkHandler {
         return soundCloudService;
     }
 
-    /*************************************
-     * PRIVATE METHODS
-     *************************************/
 
-    private void initService() {
-        OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor(createApiKeyQueryInterceptor())
-                .addInterceptor(createLoggingInterceptor())
-                .readTimeout(1, TimeUnit.MINUTES)
-                .connectTimeout(1, TimeUnit.MINUTES)
-                .build();
+    @Override
+    protected void initVariables() {
+        this.soundCloudService = getRetrofit().create(SoundCloudService.class);
+    }
 
-        Gson gson = new GsonBuilder()
+    @Override
+    protected Gson getGson() {
+        return new GsonBuilder()
                 .registerTypeAdapter(Track.class, new TrackDeserializer())
                 .registerTypeAdapter(Playlist.class, new PlaylistDeserializer())
                 .create();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(WSConstants.BASE_URL)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(client)
-                .build();
-        this.soundCloudService = retrofit.create(SoundCloudService.class);
     }
 
-    private Interceptor createApiKeyQueryInterceptor() {
+    @Override
+    protected String getBaseURL() {
+        return PodcastModuleConstants.BASE_URL;
+    }
+
+    protected Interceptor createApiKeyQueryInterceptor() {
         return new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request original = chain.request();
                 HttpUrl originalHttpUrl = original.url();
                 HttpUrl url = originalHttpUrl.newBuilder()
-                        .addQueryParameter(WSConstants.CLIENT_ID_QUERY,
+                        .addQueryParameter(PodcastModuleConstants.CLIENT_ID_QUERY,
                                 BuildConfig.SOUNDCLOUD_API_KEY)
-                        .addQueryParameter(WSConstants.PAGE_LIMIT, String.valueOf(200))
+                        .addQueryParameter(PodcastModuleConstants.PAGE_LIMIT, String.valueOf(200))
                         .build();
                 return chain.proceed(original.newBuilder().url(url).build());
             }
         };
     }
 
-    private HttpLoggingInterceptor createLoggingInterceptor() {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        if (BuildConfig.DEBUG) {
-            interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
-        } else {
-            interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
-        }
-        return interceptor;
-    }
 }

@@ -11,7 +11,7 @@ import retrofit2.http.Query
 /**
  * Created by abdulmujibaliu on 10/15/17.
  */
-interface PlaylistGetterInterface {
+interface PlaylistService {
 
     @GET("playlistItems")
     fun getPlaylistItems(@Query("playlistId") playlistID :String) : Observable<PlayListItemsResult>

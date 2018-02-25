@@ -2,12 +2,11 @@ package com.alium.soundcloudplayer.ui.fragments.playlists;
 
 import com.alium.soundcloudplayer.data.models.Playlist;
 import com.alium.soundcloudplayer.data.models.Track;
-import com.alium.soundcloudplayer.managers.DataManager;
+import com.alium.soundcloudplayer.repositories.SoundCloudRepository;
 import com.alium.soundcloudplayer.ui.fragments.parent.IPodcastPlayerContracts;
 
 import java.util.List;
 
-import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
 
 /**
@@ -19,13 +18,13 @@ public class PlayListsPresenter implements PlayListsContracts.PlayListsPresenter
 
     private final PlayListsContracts.PlayListsView view;
     private final IPodcastPlayerContracts.PodcastPlayerView parentView;
-    private DataManager dataManager;
+    private SoundCloudRepository soundCloudRepository;
 
-    public PlayListsPresenter(PlayListsContracts.PlayListsView view, IPodcastPlayerContracts.PodcastPlayerView parentView, DataManager dataManager) {
+    public PlayListsPresenter(PlayListsContracts.PlayListsView view, IPodcastPlayerContracts.PodcastPlayerView parentView, SoundCloudRepository soundCloudRepository) {
 
         this.view = view;
         this.parentView = parentView;
-        this.dataManager = dataManager;
+        this.soundCloudRepository = soundCloudRepository;
     }
 
     @Override
@@ -45,7 +44,7 @@ public class PlayListsPresenter implements PlayListsContracts.PlayListsPresenter
 
     @Override
     public void getAllPlayLists() {
-        dataManager.getAllPlayLists().subscribe(new Consumer<List<Playlist>>() {
+        soundCloudRepository.getAllPlayLists().subscribe(new Consumer<List<Playlist>>() {
             @Override
             public void accept(List<Playlist> playlists) throws Exception {
                 view.setData(playlists);

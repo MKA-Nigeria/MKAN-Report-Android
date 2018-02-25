@@ -1,4 +1,4 @@
-package com.abdulmujibaliu.koutube.fragments.childfragments
+package com.abdulmujibaliu.koutube.fragments.videos
 
 
 import android.os.Bundle
@@ -6,14 +6,37 @@ import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
-import com.abdulmujibaliu.koutube.data.repositories.PlayListRepository
-import com.abdulmujibaliu.koutube.data.repositories.contracts.RepositoryContracts
-import com.abdulmujibaliu.koutube.fragments.rvadapter.VideoRVAdapter
+import com.abdulmujibaliu.koutube.adapters.VideoRVAdapter
+import com.abdulmujibaliu.koutube.data.models.PlayListItemsResult
+import com.abdulmujibaliu.koutube.fragments.parent.BaseVideoTabFragment
 import kotlinx.android.synthetic.main.fragment_base.*
 
 
-class VideosFragment : BaseFragment() {
+class VideosFragment : BaseVideoTabFragment() , VideosContracts.VideosView{
 
+
+    private var videosPresenter: VideosContracts.VideosPresenter? = null
+
+    override fun setPresenter(presenter: VideosContracts.VideosPresenter?) {
+        this.videosPresenter = presenter
+    }
+
+    override fun setData(playLists: List<YoutubeVideo>) {
+        Log.d(TAG, playLists.toString())
+        videosRVAdapter!!.addAll(playLists as List<YoutubeVideo>)
+    }
+
+    override fun setNextPage(playLists: List<YoutubeVideo>) {
+
+    }
+
+    override fun launchVideoPlayer(video: YoutubeVideo) {
+        parentView?.showVideoView(video, mutableListOf())
+    }
+
+    override fun onVideoClicked(youtubeVideo: YoutubeVideo, data: List<YoutubeVideo>) {
+        videosPresenter!!.playVideo(youtubeVideo)
+    }
 
 
     var videosRVAdapter: VideoRVAdapter? = null
@@ -37,16 +60,13 @@ class VideosFragment : BaseFragment() {
         videosRVAdapter?.notifyDataSetChanged()
 
 
+        setPresenter(VideosPresenter(this, dataSource, parentView))
+
+        videosPresenter!!.onCreate()
 
         //UCpEHs4jtfj1sTo1g-ubDyMg //MTANG
 
-        dataSource.getVideosObservable()?.subscribe(
-                { data ->
-                    Log.d(TAG, data.toString())
-                    videosRVAdapter!!.addAll(data.items as List<YoutubeVideo>)
-                }, { error ->
-            error.printStackTrace()
-        })
+
     }
 
 

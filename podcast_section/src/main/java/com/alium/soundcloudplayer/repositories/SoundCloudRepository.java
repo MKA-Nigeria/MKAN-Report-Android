@@ -1,4 +1,4 @@
-package com.alium.soundcloudplayer.managers;
+package com.alium.soundcloudplayer.repositories;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,14 +17,14 @@ import com.alium.soundcloudplayer.network.NetworkHandler;
 /**
  * Created by Abdul-Mujeeb Aliu  on 10-10-2017
  * <p>
- * The DataManager is used to get the needed data
+ * The SoundCloudRepository is used to get the needed data
  */
-public class DataManager {
+public class SoundCloudRepository {
 
     public static final String MKAN_NG = "204709701";
     public static final String VOICE_OF_ISLAM = "182328357";
 
-    public DataManager() {
+    public SoundCloudRepository() {
     }
 
     /**

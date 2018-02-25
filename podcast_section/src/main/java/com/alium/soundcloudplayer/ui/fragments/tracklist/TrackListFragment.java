@@ -3,16 +3,11 @@ package com.alium.soundcloudplayer.ui.fragments.tracklist;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.List;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 import com.alium.soundcloudplayer.R;
 import com.alium.soundcloudplayer.data.models.Track;
@@ -46,7 +41,7 @@ public class TrackListFragment extends BaseLibraryChildFragment implements Track
         View rootView = inflater.inflate(R.layout.fragment_track_list, container, false);
         initViews(rootView);
 
-        setPresenter(new TrackListPresenter(this, dataManager, parentView));
+        setPresenter(new TrackListPresenter(this, soundCloudRepository, parentView));
 
         presenter.onCreate();
 
