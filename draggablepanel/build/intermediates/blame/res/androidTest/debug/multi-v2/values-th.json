@@ -1,0 +1,49 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/draggablepanel/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-th/values-th.xml",
+            "map": [
+                {
+                    "source": "/Users/aliumujib/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a138647e1c87781ba1ee11a3dc5b0e36/res/values-th/values-th.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/Kutube/draggablepanel/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-th/values-th.xml",
+            "map": [
+                {
+                    "source": "/Users/aliumujib/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/d1062f077041ee50c5a1fb6bb84af66d/res/values-th/values-th.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/Kutube/C:\\Android_Projects\\Kutube\\draggablepanel\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-th\\values-th.xml",
+            "map": [
+                {
+                    "source": "/Users/aliumujib/Desktop/Android_Projects/Kutube/C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\474f9748949d16ff391c36be1c78e2af\\res\\values-th\\values-th.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

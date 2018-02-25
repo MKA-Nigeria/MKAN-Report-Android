@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MKAN-Report-Android.iml" filepath="$PROJECT_DIR$/MKAN-Report-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/coremodule/coremodule.iml" filepath="$PROJECT_DIR$/coremodule/coremodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/draggablepanel/draggablepanel.iml" filepath="$PROJECT_DIR$/draggablepanel/draggablepanel.iml" />
       <module fileurl="file://$PROJECT_DIR$/filebrowser/filebrowser.iml" filepath="$PROJECT_DIR$/filebrowser/filebrowser.iml" />
       <module fileurl="file://$PROJECT_DIR$/jcplayer/jcplayer.iml" filepath="$PROJECT_DIR$/jcplayer/jcplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/loca_man_mod/loca_man_mod.iml" filepath="$PROJECT_DIR$/loca_man_mod/loca_man_mod.iml" />

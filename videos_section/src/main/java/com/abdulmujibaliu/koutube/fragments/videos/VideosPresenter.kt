@@ -33,6 +33,6 @@ class VideosPresenter(val view: VideosContracts.VideosView, val dataSource: Repo
     }
 
     override fun playVideo(video: YoutubeVideo) {
-
+        parentView!!.showVideoView(video, mutableListOf())
     }
 }

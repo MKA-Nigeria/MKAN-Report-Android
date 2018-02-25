@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -43,4 +43,57 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+
+    <com.github.pedrovgs.DraggableView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:draggable_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/draggable_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        draggable_view:top_view_id="@+id/media"
+        draggable_view:bottom_view_id="@+id/nested_scroll"
+        draggable_view:top_view_x_scale_factor="@dimen/x_scale_factor"
+        draggable_view:top_view_y_scale_factor="@dimen/y_scale_factor"
+        draggable_view:top_view_height="@dimen/top_fragment_height"
+        draggable_view:top_view_margin_right="@dimen/top_fragment_margin"
+        draggable_view:top_view_margin_bottom="@dimen/top_fragment_margin"
+        draggable_view:enable_minimized_horizontal_alpha_effect="false"
+        draggable_view:top_view_resize="true"
+        android:background="@color/white">
+
+        <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/media"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/media_height"
+            android:scaleType="centerCrop"
+            app:layout_behavior="@string/coordinator_behaviors_youtube_behavior"
+            app:shrinkRate="@integer/media_shrink_rate"
+            app:ylb_marginBottom="@dimen/margin_bottom"
+            app:ylb_marginRight="@dimen/margin_right"
+            app:start_state="state_expanded"
+            />
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/media"
+            android:id="@+id/nested_scroll"
+            android:background="@android:color/white"
+            app:layout_behavior="@string/coordinator_behaviors_youtube_follow_behavior"
+            app:mediaHeight="@dimen/media_height"
+            app:shrinkRate="@integer/media_shrink_rate"
+            app:ylb_marginBottom="@dimen/margin_bottom"
+            app:ylb_marginRight="@dimen/margin_right">
+
+            <com.abdulmujibaliu.koutube.utils.ui.videodetailsview.VideoDetailsView
+                android:id="@+id/video_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </android.support.v4.widget.NestedScrollView>
+    </com.github.pedrovgs.DraggableView>
+</RelativeLayout>

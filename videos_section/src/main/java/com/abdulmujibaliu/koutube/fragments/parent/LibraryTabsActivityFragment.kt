@@ -1,6 +1,7 @@
 package com.abdulmujibaliu.koutube.fragments.parent
 
 import android.os.Bundle
+import android.os.Handler
 import android.support.design.widget.CoordinatorLayout
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
@@ -8,12 +9,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import com.abdulmujibaliu.koutube.R
 import com.abdulmujibaliu.koutube.data.models.YoutubeVideo
 import com.abdulmujibaliu.koutube.data.repositories.PlayListRepository
 import com.abdulmujibaliu.koutube.data.repositories.contracts.RepositoryContracts
 import com.abdulmujibaliu.koutube.adapters.VideoTabsAdapter
 import com.abdulmujibaliu.koutube.utils.ui.videodetailsview.VideoDetailsView
+import com.github.pedrovgs.DraggableListener
+import com.github.pedrovgs.DraggableView
 import com.pierfrancescosoffritti.youtubeplayer.player.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayer
 import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
@@ -27,10 +31,12 @@ import kotlinx.android.synthetic.main.fragment_library_tabs.*
 open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, YoutubeLikeBehavior.OnBehaviorStateListener {
 
     var media: YouTubePlayerView? = null
+    var draggableView: DraggableView? = null
     var description: View? = null
     val TAG = javaClass.simpleName
-    var rootCordinator: CoordinatorLayout? = null
+    var rootCordinator: RelativeLayout? = null
     private var player: YouTubePlayer? = null
+    private val DELAY_MILLIS = 10
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +49,8 @@ open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, Yo
         super.onViewCreated(view, savedInstanceState)
 
         rootCordinator = view!!.findViewById(R.id.root_view)
+        draggableView = view!!.findViewById(R.id.draggable_view)
+        media = view!!.findViewById(R.id.media)
 
         val videoTabsAdapter = VideoTabsAdapter(childFragmentManager)
         toolbar.setTitle("Koutube")
@@ -55,33 +63,46 @@ open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, Yo
         val playListRepo: RepositoryContracts.IPlaylistRepository = PlayListRepository.getInstance()!!
 
         playListRepo.getPlayListsAndVideosForChannels(listOf("UCpEHs4jtfj1sTo1g-ubDyMg"))
+
+        initializeDraggableView()
+        hookListeners()
     }
 
 
+    /**
+     * Initialize DraggableView.
+     */
+    private fun initializeDraggableView() {
+        val handler = Handler()
+        handler.postDelayed({
+            //draggableView!!.setVisibility(View.GONE)
+            draggableView!!.closeToRight()
+        }, DELAY_MILLIS.toLong())
+    }
+
+    private fun hookListeners() {
+        draggableView!!.setDraggableListener(object : DraggableListener {
+            override fun onMaximized() {
+
+            }
+
+            override fun onMinimized() {
+
+            }
+
+            override fun onClosedToLeft() {
+
+            }
+
+            override fun onClosedToRight() {
+
+            }
+        })
+    }
+
     override fun showVideoView(video: YoutubeVideo, data: List<YoutubeVideo>) {
-
-        media = activity.layoutInflater.inflate(R.layout.youtubevideo_player, rootCordinator, false) as YouTubePlayerView
-        description = activity.layoutInflater.inflate(R.layout.video_description, rootCordinator, false)
-
-        if (media?.parent != null) {
-            rootCordinator?.removeView(media)
-        }
-
-        if (description?.parent != null) {
-            rootCordinator?.removeView(description)
-        }
-
-        rootCordinator!!.addView(media)
-        rootCordinator!!.addView(description)
-
-        val behavior = YoutubeLikeBehavior.from(media)
-        behavior?.listener = this
-
-        val videoDetailsView: VideoDetailsView = description!!.findViewById(R.id.video_details)
-        videoDetailsView.setVideos(video, data)
-
-        Log.d(TAG, "VID ID: ${video.videoID}")
-        //behavior?.state = YoutubeLikeBehavior.STATE_HIDDEN
+        draggableView!!.visibility = View.VISIBLE
+        draggableView!!.maximize()
 
         media!!.initialize({ initializedYouTubePlayer ->
             player = initializedYouTubePlayer
@@ -94,7 +115,7 @@ open class LibraryTabsActivityFragment : Fragment(), ParentViewContract.View, Yo
             })
         }, true)
 
-        //behavior?.state = YoutubeLikeBehavior.STATE_EXPANDED
+        //TODO GET RELATED VIDEOS
     }
 
 

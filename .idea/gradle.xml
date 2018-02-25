@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/coremodule" />
+            <option value="$PROJECT_DIR$/draggablepanel" />
             <option value="$PROJECT_DIR$/filebrowser" />
             <option value="$PROJECT_DIR$/jcplayer" />
             <option value="$PROJECT_DIR$/loca_man_mod" />
