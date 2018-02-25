@@ -64,12 +64,12 @@ public class BaseFragment extends Fragment {
         }
     }
 
-    protected void hideLoading() {
+    public void hideLoading() {
         showContentView();
         hideLoadingViewFullScreen();
     }
 
-    protected void showLoading() {
+    public void showLoading() {
         hideContentView();
         showLoadingViewFullScreen();
     }
@@ -174,5 +174,23 @@ public class BaseFragment extends Fragment {
         if (mContext != null) {
             ((BaseActivity) mContext).cancelNetWorkOpNotifcation(intID);
         }
+    }
+
+
+    public void showError() {
+
+    }
+
+
+    public void showEmpty() {
+
+    }
+
+    public void showMessage(String message) {
+
+    }
+
+    public void showBadge(int position, int count) {
+
     }
 }

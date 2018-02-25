@@ -1,10 +1,9 @@
-package com.alium.soundcloudplayer.ui.fragments;
+package com.alium.soundcloudplayer.ui.fragments.parent;
 
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -17,6 +16,7 @@ import com.aliumujib.jean.podplayer.CollapsedPlayerView;
 import com.aliumujib.jean.podplayer.JcAudio;
 import com.aliumujib.jean.podplayer.JcPlayerView;
 import com.aliumujib.jean.podplayer.JcStatus;
+import com.aliumujib.mkanapps.coremodule.base.BaseFragment;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.util.ArrayList;
@@ -27,20 +27,17 @@ import com.alium.soundcloudplayer.data.models.Track;
 import com.alium.soundcloudplayer.data.models.User;
 import com.alium.soundcloudplayer.managers.DataManager;
 import com.alium.soundcloudplayer.ui.adapters.TrackListsPagerAdapter;
-import com.alium.soundcloudplayer.ui.mvp.IPodcastPlayerContracts;
-import com.alium.soundcloudplayer.ui.mvp.PodcastPlayerPresenter;
 
 
-public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerContracts.PodcastPlayerView,
+public class PodcastsLibraryFragment extends BaseFragment implements IPodcastPlayerContracts.PodcastPlayerView,
         JcPlayerView.OnInvalidPathListener,
         JcPlayerView.JcPlayerViewStatusListener,
         SlidingUpPanelLayout.PanelSlideListener {
 
-    IPodcastPlayerContracts.PodcastPlayerPresenter mPodcastPlayerPresenter;
+    IPodcastPlayerContracts.PodcastPlayerPresenter presenter;
 
 
     private JcPlayerView mPlayer;
-    private List<JcAudio> mJcAudios;
     private ViewPager mViewPager;
     private SlidingUpPanelLayout mSlidingUpPanelLayout;
     private CollapsedPlayerView mSmallControls;
@@ -52,9 +49,9 @@ public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerC
     }
 
     public static PodcastsLibraryFragment newInstance() {
-        
+
         Bundle args = new Bundle();
-        
+
         PodcastsLibraryFragment fragment = new PodcastsLibraryFragment();
         fragment.setArguments(args);
         return fragment;
@@ -73,15 +70,14 @@ public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerC
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        setPresenter(new PodcastPlayerPresenter(this));
 
-        mPodcastPlayerPresenter = new PodcastPlayerPresenter(this);
         mPlayer = (JcPlayerView) view.findViewById(R.id.jcplayer);
         mSlidingUpPanelLayout = (SlidingUpPanelLayout) view.findViewById(R.id.sliding_layout);
         mSlidingUpPanelLayout.addPanelSlideListener(this);
 
         mSmallControls = (CollapsedPlayerView) view.findViewById(R.id.collapsed_view);
 
-        mJcAudios = new ArrayList<>();
 
         mSlidingUpPanelLayout.setPanelState(SlidingUpPanelLayout.PanelState.HIDDEN);
 
@@ -98,8 +94,12 @@ public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerC
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        presenter.onCreate();
+    }
 
-        mPlayer.initPlaylist(mJcAudios);
+    @Override
+    public void initPlayerTracks(List<JcAudio> audios) {
+        mPlayer.initPlaylist(audios);
         mPlayer.registerInvalidPathListener(this);
         mPlayer.registerStatusListener(this);
     }
@@ -110,11 +110,6 @@ public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerC
         return inflater.inflate(R.layout.fragment_podcasts_library, container, false);
     }
 
-
-    @Override
-    public IPodcastPlayerContracts.PodcastPlayerPresenter getPresenter() {
-        return mPodcastPlayerPresenter;
-    }
 
     @Override
     public void playPodCast(int position, Track track) {
@@ -213,4 +208,11 @@ public class PodcastsLibraryFragment extends Fragment implements IPodcastPlayerC
     public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
 
     }
+
+    @Override
+    public void setPresenter(IPodcastPlayerContracts.PodcastPlayerPresenter presenter) {
+        this.presenter = presenter;
+    }
+
+
 }

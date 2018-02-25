@@ -1,4 +1,4 @@
-package com.alium.soundcloudplayer.ui.fragments;
+package com.alium.soundcloudplayer.ui.fragments.playlists;
 
 
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.widget.TextView;
 import com.alium.soundcloudplayer.R;
 import com.alium.soundcloudplayer.data.models.Playlist;
 import com.alium.soundcloudplayer.data.models.Track;
+import com.alium.soundcloudplayer.managers.DataManager;
+import com.alium.soundcloudplayer.ui.fragments.base.BaseLibraryChildFragment;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -23,10 +25,11 @@ import iammert.com.expandablelib.Section;
 import io.reactivex.functions.Consumer;
 
 
-public class PlayListsFragment extends BaseLibraryChildFragment {
+public class PlayListsFragment extends BaseLibraryChildFragment implements PlayListsContracts.PlayListsView {
 
 
-    private ExpandableLayout mSectionLinearLayout;
+    private ExpandableLayout sectionLinearLayout;
+    private PlayListsContracts.PlayListsPresenter presenter;
 
 
     public PlayListsFragment() {
@@ -46,7 +49,9 @@ public class PlayListsFragment extends BaseLibraryChildFragment {
         super.onViewCreated(view, savedInstanceState);
 
         initView(view);
-        initData();
+
+        setPresenter(new PlayListsPresenter(this, parentView, dataManager));
+        presenter.onCreate();
 
     }
 
@@ -54,23 +59,24 @@ public class PlayListsFragment extends BaseLibraryChildFragment {
     public void initView(View rootView) {
         super.initView(rootView);
 
-        mSectionLinearLayout = (ExpandableLayout) rootView.findViewById(R.id.el);
+        sectionLinearLayout = (ExpandableLayout) rootView.findViewById(R.id.el);
 
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                initData();
+                presenter.getAllPlayLists();
             }
         });
 
+        sectionLinearLayout.setRenderer(mSectionRenderer);
 
-        mSectionLinearLayout.setRenderer(mSectionRenderer);
-
-        mSectionLinearLayout.setExpandListener(mExpandListener);
-        mSectionLinearLayout.setCollapseListener(mCollapseListener);
+        sectionLinearLayout.setExpandListener(mExpandListener);
+        sectionLinearLayout.setCollapseListener(mCollapseListener);
 
     }
 
+
+    //TODO ... move this BS else where ...
     ExpandableLayout.Renderer<Playlist, Track> mSectionRenderer = new ExpandableLayout.Renderer<Playlist, Track>() {
         @Override
         public void renderParent(View view, Playlist model, boolean isExpanded, int parentPosition) {
@@ -89,7 +95,7 @@ public class PlayListsFragment extends BaseLibraryChildFragment {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mParentFragment.playPodCast(childPosition, model);
+                    presenter.playTrack(childPosition, model);
                 }
             });
         }
@@ -118,35 +124,33 @@ public class PlayListsFragment extends BaseLibraryChildFragment {
     }
 
     @Override
-    public void initData() {
-        showLoading();
-        mParentFragment.getPresenter().getAllPlayLists().subscribe(new Consumer<List<Playlist>>() {
-            @Override
-            public void accept(List<Playlist> playlists) throws Exception {
-                hideLoading();
-                mSectionLinearLayout.removeAllViews();
-                for (Playlist playlist : playlists) {
-                    Section<Playlist, Track> section = new Section<>();
-                    section.parent = playlist;
-                    if(playlist.getTrackList()!=null){
-                        section.children.addAll(playlist.getTrackList());
-                        mSectionLinearLayout.addSection(section);
-                    }
-                }
-            }
-        }, new Consumer<Throwable>() {
-            @Override
-            public void accept(Throwable throwable) throws Exception {
-                throwable.printStackTrace();
-            }
-        });
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_play_lists, container, false);
     }
 
+    @Override
+    public void setPresenter(PlayListsContracts.PlayListsPresenter presenter) {
+        this.presenter = presenter;
+    }
+
+    @Override
+    public void setData(List<Playlist> playlists) {
+        hideLoading();
+        sectionLinearLayout.removeAllViews();
+        for (Playlist playlist : playlists) {
+            Section<Playlist, Track> section = new Section<>();
+            section.parent = playlist;
+            if (playlist.getTrackList() != null) {
+                section.children.addAll(playlist.getTrackList());
+                sectionLinearLayout.addSection(section);
+            }
+        }
+    }
+
+    @Override
+    public void addMorePlayLists(List<Playlist> playlists) {
+
+    }
 }

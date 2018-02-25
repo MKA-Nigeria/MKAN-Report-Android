@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\2c876dcc1ad77c54f9fb9e136f9e70c6\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\2c876dcc1ad77c54f9fb9e136f9e70c6\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "120,204,288,384,486,588,682"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/jcplayer/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/aliumujib/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/8ae2268c7019797233191f41a1f203d6/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

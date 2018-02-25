@@ -1,10 +1,26 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v12\\values-v12.xml",
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Android_Projects\\MKAN-Report-Android\\jcplayer\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v12\\values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\2c876dcc1ad77c54f9fb9e136f9e70c6\\res\\values-v12\\values-v12.xml",
+                    "source": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/C:\\Users\\ABDUL-MUJEEB ALIU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\2c876dcc1ad77c54f9fb9e136f9e70c6\\res\\values-v12\\values-v12.xml",
+                    "from": {
+                        "startLines": "2,5,8,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,279,479,598",
+                        "endLines": "4,7,8,9",
+                        "endColumns": "12,12,118,94",
+                        "endOffsets": "274,474,593,688"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/aliumujib/Desktop/Android_Projects/MKAN-Report-Android/jcplayer/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v12/values-v12.xml",
+            "map": [
+                {
+                    "source": "/Users/aliumujib/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/8ae2268c7019797233191f41a1f203d6/res/values-v12/values-v12.xml",
                     "from": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",

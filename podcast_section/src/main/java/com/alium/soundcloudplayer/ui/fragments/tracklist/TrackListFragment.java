@@ -1,4 +1,4 @@
-package com.alium.soundcloudplayer.ui.fragments;
+package com.alium.soundcloudplayer.ui.fragments.tracklist;
 
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -17,15 +17,17 @@ import io.reactivex.disposables.Disposable;
 import com.alium.soundcloudplayer.R;
 import com.alium.soundcloudplayer.data.models.Track;
 import com.alium.soundcloudplayer.ui.adapters.TracksRecyclerViewAdapter;
+import com.alium.soundcloudplayer.ui.fragments.base.BaseLibraryChildFragment;
 
 
 /**
  * Created by Abdul-Mujeeb Aliu  on 10-10-2017
  */
 
-public class TrackListFragment extends BaseLibraryChildFragment {
+public class TrackListFragment extends BaseLibraryChildFragment implements TrackListContracts.TrackListView {
 
     private TracksRecyclerViewAdapter mAdapter;
+    private TrackListContracts.TrackListPresenter presenter;
 
     public TrackListFragment() {
     }
@@ -43,15 +45,14 @@ public class TrackListFragment extends BaseLibraryChildFragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_track_list, container, false);
         initViews(rootView);
-        initData();
+
+        setPresenter(new TrackListPresenter(this, dataManager, parentView));
+
+        presenter.onCreate();
+
         return rootView;
     }
 
-    @Override
-    public void initData() {
-        showLoading();
-        loadTracks();
-    }
 
     private void initViews(View rootView) {
         super.initView(rootView);
@@ -62,48 +63,32 @@ public class TrackListFragment extends BaseLibraryChildFragment {
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                loadTracks();
+                presenter.getAllTracks();
             }
         });
         mAdapter.setOnTrackClickListener(new TracksRecyclerViewAdapter.OnTrackClickListener() {
             @Override
             public void onTrackClick(int position, Track track, View sharedImage) {
-                mParentFragment.playPodCast(position, track);
+                presenter.playTrack(position, track);
             }
         });
     }
 
 
-    public void loadTracks() {
-        mParentFragment.getPresenter().getAllPodcasts().subscribe(new Observer<List<Track>>() {
-            @Override
-            public void onSubscribe(Disposable d) {
 
-            }
-
-            @Override
-            public void onComplete() {
-                hideLoadingIndicators();
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                hideLoadingIndicators();
-                String errorMsg = "Loading tracks went wrong";
-                Log.e(TAG, errorMsg, e);
-                Toast.makeText(getContext(), errorMsg, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNext(List<Track> tracks) {
-                mAdapter.clearTracks();
-                mAdapter.addTracks(tracks);
-            }
-        });
+    @Override
+    public void setPresenter(TrackListContracts.TrackListPresenter presenter) {
+        this.presenter = presenter;
     }
 
+    @Override
+    public void setData(List<Track> tracks) {
+        mAdapter.clearTracks();
+        mAdapter.addTracks(tracks);
+    }
 
-    private void hideLoadingIndicators() {
-        hideLoading();
+    @Override
+    public void addMoreTracks(List<Track> tracks) {
+
     }
 }

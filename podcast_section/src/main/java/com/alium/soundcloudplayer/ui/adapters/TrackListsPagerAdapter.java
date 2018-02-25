@@ -7,10 +7,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alium.soundcloudplayer.data.models.Playlist;
 import com.alium.soundcloudplayer.data.models.User;
-import com.alium.soundcloudplayer.ui.fragments.PlayListsFragment;
-import com.alium.soundcloudplayer.ui.fragments.TrackListFragment;
+import com.alium.soundcloudplayer.ui.fragments.playlists.PlayListsFragment;
+import com.alium.soundcloudplayer.ui.fragments.tracklist.TrackListFragment;
 
 /**
  * Created by Abdul-Mujeeb Aliu  on 10-10-2017
