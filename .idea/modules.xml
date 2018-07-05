@@ -8,12 +8,12 @@
       <module fileurl="file://$PROJECT_DIR$/filebrowser/filebrowser.iml" filepath="$PROJECT_DIR$/filebrowser/filebrowser.iml" />
       <module fileurl="file://$PROJECT_DIR$/jcplayer/jcplayer.iml" filepath="$PROJECT_DIR$/jcplayer/jcplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/loca_man_mod/loca_man_mod.iml" filepath="$PROJECT_DIR$/loca_man_mod/loca_man_mod.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mkan_media_app/mkanmediaapp.iml" filepath="$PROJECT_DIR$/mkan_media_app/mkanmediaapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mkan_media_app/mkan_media_app.iml" filepath="$PROJECT_DIR$/mkan_media_app/mkan_media_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mkan_report_app/mkan_report_app.iml" filepath="$PROJECT_DIR$/mkan_report_app/mkan_report_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mkan_report_data/mkan_report_data.iml" filepath="$PROJECT_DIR$/mkan_report_data/mkan_report_data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/podcast_section/podcast_section.iml" filepath="$PROJECT_DIR$/podcast_section/podcast_section.iml" />
+      <module fileurl="file://$PROJECT_DIR$/podcast_module/podcast_module.iml" filepath="$PROJECT_DIR$/podcast_module/podcast_module.iml" />
       <module fileurl="file://$PROJECT_DIR$/spinnerdialog/spinnerdialog.iml" filepath="$PROJECT_DIR$/spinnerdialog/spinnerdialog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/videos_section/videos_section.iml" filepath="$PROJECT_DIR$/videos_section/videos_section.iml" />
+      <module fileurl="file://$PROJECT_DIR$/videos_module/videos_module.iml" filepath="$PROJECT_DIR$/videos_module/videos_module.iml" />
     </modules>
   </component>
 </project>

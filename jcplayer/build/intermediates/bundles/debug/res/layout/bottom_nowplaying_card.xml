@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="60dp"
     android:layout_gravity="top"
-    android:background="@android:color/white"
+    android:background="#FFFFFF"
     >
 
     <com.aliumujib.jean.podplayer.SquareImageView

@@ -16,9 +16,9 @@
             <option value="$PROJECT_DIR$/mkan_media_app" />
             <option value="$PROJECT_DIR$/mkan_report_app" />
             <option value="$PROJECT_DIR$/mkan_report_data" />
-            <option value="$PROJECT_DIR$/podcast_section" />
+            <option value="$PROJECT_DIR$/podcast_module" />
             <option value="$PROJECT_DIR$/spinnerdialog" />
-            <option value="$PROJECT_DIR$/videos_section" />
+            <option value="$PROJECT_DIR$/videos_module" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

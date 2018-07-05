@@ -1,11 +1,15 @@
 package com.aliumujib.mkanmedia
 
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.abdulmujibaliu.koutube.fragments.parent.LibraryTabsActivityFragment
 import com.alium.soundcloudplayer.ui.fragments.parent.PodcastsLibraryFragment
 import com.aliumujib.mkanapps.coremodule.base.BaseMainActivity
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
+
 
 class MainMediaActivity : BaseMainActivity() {
 
@@ -18,7 +22,6 @@ class MainMediaActivity : BaseMainActivity() {
             setToolBarTitle("Videos")
             replaceCurrentFragmentWithBackState(LibraryTabsActivityFragment.newInstance())
         }
-
         closeDrawer()
         return true
     }
@@ -27,6 +30,7 @@ class MainMediaActivity : BaseMainActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        Fabric.with(this, Crashlytics())
         replaceCurrentFragmentWithBackState(PodcastsLibraryFragment.newInstance())
     }
 
@@ -37,7 +41,11 @@ class MainMediaActivity : BaseMainActivity() {
     }
 
     override fun getMenuResID(): Int {
-        return R.menu.activity_media_drawer
+        return if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            R.menu.activity_media_drawer
+        } else {
+            R.menu.activity_media_drawer_lollipop
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

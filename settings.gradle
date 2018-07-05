@@ -1,2 +1,2 @@
-include ':mkan_report_app', ':loca_man_mod', ':mkan_report_data', ':spinnerdialog', ':filebrowser', ':jcplayer', ':podcast_section', ':videos_section', ':mkan_media_app', ':coremodule', ':draggablepanel'
+include ':mkan_report_app', ':loca_man_mod', ':mkan_report_data', ':spinnerdialog', ':filebrowser', ':jcplayer', ':podcast_module', ':videos_module', ':mkan_media_app', ':coremodule', ':draggablepanel'
 //':mkan_report_app',

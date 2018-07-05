@@ -8,11 +8,6 @@
             android:icon="@drawable/ic_microphone_grey600_24dp"
             android:title="Podcasts" />
 
-        <item
-            android:id="@+id/nav_videos"
-            android:icon="@drawable/ic_video_grey600_24dp"
-            android:title="Video" />
-
     </group>
 
 </menu>
